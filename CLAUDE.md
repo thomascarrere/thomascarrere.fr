@@ -62,10 +62,25 @@ Couleurs principales definies dans `globals.css` :
 - Canonical URLs sur chaque page
 - Open Graph + Twitter cards configures
 
+## Workflow de deploiement
+
+```
+npm run build && git add -A && git commit -m "message" && git push && npx vercel --yes --prod
+```
+
 ## Conventions
 
 - Langue du site : francais
 - Tous les CTAs principaux : "Reserver mon diagnostic offert (30min) →"
 - Lien calendrier : `https://calendar.app.google/xaB44wDhgrkCX8Rj8`
+- LinkedIn : `https://www.linkedin.com/in/thomascarrere/`
 - Hierarchie headings : h1 > h2 > h3 (pas de h4/h5/h6)
 - Composants client ("use client") : NavBar, Accordion uniquement
+- Nav links : "Sprint Fondations", "Direction Marketing externalisee", "Qui suis-je ?"
+- Bouton navbar : "Discutons →" (seul CTA avec un texte different)
+
+## Audits realises
+
+- **SEO** (skill `seo-review`) : titles, meta descriptions, keyword placement, maillage interne
+- **GEO** (skill `geo-fundamentals`) : JSON-LD, robots.txt AI crawlers, definitions citables — score 34% → 67%
+- **UX Content Design** (skill `content-design`) : CTAs, heading hierarchy, jargon, parcours utilisateur
