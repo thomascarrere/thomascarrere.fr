@@ -6,10 +6,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const LIENS = [
-  { href: "/sprint-fondations", label: "Diagnostic et strategie" },
+  { href: "/sprint-fondations", label: "Diagnostic et stratégie" },
   {
     href: "/direction-marketing-externalise",
-    label: "Direction Marketing externalisee",
+    label: "Direction Marketing externalisée",
   },
   { href: "/qui-suis-je", label: "Qui suis-je ?" },
 ];
@@ -27,7 +27,7 @@ export function NavBar() {
         <Link href="/" className="shrink-0">
           <Image
             src="/images/logo.png"
-            alt="Thomas Carrere"
+            alt="Thomas Carrère"
             width={160}
             height={40}
             className="h-10 w-auto"

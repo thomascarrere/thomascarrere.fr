@@ -10,15 +10,19 @@ export function Footer() {
         <Link href="/">
           <Image
             src="/images/logo.png"
-            alt="Thomas Carrere"
+            alt="Thomas Carrère"
             width={120}
             height={30}
             className="h-8 w-auto"
           />
         </Link>
 
-        <p className="text-xs font-medium text-text-muted">
-          &copy; 2026 Thomas Carrere
+        <p className="text-xs font-medium text-text-muted text-center">
+          &copy; 2026 Thomas Carrère — Consultant Marketing
+          <br />
+          <span className="text-[11px]">
+            La Réunion &middot; France
+          </span>
         </p>
 
         <a

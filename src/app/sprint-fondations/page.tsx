@@ -1,18 +1,54 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Section } from "@/components/section";
 import { Bouton } from "@/components/bouton";
 
 export const metadata: Metadata = {
-  title: "Sprint Fondations — Thomas Carrère",
+  title: "Sprint Fondations : 15 jours pour structurer votre marketing",
   description:
-    "15 jours pour retrouver de la clarté et poser les bases de votre marketing. 2 900 EUR HT.",
+    "Sprint Fondations : une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. 2 900 EUR HT, sans engagement long terme.",
+  alternates: { canonical: "https://thomascarrere.fr/sprint-fondations" },
 };
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
 
+const jsonLdService = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Sprint Fondations",
+  description:
+    "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. Inclut la fiche offre, le kit prospection, le cockpit Notion et la roadmap 90 jours.",
+  provider: {
+    "@type": "Person",
+    name: "Thomas Carrère",
+    url: "https://thomascarrere.fr",
+  },
+  areaServed: [
+    { "@type": "Place", name: "La Réunion" },
+    { "@type": "Country", name: "France" },
+  ],
+  offers: {
+    "@type": "Offer",
+    price: "2900",
+    priceCurrency: "EUR",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      price: "2900",
+      priceCurrency: "EUR",
+      valueAddedTaxIncluded: false,
+    },
+  },
+  url: "https://thomascarrere.fr/sprint-fondations",
+};
+
 export default function SprintFondations() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
+      />
+
       {/* Hero */}
       <Section>
         <div className="max-w-[840px] mx-auto text-center py-12 md:py-20">
@@ -24,9 +60,12 @@ export default function SprintFondations() {
             clarté et poser les bases de votre marketing.
           </h1>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
-            Une immersion de deux semaines pour simplifier votre offre,
-            organiser vos outils et tracer une route claire pour les mois à
-            venir. Sans jargon, sans détours.
+            Le <strong className="text-heading">Sprint Fondations</strong> est
+            une immersion marketing de 15 jours conçue pour les{" "}
+            <strong className="text-heading">dirigeants de PME</strong> qui
+            veulent clarifier leur offre, structurer leurs outils de vente et
+            tracer une feuille de route concrète pour les 90 prochains jours.
+            Sans jargon, sans détours.
           </p>
           <Bouton href={CALENDRIER} externe>
             Je réserve un créneau →
@@ -279,6 +318,30 @@ export default function SprintFondations() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* Et après ? */}
+      <Section bg="alt">
+        <div className="max-w-[840px] mx-auto text-center">
+          <h2 className="mb-4">Et après le Sprint ?</h2>
+          <p className="text-lg leading-8 text-text tracking-[-0.02em] mb-6">
+            Le Sprint Fondations pose les bases. Pour maintenir la dynamique
+            sur le long terme, je propose un accompagnement régulier en{" "}
+            <Link
+              href="/direction-marketing-externalise"
+              className="text-violet font-medium hover:text-violet-hover transition-colors"
+            >
+              Direction Marketing Externalisée
+            </Link>
+            .
+          </p>
+          <Link
+            href="/qui-suis-je"
+            className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+          >
+            En savoir plus sur mon parcours →
+          </Link>
         </div>
       </Section>
 

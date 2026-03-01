@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Section } from "@/components/section";
 import { Bouton } from "@/components/bouton";
 import { CarteTemoignage } from "@/components/carte-temoignage";
 import { Accordion } from "@/components/accordion";
 import { GrilleLogos } from "@/components/grille-logos";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://thomascarrere.fr" },
+};
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
 
@@ -102,19 +108,74 @@ const TEMOIGNAGES = [
   },
 ];
 
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.reponse,
+    },
+  })),
+};
+
+const jsonLdReviews = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://thomascarrere.fr/#business",
+  name: "Thomas Carrère — Consultant Marketing",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: String(TEMOIGNAGES.length),
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: TEMOIGNAGES.map((t) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: t.nom },
+    reviewBody: t.texte,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+    },
+  })),
+};
+
 export default function Accueil() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdReviews) }}
+      />
+
       {/* Hero */}
       <Section>
         <div className="max-w-[840px] mx-auto text-center py-12 md:py-20">
+          <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
+            Consultant marketing pour PME et TPE
+          </p>
           <h1 className="mb-6">
             Le marketing de votre entreprise devient enfin clair et organisé
           </h1>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
-            J&apos;aide les dirigeants de PME à simplifier leurs messages et à
-            structurer leurs actions de vente. 15 ans d&apos;expérience à vos
-            côtés pour construire des bases solides, sans complexité inutile.
+            <strong className="text-heading">Consultant marketing</strong>{" "}
+            basé à La Réunion, j&apos;aide les dirigeants de PME à simplifier
+            leurs messages et à structurer leurs actions de vente.{" "}
+            <strong className="text-heading">15 ans d&apos;expérience</strong>{" "}
+            et{" "}
+            <strong className="text-heading">
+              120 entreprises accompagnées
+            </strong>{" "}
+            pour construire des bases solides, sans complexité inutile.
           </p>
           <Bouton href={CALENDRIER} externe>
             Réserver mon diagnostic offert (30min) →
@@ -249,6 +310,14 @@ export default function Accueil() {
             qui marche, on simplifie ce qui est complexe, et on construit sur la
             durée.
           </p>
+          <div className="mt-6">
+            <Link
+              href="/qui-suis-je"
+              className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+            >
+              En savoir plus sur mon parcours →
+            </Link>
+          </div>
         </div>
         <GrilleLogos logos={LOGOS_CLIENTS} />
       </Section>

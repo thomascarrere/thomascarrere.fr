@@ -5,32 +5,74 @@ import { Section } from "@/components/section";
 import { Bouton } from "@/components/bouton";
 
 export const metadata: Metadata = {
-  title: "Qui suis-je — Thomas Carrère",
+  title:
+    "Thomas Carrère — Consultant Marketing, 15 ans d'expérience",
   description:
-    "15 ans d'expérience et 120 entreprises accompagnées. Je simplifie votre marketing pour libérer votre croissance.",
+    "Découvrez le parcours de Thomas Carrère, consultant marketing à La Réunion. 15 ans d'expérience, 120 entreprises accompagnées. Un regard externe et pragmatique pour structurer votre croissance.",
+  alternates: { canonical: "https://thomascarrere.fr/qui-suis-je" },
 };
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
 
+const jsonLdPerson = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Thomas Carrère",
+  jobTitle: "Consultant Marketing",
+  description:
+    "Consultant marketing pour PME et TPE basé à La Réunion. 15 ans d'expérience dans le marketing digital, l'entrepreneuriat et le consulting. Fondateur de l'agence Du Simple au Double. Plus de 120 entreprises accompagnées.",
+  url: "https://thomascarrere.fr/qui-suis-je",
+  sameAs: ["https://www.linkedin.com/in/thomascarrere/"],
+  knowsAbout: [
+    "Marketing digital",
+    "Stratégie marketing PME",
+    "Direction marketing externalisée",
+    "SEO",
+    "Social Media",
+    "CRM",
+    "Notion",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "L'Étang-Salé",
+    addressRegion: "La Réunion",
+    addressCountry: "FR",
+  },
+  image: "https://thomascarrere.fr/images/thomas-portrait.webp",
+  worksFor: {
+    "@type": "Organization",
+    name: "Thomas Carrère — Consultant Marketing",
+    url: "https://thomascarrere.fr",
+  },
+};
+
 export default function QuiSuisJe() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
+      />
+
       {/* Hero */}
       <Section>
         <div className="max-w-[840px] mx-auto text-center py-12 md:py-20">
           <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
-            Qui suis-je
+            Consultant marketing — La Réunion
           </p>
           <h1 className="mb-6">
             15 ans d&apos;expérience et 120 entreprises accompagnées : je
             simplifie votre marketing pour libérer votre croissance.
           </h1>
           <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-            Le marketing ne devrait pas être une source de stress, mais un
-            levier de clarté. Après avoir fondé l&apos;agence Du Simple au
-            Double et accompagné plus de 120 entreprises à La Réunion et en
-            Métropole, j&apos;ai fait un constat simple : la complexité est
-            l&apos;ennemi de l&apos;efficacité.
+            <strong className="text-heading">Thomas Carrère</strong>,{" "}
+            <strong className="text-heading">consultant marketing</strong>{" "}
+            basé à La Réunion. Le marketing ne devrait pas être une source de
+            stress, mais un levier de clarté. Après avoir fondé l&apos;agence
+            Du Simple au Double et accompagné plus de{" "}
+            <strong className="text-heading">120 entreprises</strong> à La
+            Réunion et en Métropole, j&apos;ai fait un constat simple : la
+            complexité est l&apos;ennemi de l&apos;efficacité.
           </p>
         </div>
       </Section>

@@ -5,9 +5,13 @@ import { Bouton } from "@/components/bouton";
 import { GrilleLogos } from "@/components/grille-logos";
 
 export const metadata: Metadata = {
-  title: "Direction Marketing Externalisée — Thomas Carrère",
+  title:
+    "Direction Marketing Externalisée — CMO senior, flexibilité en plus",
   description:
-    "Directeur Marketing externalisé à temps partiel. La puissance d'un CMO senior, la flexibilité en plus.",
+    "Directeur Marketing externalisé à temps partiel pour PME. Pilotage stratégique, production de contenus et coordination de vos équipes. La puissance d'un CMO senior, la flexibilité en plus.",
+  alternates: {
+    canonical: "https://thomascarrere.fr/direction-marketing-externalise",
+  },
 };
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
@@ -27,9 +31,60 @@ const LOGOS_CLIENTS = [
   { nom: "Zotcar" },
 ];
 
+const jsonLdService = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Direction Marketing Externalisée",
+  description:
+    "La direction marketing externalisée consiste à confier le pilotage de sa stratégie marketing à un expert externe, à temps partiel. Trois niveaux d'intensité : Gouvernance, Croissance et CMO complet.",
+  provider: {
+    "@type": "Person",
+    name: "Thomas Carrère",
+    url: "https://thomascarrere.fr",
+  },
+  areaServed: [
+    { "@type": "Place", name: "La Réunion" },
+    { "@type": "Country", name: "France" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Niveaux d'accompagnement",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Pilotage Gouvernance",
+        price: "1600",
+        priceCurrency: "EUR",
+        description:
+          "Stratégie, priorités et pilotage des prestataires. 1 session hebdomadaire.",
+      },
+      {
+        "@type": "Offer",
+        name: "Pilotage Croissance",
+        price: "2800",
+        priceCurrency: "EUR",
+        description:
+          "Gouvernance + production d'un actif clé par mois.",
+      },
+      {
+        "@type": "Offer",
+        name: "CMO complet",
+        description:
+          "Gestion intégrale du pôle marketing comme une Business Unit autonome.",
+      },
+    ],
+  },
+  url: "https://thomascarrere.fr/direction-marketing-externalise",
+};
+
 export default function DirectionMarketing() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
+      />
+
       {/* Hero */}
       <Section>
         <div className="max-w-[840px] mx-auto text-center py-12 md:py-20">
@@ -40,11 +95,18 @@ export default function DirectionMarketing() {
             Directeur Marketing externalisé à temps partiel
           </h1>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
-            Vous avez passé l&apos;étape des fondations et vous voulez
-            maintenant passer à la vitesse supérieure. Je deviens votre bras
-            droit stratégique pour piloter votre marketing, animer vos équipes
-            et garantir l&apos;exécution de votre feuille de route. La puissance
-            d&apos;un CMO senior, la flexibilité en plus.
+            La{" "}
+            <strong className="text-heading">
+              direction marketing externalisée
+            </strong>{" "}
+            consiste à confier le pilotage de sa stratégie marketing à un
+            expert externe, à temps partiel, plutôt que de recruter un
+            directeur marketing en interne. Je deviens votre bras droit
+            stratégique pour piloter votre marketing, animer vos équipes et
+            garantir l&apos;exécution de votre feuille de route. La puissance
+            d&apos;un{" "}
+            <strong className="text-heading">CMO senior</strong>, la
+            flexibilité en plus.
           </p>
           <Bouton href={CALENDRIER} externe>
             Réserver un appel de découverte de 30min →
@@ -290,9 +352,17 @@ export default function DirectionMarketing() {
             discutons-en. Nous évaluerons ensemble le niveau d&apos;intensité
             dont votre entreprise a besoin.
           </p>
-          <Bouton href={CALENDRIER} externe>
-            Réserver mon diagnostic offert (30min) →
-          </Bouton>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Bouton href={CALENDRIER} externe>
+              Réserver mon diagnostic offert (30min) →
+            </Bouton>
+            <Link
+              href="/qui-suis-je"
+              className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+            >
+              En savoir plus sur mon parcours →
+            </Link>
+          </div>
         </div>
       </Section>
 
