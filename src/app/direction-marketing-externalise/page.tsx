@@ -70,7 +70,7 @@ const jsonLdService = {
         "@type": "Offer",
         name: "CMO complet",
         description:
-          "Gestion intégrale du pôle marketing comme une Business Unit autonome.",
+          "Gestion intégrale du pôle marketing comme une entreprise à part entière.",
       },
     ],
   },
@@ -105,11 +105,13 @@ export default function DirectionMarketing() {
             stratégique pour piloter votre marketing, animer vos équipes et
             garantir l&apos;exécution de votre feuille de route. La puissance
             d&apos;un{" "}
-            <strong className="text-heading">CMO senior</strong>, la
-            flexibilité en plus.
+            <strong className="text-heading">
+              CMO senior (Chief Marketing Officer)
+            </strong>
+            , la flexibilité en plus.
           </p>
           <Bouton href={CALENDRIER} externe>
-            Réserver un appel de découverte de 30min →
+            Réserver mon diagnostic offert (30min) →
           </Bouton>
         </div>
       </Section>
@@ -170,7 +172,7 @@ export default function DirectionMarketing() {
                 {item.icone}
               </div>
               <div>
-                <h5 className="mb-2">{item.titre}</h5>
+                <h3 className="mb-2">{item.titre}</h3>
                 <p className="text-text text-[15px]">{item.texte}</p>
               </div>
             </div>
@@ -178,7 +180,7 @@ export default function DirectionMarketing() {
         </div>
         <div className="text-center mt-8">
           <Bouton href={CALENDRIER} externe>
-            Voyons comment je peux vous aider →
+            Réserver mon diagnostic offert (30min) →
           </Bouton>
         </div>
       </Section>
@@ -221,7 +223,7 @@ export default function DirectionMarketing() {
               titre: "Pilotage \"CMO complet\"",
               ideal:
                 "Vous voulez déléguer l'intégralité du pôle marketing pour vous concentrer sur votre métier de dirigeant.",
-              role: "Je gère votre marketing comme une Business Unit autonome.",
+              role: "Je gère votre marketing comme une entreprise à part entière.",
               livrables:
                 "Tout le Niveau 2 + Présence renforcée, recrutement et formation de vos futurs collaborateurs internes, gestion globale du budget marketing et ROI consolidé.",
               tarif: "Sur devis (selon complexité)",
@@ -235,7 +237,7 @@ export default function DirectionMarketing() {
                 <span className="text-xs font-bold tracking-[0.08em] uppercase text-violet bg-violet-bg px-3 py-1 rounded-full">
                   {item.niveau}
                 </span>
-                <h5>{item.titre}</h5>
+                <h3>{item.titre}</h3>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
@@ -303,7 +305,7 @@ export default function DirectionMarketing() {
               key={item.titre}
               className="bg-white rounded-xl p-8 text-center"
             >
-              <h5 className="mb-3">{item.titre}</h5>
+              <h3 className="mb-3">{item.titre}</h3>
               <p className="text-text text-[15px]">{item.texte}</p>
             </div>
           ))}
@@ -314,9 +316,9 @@ export default function DirectionMarketing() {
       <Section>
         <div className="max-w-[840px] mx-auto">
           <div className="bg-violet-bg rounded-xl p-8 md:p-10 border border-violet-lighter">
-            <h5 className="mb-4">
+            <h3 className="mb-4">
               Pré-requis : commencer sur des bases saines
-            </h5>
+            </h3>
             <p className="text-text leading-relaxed mb-4">
               Pour que mon pilotage soit efficace, je ne prends pas de mission
               de Direction Marketing sans être passé par le Sprint Fondations
@@ -345,7 +347,7 @@ export default function DirectionMarketing() {
             On y va ?
           </p>
           <h2 className="mb-6">
-            Prêt à déléguer votre marketing à un expert ?
+            Déléguez votre marketing à un expert
           </h2>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
             Si vous sentez que votre marketing freine votre croissance,

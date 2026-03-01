@@ -233,7 +233,7 @@ export default function Accueil() {
               <div className="w-10 h-10 rounded bg-bg-icon flex items-center justify-center mb-4 shadow-[23px_23px_48px_-8px_#1600420a]">
                 {item.icone}
               </div>
-              <h5 className="mb-3">{item.titre}</h5>
+              <h3 className="mb-3">{item.titre}</h3>
               <p className="text-text">{item.texte}</p>
             </div>
           ))}
@@ -365,7 +365,7 @@ export default function Accueil() {
               key={item.titre}
               className="bg-bg-alt rounded-xl p-8 text-center"
             >
-              <h5 className="mb-3">{item.titre}</h5>
+              <h3 className="mb-3">{item.titre}</h3>
               <p className="text-text text-sm">{item.desc}</p>
             </div>
           ))}

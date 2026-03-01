@@ -68,7 +68,7 @@ export default function SprintFondations() {
             Sans jargon, sans détours.
           </p>
           <Bouton href={CALENDRIER} externe>
-            Je réserve un créneau →
+            Réserver mon diagnostic offert (30min) →
           </Bouton>
         </div>
       </Section>
@@ -135,7 +135,7 @@ export default function SprintFondations() {
                 {item.icone}
               </div>
               <div>
-                <h5 className="mb-2">{item.titre}</h5>
+                <h3 className="mb-2">{item.titre}</h3>
                 <p className="text-text text-[15px]">{item.texte}</p>
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function SprintFondations() {
                 {item.num}
               </span>
               <div>
-                <h5 className="mb-2">{item.titre}</h5>
+                <h3 className="mb-2">{item.titre}</h3>
                 <p className="text-text mb-3">{item.texte}</p>
                 <p className="text-text text-[15px]">
                   <span className="font-semibold text-heading">
@@ -248,7 +248,7 @@ export default function SprintFondations() {
             </p>
           </div>
           <div className="bg-bg-alt rounded-xl p-8 md:p-10">
-            <h5 className="mb-6 text-center">Ce qui est inclus :</h5>
+            <h3 className="mb-6 text-center">Ce qui est inclus :</h3>
             <div className="space-y-4">
               {[
                 {
@@ -351,7 +351,7 @@ export default function SprintFondations() {
           <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
             On y va ?
           </p>
-          <h2 className="mb-6">Prêt à sortir du flou ?</h2>
+          <h2 className="mb-6">Sortez du flou en 15 jours</h2>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
             On ne commence jamais une mission sans se parler, évidemment !
             Réservez un créneau de 30 minutes pour diagnostiquer vos blocages

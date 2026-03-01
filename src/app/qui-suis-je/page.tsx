@@ -108,7 +108,7 @@ export default function QuiSuisJe() {
                   </svg>
                 </div>
                 <div>
-                  <h5 className="mb-2">{item.titre}</h5>
+                  <h3 className="mb-2">{item.titre}</h3>
                   <p className="text-text text-[15px]">{item.texte}</p>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function QuiSuisJe() {
               key={item.titre}
               className="bg-bg-alt rounded-xl p-8 text-center"
             >
-              <h5 className="mb-3">{item.titre}</h5>
+              <h3 className="mb-3">{item.titre}</h3>
               <p className="text-text text-[15px]">{item.texte}</p>
             </div>
           ))}
@@ -173,7 +173,7 @@ export default function QuiSuisJe() {
             <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
               Sprint Fondations
             </p>
-            <h5 className="mb-3">Le Pack Fondations</h5>
+            <h3 className="mb-3">Le Pack Fondations</h3>
             <p className="text-text text-[15px] mb-6">
               Une immersion de 15 jours pour remettre votre marketing à plat,
               clarifier vos messages et organiser vos outils de vente.
@@ -189,7 +189,7 @@ export default function QuiSuisJe() {
             <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
               Accompagnement régulier
             </p>
-            <h5 className="mb-3">Direction Marketing Externalisée</h5>
+            <h3 className="mb-3">Direction Marketing Externalisée</h3>
             <p className="text-text text-[15px] mb-6">
               Un accompagnement régulier pour piloter votre stratégie sur le
               long terme et garantir que vos objectifs de croissance soient

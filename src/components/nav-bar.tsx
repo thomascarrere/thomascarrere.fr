@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const LIENS = [
-  { href: "/sprint-fondations", label: "Diagnostic et stratégie" },
+  { href: "/sprint-fondations", label: "Sprint Fondations" },
   {
     href: "/direction-marketing-externalise",
     label: "Direction Marketing externalisée",
