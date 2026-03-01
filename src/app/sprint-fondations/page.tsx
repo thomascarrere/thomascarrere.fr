@@ -3,9 +3,9 @@ import { Section } from "@/components/section";
 import { Bouton } from "@/components/bouton";
 
 export const metadata: Metadata = {
-  title: "Sprint Fondations — Thomas Carrere",
+  title: "Sprint Fondations — Thomas Carrère",
   description:
-    "15 jours pour retrouver de la clarte et poser les bases de votre marketing. 2 900 EUR HT.",
+    "15 jours pour retrouver de la clarté et poser les bases de votre marketing. 2 900 EUR HT.",
 };
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
@@ -21,15 +21,15 @@ export default function SprintFondations() {
           </p>
           <h1 className="mb-6">
             Le sprint &quot;Fondations&quot; — 15 jours pour retrouver de la
-            clarte et poser les bases de votre marketing.
+            clarté et poser les bases de votre marketing.
           </h1>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
             Une immersion de deux semaines pour simplifier votre offre,
-            organiser vos outils et tracer une route claire pour les mois a
-            venir. Sans jargon, sans detours.
+            organiser vos outils et tracer une route claire pour les mois à
+            venir. Sans jargon, sans détours.
           </p>
           <Bouton href={CALENDRIER} externe>
-            Je reserve un creneau →
+            Je réserve un créneau →
           </Bouton>
         </div>
       </Section>
@@ -38,19 +38,19 @@ export default function SprintFondations() {
       <Section bg="alt">
         <div className="max-w-[840px] mx-auto text-center mb-12">
           <h2 className="mb-4">
-            Pourquoi votre marketing semble &quot;pedaler dans la semoule&quot; ?
+            Pourquoi votre marketing semble &quot;pédaler dans la semoule&quot; ?
           </h2>
           <p className="text-lg leading-8 text-text tracking-[-0.02em]">
             La plupart des dirigeants de PME et TPE que j&apos;accompagne font
-            face aux memes obstacles :
+            face aux mêmes obstacles :
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              titre: "Message dilue",
+              titre: "Message dilué",
               texte:
-                "On ne comprend pas immediatement en quoi vous etes l'unique solution aux problemes de vos clients",
+                "On ne comprend pas immédiatement en quoi vous êtes l'unique solution aux problèmes de vos clients",
               icone: (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
@@ -58,7 +58,7 @@ export default function SprintFondations() {
               ),
             },
             {
-              titre: "Opportunites qui dorment",
+              titre: "Opportunités qui dorment",
               texte:
                 "Des anciens prospects ou des clients inactifs que personne ne prend le temps de relancer",
               icone: (
@@ -70,7 +70,7 @@ export default function SprintFondations() {
             {
               titre: "Syndrome de la page blanche",
               texte:
-                "Vos equipes commerciales perdent du temps a reinventer leurs arguments a chaque appel",
+                "Vos équipes commerciales perdent du temps à réinventer leurs arguments à chaque appel",
               icone: (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" />
@@ -78,7 +78,7 @@ export default function SprintFondations() {
               ),
             },
             {
-              titre: "Pilotage au \"doigt mouille\"",
+              titre: "Pilotage au \"doigt mouillé\"",
               texte:
                 "Vous manquez d'un endroit unique pour voir vos KPIs et votre feuille de route",
               icone: (
@@ -111,8 +111,8 @@ export default function SprintFondations() {
             Les 4 piliers de votre nouvelle machine marketing
           </h2>
           <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-            Je ne vous livre pas un rapport theorique. Je construis des actifs
-            utilisables des le lendemain.
+            Je ne vous livre pas un rapport théorique. Je construis des actifs
+            utilisables dès le lendemain.
           </p>
         </div>
         <div className="space-y-8">
@@ -121,17 +121,17 @@ export default function SprintFondations() {
               num: "01",
               titre: "Fiche \"Offre\"",
               texte:
-                "Je retravaille votre positionnement et vos messages cles.",
+                "Je retravaille votre positionnement et vos messages clés.",
               livrable:
-                "Un document de reference qui synthetise qui vous aidez, quel probleme vous reglez, et pourquoi on doit vous choisir vous (et pas un autre). C'est la base de toute votre communication future.",
+                "Un document de référence qui synthétise qui vous aidez, quel problème vous réglez, et pourquoi on doit vous choisir vous (et pas un autre). C'est la base de toute votre communication future.",
             },
             {
               num: "02",
               titre: "Le Kit \"RDV et prospection\"",
               texte:
-                "Je retravaille ou cree vos scripts de vente et vos modeles d'emails.",
+                "Je retravaille ou crée vos scripts de vente et vos modèles d'emails.",
               livrable:
-                "Un systeme de relance pret a l'envoi pour vos prospects \"froids\" et vos anciens clients. Objectif : generer vos premiers rendez-vous et rentabiliser le Sprint avant meme la fin de ma mission.",
+                "Un système de relance prêt à l'envoi pour vos prospects \"froids\" et vos anciens clients. Objectif : générer vos premiers rendez-vous et rentabiliser le Sprint avant même la fin de ma mission.",
             },
             {
               num: "03",
@@ -139,14 +139,14 @@ export default function SprintFondations() {
               texte:
                 "Je centralise votre marketing dans un outil simple, visuel et collaboratif.",
               livrable:
-                "Votre espace Notion sur mesure incluant votre CRM simplifie (ou optimise), votre bibliotheque d'assets (textes, logos, preuves sociales) et votre tableau de bord de performance.",
+                "Votre espace Notion sur mesure incluant votre CRM simplifié (ou optimisé), votre bibliothèque d'assets (textes, logos, preuves sociales) et votre tableau de bord de performance.",
             },
             {
               num: "04",
               titre: "La Roadmap sur 90 jours",
-              texte: "Pour en finir avec le \"il faudrait faire ca...\".",
+              texte: "Pour en finir avec le \"il faudrait faire ça...\".",
               livrable:
-                "Votre plan d'action priorise et dimensionne pour les 3 prochains mois. Vous savez exactement quoi faire, chaque semaine, pour maintenir la dynamique.",
+                "Votre plan d'action priorisé et dimensionné pour les 3 prochains mois. Vous savez exactement quoi faire, chaque semaine, pour maintenir la dynamique.",
             },
           ].map((item) => (
             <div
@@ -178,15 +178,15 @@ export default function SprintFondations() {
             Pourquoi choisir le format &quot;Sprint&quot; ?
           </h2>
           <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-            Pour obtenir ce niveau de resultat, une PME a normalement deux
-            choix : recruter un Directeur Marketing interne (cout minimum :
+            Pour obtenir ce niveau de résultat, une PME a normalement deux
+            choix : recruter un Directeur Marketing interne (coût minimum :
             60 000 EUR/an) ou mandater une agence sur plusieurs mois.{" "}
             <strong className="text-heading">
-              Le Sprint est la troisieme voie
+              Le Sprint est la troisième voie
             </strong>{" "}
-            : l&apos;impact immediat d&apos;un expert senior de 15 ans
-            d&apos;experience, sans engagement long terme, pour le prix
-            d&apos;un investissement ponctuel maitrise.
+            : l&apos;impact immédiat d&apos;un expert senior de 15 ans
+            d&apos;expérience, sans engagement long terme, pour le prix
+            d&apos;un investissement ponctuel maîtrisé.
           </p>
         </div>
       </Section>
@@ -205,7 +205,7 @@ export default function SprintFondations() {
               <span className="text-text-muted text-lg">HT</span>
             </div>
             <p className="text-text-muted text-sm italic">
-              TVA 8,5 % pour les entreprises locales — Pas de frais caches
+              TVA 8,5 % pour les entreprises locales — Pas de frais cachés
             </p>
           </div>
           <div className="bg-bg-alt rounded-xl p-8 md:p-10">
@@ -218,15 +218,15 @@ export default function SprintFondations() {
                 },
                 {
                   titre: "Phase de Production",
-                  desc: "Je redige, je configure, je structure.",
+                  desc: "Je rédige, je configure, je structure.",
                 },
                 {
                   titre: "Session de Restitution",
-                  desc: "1h pour prendre en main vos outils et lancer les premieres actions.",
+                  desc: "1h pour prendre en main vos outils et lancer les premières actions.",
                 },
                 {
                   titre: "Suivi",
-                  desc: "Un acces direct a moi par messagerie pendant toute la duree du Sprint.",
+                  desc: "Un accès direct à moi par messagerie pendant toute la durée du Sprint.",
                 },
               ].map((item) => (
                 <div key={item.titre} className="flex gap-3">
@@ -248,23 +248,23 @@ export default function SprintFondations() {
         </div>
       </Section>
 
-      {/* Eligibilite */}
+      {/* Éligibilité */}
       <Section bg="alt">
         <div className="max-w-[840px] mx-auto">
           <div className="text-center mb-8">
             <h2 className="mb-4">Ce Sprint est-il fait pour vous ?</h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-              Pour garantir ces resultats en 15 jours, je ne selectionne que des
-              projets ou je peux avoir un impact immediat. Ce format est ideal
+              Pour garantir ces résultats en 15 jours, je ne sélectionne que des
+              projets où je peux avoir un impact immédiat. Ce format est idéal
               si :
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              "Vous realisez au moins 500 k EUR de CA annuel.",
-              "Vous avez une base de donnees (clients/prospects) meme si elle est inexploitee.",
-              "Vous etes pret a consacrer 2 a 3 heures de votre temps sur 15 jours pour valider les etapes cles.",
-              "Vous vendez des produits ou services a forte valeur ajoutee (B2B ou B2C Premium).",
+              "Vous réalisez au moins 500 k EUR de CA annuel.",
+              "Vous avez une base de données (clients/prospects) même si elle est inexploitée.",
+              "Vous êtes prêt à consacrer 2 à 3 heures de votre temps sur 15 jours pour valider les étapes clés.",
+              "Vous vendez des produits ou services à forte valeur ajoutée (B2B ou B2C Premium).",
             ].map((critere) => (
               <div
                 key={critere}
@@ -288,14 +288,14 @@ export default function SprintFondations() {
           <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
             On y va ?
           </p>
-          <h2 className="mb-6">Pret a sortir du flou ?</h2>
+          <h2 className="mb-6">Prêt à sortir du flou ?</h2>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
-            On ne commence jamais une mission sans se parler, evidemment !
-            Reservez un creneau de 30 minutes pour diagnostiquer vos blocages
-            eventuels. C&apos;est gratuit et sans engagement.
+            On ne commence jamais une mission sans se parler, évidemment !
+            Réservez un créneau de 30 minutes pour diagnostiquer vos blocages
+            éventuels. C&apos;est gratuit et sans engagement.
           </p>
           <Bouton href={CALENDRIER} externe>
-            Reserver mon diagnostic offert (30min) →
+            Réserver mon diagnostic offert (30min) →
           </Bouton>
         </div>
       </Section>

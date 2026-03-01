@@ -19,15 +19,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Thomas Carrere — Consultant Marketing",
+  title: "Thomas Carrère — Consultant Marketing",
   description:
-    "Le marketing de votre entreprise devient enfin clair et organise. 15 ans d'experience, 120 entreprises accompagnees.",
+    "Le marketing de votre entreprise devient enfin clair et organisé. 15 ans d'expérience, 120 entreprises accompagnées.",
   openGraph: {
-    title: "Thomas Carrere — Consultant Marketing",
+    title: "Thomas Carrère — Consultant Marketing",
     description:
-      "Le marketing de votre entreprise devient enfin clair et organise.",
+      "Le marketing de votre entreprise devient enfin clair et organisé.",
     url: "https://thomascarrere.fr",
-    siteName: "Thomas Carrere",
+    siteName: "Thomas Carrère",
     locale: "fr_FR",
     type: "website",
   },

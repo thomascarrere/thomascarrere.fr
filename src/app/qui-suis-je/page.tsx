@@ -5,9 +5,9 @@ import { Section } from "@/components/section";
 import { Bouton } from "@/components/bouton";
 
 export const metadata: Metadata = {
-  title: "Qui suis-je — Thomas Carrere",
+  title: "Qui suis-je — Thomas Carrère",
   description:
-    "15 ans d'experience et 120 entreprises accompagnees. Je simplifie votre marketing pour liberer votre croissance.",
+    "15 ans d'expérience et 120 entreprises accompagnées. Je simplifie votre marketing pour libérer votre croissance.",
 };
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
@@ -22,15 +22,15 @@ export default function QuiSuisJe() {
             Qui suis-je
           </p>
           <h1 className="mb-6">
-            15 ans d&apos;experience et 120 entreprises accompagnees : je
-            simplifie votre marketing pour liberer votre croissance.
+            15 ans d&apos;expérience et 120 entreprises accompagnées : je
+            simplifie votre marketing pour libérer votre croissance.
           </h1>
           <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-            Le marketing ne devrait pas etre une source de stress, mais un
-            levier de clarte. Apres avoir fonde l&apos;agence Du Simple au
-            Double et accompagne plus de 120 entreprises a La Reunion et en
-            Metropole, j&apos;ai fait un constat simple : la complexite est
-            l&apos;ennemi de l&apos;efficacite.
+            Le marketing ne devrait pas être une source de stress, mais un
+            levier de clarté. Après avoir fondé l&apos;agence Du Simple au
+            Double et accompagné plus de 120 entreprises à La Réunion et en
+            Métropole, j&apos;ai fait un constat simple : la complexité est
+            l&apos;ennemi de l&apos;efficacité.
           </p>
         </div>
       </Section>
@@ -38,7 +38,7 @@ export default function QuiSuisJe() {
       {/* Expertise */}
       <Section bg="alt">
         <div className="max-w-[840px] mx-auto text-center mb-12">
-          <h2>Une expertise forgee sur le terrain</h2>
+          <h2>Une expertise forgée sur le terrain</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -46,17 +46,17 @@ export default function QuiSuisJe() {
               {
                 titre: "15 ans de pratique",
                 texte:
-                  "Apres 5 ans dans l'edition et les medias, j'ai cumule plus de 15 ans d'experience dans le Digital, le marketing et l'entrepreneuriat.",
+                  "Après 5 ans dans l'édition et les médias, j'ai cumulé plus de 15 ans d'expérience dans le Digital, le marketing et l'entrepreneuriat.",
               },
               {
-                titre: "7 ans a la tete d'une agence",
+                titre: "7 ans à la tête d'une agence",
                 texte:
-                  "CEO d'une agence de marketing digital pour maitriser l'ensemble de la chaine de valeur (SEO, Social Media, Contenus, Strategie).",
+                  "CEO d'une agence de marketing digital pour maîtriser l'ensemble de la chaîne de valeur (SEO, Social Media, Contenus, Stratégie).",
               },
               {
-                titre: "+120 clients accompagnes",
+                titre: "+120 clients accompagnés",
                 texte:
-                  "De la startup en croissance a la PME historique (Isautier, SAPMER, ETAP-Sante, L'Ecole 42 Le Havre, etc.).",
+                  "De la startup en croissance à la PME historique (Isautier, SAPMER, ETAP-Santé, L'École 42 Le Havre, etc.).",
               },
             ].map((item) => (
               <div key={item.titre} className="flex gap-4">
@@ -75,7 +75,7 @@ export default function QuiSuisJe() {
           <div className="relative aspect-[4/5] rounded-xl overflow-hidden">
             <Image
               src="/images/thomas-portrait.webp"
-              alt="Thomas Carrere"
+              alt="Thomas Carrère"
               fill
               className="object-cover"
             />
@@ -86,24 +86,24 @@ export default function QuiSuisJe() {
       {/* Mon approche */}
       <Section>
         <div className="max-w-[840px] mx-auto text-center mb-12">
-          <h2>Mon approche : la serenite par la structure</h2>
+          <h2>Mon approche : la sérénité par la structure</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
               titre: "Un regard externe et pragmatique",
               texte:
-                "Je vous aide a prendre du recul sur vos strategies pour identifier les priorites reelles et arreter de perdre du temps sur ce qui ne fonctionne pas.",
+                "Je vous aide à prendre du recul sur vos stratégies pour identifier les priorités réelles et arrêter de perdre du temps sur ce qui ne fonctionne pas.",
             },
             {
-              titre: "Des solutions immediatement actionnables",
+              titre: "Des solutions immédiatement actionnables",
               texte:
-                "Pas de rapports theoriques. Je construis avec vous des systemes (Notion, CRM, scripts) que vous pouvez piloter des le lendemain.",
+                "Pas de rapports théoriques. Je construis avec vous des systèmes (Notion, CRM, scripts) que vous pouvez piloter dès le lendemain.",
             },
             {
-              titre: "Un partenaire de confiance a La Reunion",
+              titre: "Un partenaire de confiance à La Réunion",
               texte:
-                "Base a l'Etang-Sale, j'allie la connaissance fine du tissu economique local a une exigence de niveau national.",
+                "Basé à l'Étang-Salé, j'allie la connaissance fine du tissu économique local à une exigence de niveau national.",
             },
           ].map((item) => (
             <div
@@ -123,7 +123,7 @@ export default function QuiSuisJe() {
           <h2>Comment nous pouvons travailler ensemble ?</h2>
           <p className="text-lg leading-8 text-text tracking-[-0.02em] mt-4">
             La plupart des dirigeants de PME et TPE que j&apos;accompagne font
-            face aux memes obstacles :
+            face aux mêmes obstacles :
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-[960px] mx-auto">
@@ -133,23 +133,23 @@ export default function QuiSuisJe() {
             </p>
             <h5 className="mb-3">Le Pack Fondations</h5>
             <p className="text-text text-[15px] mb-6">
-              Une immersion de 15 jours pour remettre votre marketing a plat,
+              Une immersion de 15 jours pour remettre votre marketing à plat,
               clarifier vos messages et organiser vos outils de vente.
             </p>
             <Link
               href="/sprint-fondations"
               className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
             >
-              Decouvrir l&apos;offre &quot;Fondations&quot; →
+              Découvrir l&apos;offre &quot;Fondations&quot; →
             </Link>
           </div>
           <div className="bg-white rounded-xl p-8 shadow-[34px_34px_140px_-48px_#393b6a14]">
             <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
-              Accompagnement regulier
+              Accompagnement régulier
             </p>
-            <h5 className="mb-3">Direction Marketing Externalisee</h5>
+            <h5 className="mb-3">Direction Marketing Externalisée</h5>
             <p className="text-text text-[15px] mb-6">
-              Un accompagnement regulier pour piloter votre strategie sur le
+              Un accompagnement régulier pour piloter votre stratégie sur le
               long terme et garantir que vos objectifs de croissance soient
               atteints.
             </p>
@@ -157,7 +157,7 @@ export default function QuiSuisJe() {
               href="/direction-marketing-externalise"
               className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
             >
-              Decouvrir la Direction Marketing Externalisee →
+              Découvrir la Direction Marketing Externalisée →
             </Link>
           </div>
         </div>
@@ -167,16 +167,16 @@ export default function QuiSuisJe() {
       <Section>
         <div className="max-w-[840px] mx-auto text-center py-8">
           <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
-            Cafe ou visio
+            Café ou visio
           </p>
           <h2 className="mb-6">On en discute ?</h2>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
             Chaque entreprise est unique, mais les blocages sont souvent
-            similaires. Je vous propose un echange de 30 minutes pour faire le
+            similaires. Je vous propose un échange de 30 minutes pour faire le
             point sur votre situation actuelle, sans engagement.
           </p>
           <Bouton href={CALENDRIER} externe>
-            Reserver mon diagnostic offert (30min) →
+            Réserver mon diagnostic offert (30min) →
           </Bouton>
         </div>
       </Section>

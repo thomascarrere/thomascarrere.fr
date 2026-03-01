@@ -8,31 +8,31 @@ import { GrilleLogos } from "@/components/grille-logos";
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
 
 const LOGOS_CLIENTS = [
-  { nom: "GEM Formation", initiales: "GEM" },
-  { nom: "Gaia", initiales: "GA" },
-  { nom: "AJ Promotion", initiales: "AJ" },
-  { nom: "ETAP-Sante", initiales: "ES" },
-  { nom: "SAPMER", initiales: "SA" },
-  { nom: "Isautier", initiales: "IS" },
-  { nom: "ASDR", initiales: "AS" },
-  { nom: "SEDRE", initiales: "SE" },
+  { nom: "GEM Formation", image: "/images/logo-gem.webp" },
+  { nom: "Gaia", image: "/images/logo-gaia.webp" },
+  { nom: "AJ Promotion", image: "/images/logo-ajp.jpg" },
+  { nom: "ETAP-Santé", image: "/images/logo-etap-sante.png" },
+  { nom: "SAPMER", image: "/images/logo-sapmer.png" },
+  { nom: "Isautier", image: "/images/logo-isautier.webp" },
+  { nom: "ASDR", image: "/images/logo-asdr.jpeg" },
+  { nom: "SEDRE", image: "/images/logo-sedre.jpg" },
 ];
 
 const FAQ = [
   {
     question: "Je suis en Hexagone, on peut travailler ensemble ?",
     reponse:
-      "Absolument. Bien que base physiquement a La Reunion, je travaille en mode \"Remote-First\" avec des outils collaboratifs (Notion, Visio). L'avantage ? Vous profitez d'une expertise senior avec une TVA locale de 8,5 %.",
+      "Absolument. Bien que basé physiquement à La Réunion, je travaille en mode \"Remote-First\" avec des outils collaboratifs (Notion, Visio). L'avantage ? Vous profitez d'une expertise senior avec une TVA locale de 8,5 %.",
   },
   {
     question: "Je fais du B2C, c'est pour moi ?",
     reponse:
-      "Oui, si vous vendez des produits ou services a forte valeur ajoutee (immobilier, sante, services premium). Si votre vente demande de la reflexion et de la reassurance, mon systeme fonctionne.",
+      "Oui, si vous vendez des produits ou services à forte valeur ajoutée (immobilier, santé, services premium). Si votre vente demande de la réflexion et de la réassurance, mon système fonctionne.",
   },
   {
-    question: "Comment se passent les echanges ?",
+    question: "Comment se passent les échanges ?",
     reponse:
-      "Je privilegie toujours la clarte : un point hebdomadaire, un espace partage disponible H24 et une reactivite totale par message.",
+      "Je privilégie toujours la clarté : un point hebdomadaire, un espace partagé disponible H24 et une réactivité totale par message.",
   },
 ];
 
@@ -42,63 +42,63 @@ const TEMOIGNAGES = [
     entreprise: "AJ Promotion",
     avatar: "/images/avatar-sonia.webp",
     texte:
-      "Je ne connaissais pas vraiment les techniques de marketing digital mais je me suis laisse guidee par ses connaissances et son professionnalisme. Et nous avons ete tres agreablement surpris par le resultat. Nous avons eu des retours tres positifs, des nouveaux prospects, une image plus \"humaine\". Thomas est professionnel, sait s'adapter a ses clients et donne des conseils pertinents. Je recommande vivement !",
+      "Je ne connaissais pas vraiment les techniques de marketing digital mais je me suis laissé guidée par ses connaissances et son professionnalisme. Et nous avons été très agréablement surpris par le résultat. Nous avons eu des retours très positifs, des nouveaux prospects, une image plus \"humaine\". Thomas est professionnel, sait s'adapter à ses clients et donne des conseils pertinents. Je recommande vivement !",
   },
   {
     nom: "Annabelle Smith",
-    entreprise: "Groupe La Perriere",
+    entreprise: "Groupe La Perrière",
     avatar: "/images/avatar-annabelle.webp",
     texte:
-      "Thomas m'a ete d'un soutien precieux. Il m'a aide a prendre du recul sur mon poste et mes strategies, a structurer mes priorites et a explorer des pistes innovantes pour atteindre mes objectifs. Une des forces de Thomas selon moi, c'est sa capacite a comprendre rapidement les enjeux d'une entreprise et a proposer des solutions concretes et adaptees, tout en transmettant ses connaissances avec clarte.",
+      "Thomas m'a été d'un soutien précieux. Il m'a aidé à prendre du recul sur mon poste et mes stratégies, à structurer mes priorités et à explorer des pistes innovantes pour atteindre mes objectifs. Une des forces de Thomas selon moi, c'est sa capacité à comprendre rapidement les enjeux d'une entreprise et à proposer des solutions concrètes et adaptées, tout en transmettant ses connaissances avec clarté.",
   },
   {
     nom: "Claire Pasquier",
-    entreprise: "ETAP-Sante",
+    entreprise: "ETAP-Santé",
     avatar: "/images/avatar-claire.webp",
     texte:
-      "J'ai choisi d'etre accompagnee par Thomas pour beneficier de son regard d'expert sur notre communication. Conseils strategiques, cadrage, outils et astuces du quotidien, Thomas propose toujours une reponse adaptee a nos besoins ! Son recul est un veritable atout pour notre association.",
+      "J'ai choisi d'être accompagnée par Thomas pour bénéficier de son regard d'expert sur notre communication. Conseils stratégiques, cadrage, outils et astuces du quotidien, Thomas propose toujours une réponse adaptée à nos besoins ! Son recul est un véritable atout pour notre association.",
   },
   {
     nom: "Antoine Devasle",
-    entreprise: "Crealise",
+    entreprise: "Créalise",
     avatar: "/images/avatar-antoine.webp",
     texte:
-      "Thomas a toujours releve nos defis en intervenant devant des publics divers et varies avec beaucoup de pedagogie. Il a su transmettre sa passion et son expertise du marketing digital avec beaucoup de professionnalisme. Ces differentes experiences en font un vrai couteau suisse pour accompagner au mieux les entreprises dans leur croissance.",
+      "Thomas a toujours relevé nos défis en intervenant devant des publics divers et variés avec beaucoup de pédagogie. Il a su transmettre sa passion et son expertise du marketing digital avec beaucoup de professionnalisme. Ces différentes expériences en font un vrai couteau suisse pour accompagner au mieux les entreprises dans leur croissance.",
   },
   {
     nom: "Nathan Hoarau",
     entreprise: "Universweb",
     avatar: "/images/avatar-nathan.webp",
     texte:
-      "Thomas est a l'ecoute et propose un accompagnement concret avec des pistes de reflexions et des outils tres efficaces pour ameliorer la gestion de son agence.",
+      "Thomas est à l'écoute et propose un accompagnement concret avec des pistes de réflexions et des outils très efficaces pour améliorer la gestion de son agence.",
   },
   {
     nom: "Kevin Ouazzani",
     entreprise: "Augure Data",
     avatar: "/images/avatar-kevin.webp",
     texte:
-      "J'ai pu beneficier de l'experience et du travail de Thomas, qui m'a accompagne sur les aspects marketing de mon entreprise. Je le recommande pour son niveau de maitrise du sujet, la personnalisation de l'accompagnement et globalement son professionnalisme.",
+      "J'ai pu bénéficier de l'expérience et du travail de Thomas, qui m'a accompagné sur les aspects marketing de mon entreprise. Je le recommande pour son niveau de maîtrise du sujet, la personnalisation de l'accompagnement et globalement son professionnalisme.",
   },
   {
-    nom: "Emilie Seva",
-    entreprise: "DAC La Reunion",
+    nom: "Émilie Séva",
+    entreprise: "DAC La Réunion",
     avatar: "/images/avatar-emilie.webp",
     texte:
-      "Thomas a apporte une expertise inestimable a notre equipe de communication. Son approche proactive et sa collaboration transparente ont grandement contribue a renforcer notre visibilite en ligne et a atteindre nos objectifs de communication externe. Si vous cherchez un expert en marketing digital passionne et dedie a l'excellence, je vous recommande vivement de travailler avec Thomas Carrere.",
+      "Thomas a apporté une expertise inestimable à notre équipe de communication. Son approche proactive et sa collaboration transparente ont grandement contribué à renforcer notre visibilité en ligne et à atteindre nos objectifs de communication externe. Si vous cherchez un expert en marketing digital passionné et dédié à l'excellence, je vous recommande vivement de travailler avec Thomas Carrère.",
   },
   {
     nom: "Nathalie Bucci",
     entreprise: "Natucci Estetica",
     avatar: "/images/avatar-nathalie.webp",
     texte:
-      "Je tiens a vous recommander Thomas avec qui j'ai eu le privilege de collaborer pendant deux mois de coaching intensif axe sur l'amelioration de ma strategie sur les reseaux sociaux. Thomas s'est avere etre un formateur exceptionnel, alliant une profonde expertise a une personnalite extremement sympathique.",
+      "Je tiens à vous recommander Thomas avec qui j'ai eu le privilège de collaborer pendant deux mois de coaching intensif axé sur l'amélioration de ma stratégie sur les réseaux sociaux. Thomas s'est avéré être un formateur exceptionnel, alliant une profonde expertise à une personnalité extrêmement sympathique.",
   },
   {
-    nom: "Eloise Checkouri",
+    nom: "Éloïse Checkouri",
     entreprise: "Woundi",
     avatar: "/images/avatar-eloise.webp",
     texte:
-      "J'ai pu beneficier de plusieurs formations animees par Thomas dans le cadre de mon incubation a La Technopole de La Reunion. Ses formations (Personal Branding, Plateforme de marque) ont ete tres enrichissantes et m'ont permis de mettre en place des actions correctives rapidement. Tres pedagogue, Thomas sait trouver de bons exemples pour illustrer ses propos.",
+      "J'ai pu bénéficier de plusieurs formations animées par Thomas dans le cadre de mon incubation à La Technopole de La Réunion. Ses formations (Personal Branding, Plateforme de marque) ont été très enrichissantes et m'ont permis de mettre en place des actions correctives rapidement. Très pédagogue, Thomas sait trouver de bons exemples pour illustrer ses propos.",
   },
 ];
 
@@ -109,27 +109,27 @@ export default function Accueil() {
       <Section>
         <div className="max-w-[840px] mx-auto text-center py-12 md:py-20">
           <h1 className="mb-6">
-            Le marketing de votre entreprise devient enfin clair et organise
+            Le marketing de votre entreprise devient enfin clair et organisé
           </h1>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
-            J&apos;aide les dirigeants de PME a simplifier leurs messages et a
-            structurer leurs actions de vente. 15 ans d&apos;experience a vos
-            cotes pour construire des bases solides, sans complexite inutile.
+            J&apos;aide les dirigeants de PME à simplifier leurs messages et à
+            structurer leurs actions de vente. 15 ans d&apos;expérience à vos
+            côtés pour construire des bases solides, sans complexité inutile.
           </p>
           <Bouton href={CALENDRIER} externe>
-            Reserver mon diagnostic offert (30min) →
+            Réserver mon diagnostic offert (30min) →
           </Bouton>
         </div>
       </Section>
 
-      {/* Problematiques */}
+      {/* Problématiques */}
       <Section bg="alt">
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              titre: "Besoin de clarte",
+              titre: "Besoin de clarté",
               texte:
-                "Votre offre est excellente, mais elle merite d'etre expliquee plus simplement pour convaincre plus vite.",
+                "Votre offre est excellente, mais elle mérite d'être expliquée plus simplement pour convaincre plus vite.",
               icone: (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -139,7 +139,7 @@ export default function Accueil() {
             {
               titre: "Besoin de structure",
               texte:
-                "Vos equipes ont besoin de methodes et d'outils concrets pour ne plus perdre de temps au quotidien.",
+                "Vos équipes ont besoin de méthodes et d'outils concrets pour ne plus perdre de temps au quotidien.",
               icone: (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
@@ -149,7 +149,7 @@ export default function Accueil() {
             {
               titre: "Besoin d'accompagnement",
               texte:
-                "Vous n'avez pas besoin d'une agence de plus, mais d'un partenaire qui s'implique vraiment a vos cotes.",
+                "Vous n'avez pas besoin d'une agence de plus, mais d'un partenaire qui s'implique vraiment à vos côtés.",
               icone: (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
@@ -179,30 +179,30 @@ export default function Accueil() {
               Le diagnostic Fondations
             </p>
             <h2 className="mb-6">
-              15 jours pour tout remettre a plat
+              15 jours pour tout remettre à plat
             </h2>
             <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
-              Je m&apos;immerge dans votre activite pendant deux semaines pour
-              lever les doutes et installer votre nouveau systeme de travail.
-              Pas de theorie, juste du concret.
+              Je m&apos;immerge dans votre activité pendant deux semaines pour
+              lever les doutes et installer votre nouveau système de travail.
+              Pas de théorie, juste du concret.
             </p>
             <div className="space-y-4 mb-8">
               {[
                 {
-                  titre: "Votre message clarifie",
-                  desc: "Pour etre compris par vos clients des les premieres secondes",
+                  titre: "Votre message clarifié",
+                  desc: "Pour être compris par vos clients dès les premières secondes",
                 },
                 {
                   titre: "Vos outils de vente",
-                  desc: "Des modeles d'emails et des messages prets a l'emploi pour vos equipes",
+                  desc: "Des modèles d'emails et des messages prêts à l'emploi pour vos équipes",
                 },
                 {
                   titre: "Votre espace de pilotage",
-                  desc: "Un outil simple (Notion) pour centraliser vos idees, vos projets et vos resultats",
+                  desc: "Un outil simple (Notion) pour centraliser vos idées, vos projets et vos résultats",
                 },
                 {
                   titre: "Votre feuille de route",
-                  desc: "Un plan precis sur 90 jours pour savoir exactement ou vous allez",
+                  desc: "Un plan précis sur 90 jours pour savoir exactement où vous allez",
                 },
               ].map((item) => (
                 <div key={item.titre} className="flex gap-3">
@@ -219,13 +219,13 @@ export default function Accueil() {
               ))}
             </div>
             <Bouton href="/sprint-fondations" variante="secondaire">
-              Decouvrir l&apos;offre &quot;Fondations&quot;
+              Découvrir l&apos;offre &quot;Fondations&quot;
             </Bouton>
           </div>
           <div className="relative aspect-[4/5] rounded-xl overflow-hidden">
             <Image
               src="/images/thomas-conference.jpg"
-              alt="Thomas Carrere en conference"
+              alt="Thomas Carrère en conférence"
               fill
               className="object-cover"
             />
@@ -233,21 +233,21 @@ export default function Accueil() {
         </div>
       </Section>
 
-      {/* A propos + logos */}
+      {/* À propos + logos */}
       <Section bg="alt">
         <div className="max-w-[840px] mx-auto text-center mb-12">
           <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
             Qui suis-je
           </p>
           <h2 className="mb-6">
-            Un regard exterieur, 15 ans d&apos;experience
+            Un regard extérieur, 15 ans d&apos;expérience
           </h2>
           <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-            Ancien dirigeant d&apos;agence, j&apos;ai accompagne plus d&apos;une
+            Ancien dirigeant d&apos;agence, j&apos;ai accompagné plus d&apos;une
             centaine d&apos;entreprises avant de choisir de travailler en direct
             avec les dirigeants. Mon approche est celle du bon sens : on garde ce
             qui marche, on simplifie ce qui est complexe, et on construit sur la
-            duree.
+            durée.
           </p>
         </div>
         <GrilleLogos logos={LOGOS_CLIENTS} />
@@ -257,15 +257,15 @@ export default function Accueil() {
       <Section>
         <div className="max-w-[840px] mx-auto text-center mb-12">
           <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
-            Direction Marketing externalisee
+            Direction Marketing externalisée
           </p>
           <h2 className="mb-6">
-            Un Directeur Marketing a vos cotes, chaque mois
+            Un Directeur Marketing à vos côtés, chaque mois
           </h2>
           <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-            Une fois les bases posees, je ne vous laisse pas seul. Je peux
-            devenir votre bras droit regulier pour piloter votre strategie,
-            coordonner vos prestataires et veiller a ce que vos objectifs soient
+            Une fois les bases posées, je ne vous laisse pas seul. Je peux
+            devenir votre bras droit régulier pour piloter votre stratégie,
+            coordonner vos prestataires et veiller à ce que vos objectifs soient
             atteints.
           </p>
         </div>
@@ -273,15 +273,15 @@ export default function Accueil() {
           {[
             {
               titre: "Gouvernance",
-              desc: "Je cadre, je coache vos equipes et je pilote vos prestataires",
+              desc: "Je cadre, je coache vos équipes et je pilote vos prestataires",
             },
             {
               titre: "Production",
-              desc: "Je cree vos contenus strategiques (cas clients, sequences mails, pubs, etc.)",
+              desc: "Je crée vos contenus stratégiques (cas clients, séquences mails, pubs, etc.)",
             },
             {
               titre: "CMO complet",
-              desc: "Je gere l'integralite de votre marketing comme si c'etait ma propre boite",
+              desc: "Je gère l'intégralité de votre marketing comme si c'était ma propre boîte",
             },
           ].map((item) => (
             <div
@@ -295,7 +295,7 @@ export default function Accueil() {
         </div>
         <div className="text-center mt-8">
           <Bouton href="/direction-marketing-externalise" variante="secondaire">
-            Decouvrir la Direction Marketing Externalisee
+            Découvrir la Direction Marketing Externalisée
           </Bouton>
         </div>
       </Section>
@@ -304,17 +304,17 @@ export default function Accueil() {
       <Section bg="alt">
         <div className="max-w-[840px] mx-auto">
           <div className="text-center mb-12">
-            <h2>Questions frequentes</h2>
+            <h2>Questions fréquentes</h2>
           </div>
           <Accordion items={FAQ} />
         </div>
       </Section>
 
-      {/* Temoignages */}
+      {/* Témoignages */}
       <Section>
         <div className="text-center mb-12">
           <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
-            Temoignages
+            Témoignages
           </p>
           <h2>Ce que disent mes clients</h2>
         </div>
@@ -338,15 +338,15 @@ export default function Accueil() {
             On y va ?
           </p>
           <h2 className="mb-6">
-            Pret a structurer votre croissance ?
+            Prêt à structurer votre croissance ?
           </h2>
           <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
-            On ne commence jamais une mission sans se parler, evidemment !
-            Reservez un creneau de 30 minutes pour diagnostiquer vos blocages
-            eventuels. C&apos;est gratuit et sans engagement.
+            On ne commence jamais une mission sans se parler, évidemment !
+            Réservez un créneau de 30 minutes pour diagnostiquer vos blocages
+            éventuels. C&apos;est gratuit et sans engagement.
           </p>
           <Bouton href={CALENDRIER} externe>
-            Reserver mon diagnostic offert (30min) →
+            Réserver mon diagnostic offert (30min) →
           </Bouton>
         </div>
       </Section>
