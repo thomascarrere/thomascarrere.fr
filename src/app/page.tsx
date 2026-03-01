@@ -126,6 +126,14 @@ const jsonLdReviews = {
   "@type": "LocalBusiness",
   "@id": "https://thomascarrere.fr/#business",
   name: "Thomas Carrère — Consultant Marketing",
+  url: "https://thomascarrere.fr",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "L'Étang-Salé",
+    addressRegion: "La Réunion",
+    postalCode: "97427",
+    addressCountry: "FR",
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",
