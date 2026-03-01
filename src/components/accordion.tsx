@@ -23,7 +23,7 @@ export function Accordion({ items }: AccordionProps) {
           onClick={() => setOuvert(ouvert === index ? null : index)}
         >
           <div className="flex items-center justify-between">
-            <h5 className="text-sm font-medium text-heading">{item.question}</h5>
+            <h3 className="text-sm font-medium text-heading">{item.question}</h3>
             <svg
               width="20"
               height="20"
