@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
@@ -123,6 +124,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q2Y0BZEN2C"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Q2Y0BZEN2C');
+          `}
+        </Script>
+      </head>
       <body
         className={`${archivo.variable} ${inter.variable} antialiased`}
       >
