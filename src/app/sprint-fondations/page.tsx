@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Section } from "@/components/section";
 import { Bouton } from "@/components/bouton";
+import { LienTracker } from "@/components/lien-tracker";
 
 export const metadata: Metadata = {
   title: "Sprint Fondations : 15 jours pour structurer votre marketing",
@@ -328,20 +328,24 @@ export default function SprintFondations() {
           <p className="text-lg leading-8 text-text tracking-[-0.02em] mb-6">
             Le Sprint Fondations pose les bases. Pour maintenir la dynamique
             sur le long terme, je propose un accompagnement régulier en{" "}
-            <Link
+            <LienTracker
               href="/direction-marketing-externalise"
+              event="offre"
+              label="Direction Marketing Externalisee"
               className="text-violet font-medium hover:text-violet-hover transition-colors"
             >
               Direction Marketing Externalisée
-            </Link>
+            </LienTracker>
             .
           </p>
-          <Link
+          <LienTracker
             href="/qui-suis-je"
+            event="parcours"
+            label="sprint-fondations"
             className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
           >
             En savoir plus sur mon parcours →
-          </Link>
+          </LienTracker>
         </div>
       </Section>
 

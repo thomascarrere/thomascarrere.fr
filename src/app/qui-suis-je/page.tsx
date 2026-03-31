@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Section } from "@/components/section";
 import { Bouton } from "@/components/bouton";
+import { LienTracker } from "@/components/lien-tracker";
 
 export const metadata: Metadata = {
   title:
@@ -178,12 +178,14 @@ export default function QuiSuisJe() {
               Une immersion de 15 jours pour remettre votre marketing à plat,
               clarifier vos messages et organiser vos outils de vente.
             </p>
-            <Link
+            <LienTracker
               href="/sprint-fondations"
+              event="offre"
+              label="Sprint Fondations"
               className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
             >
               Découvrir l&apos;offre &quot;Fondations&quot; →
-            </Link>
+            </LienTracker>
           </div>
           <div className="bg-white rounded-xl p-8 shadow-[34px_34px_140px_-48px_#393b6a14]">
             <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
@@ -195,12 +197,14 @@ export default function QuiSuisJe() {
               long terme et garantir que vos objectifs de croissance soient
               atteints.
             </p>
-            <Link
+            <LienTracker
               href="/direction-marketing-externalise"
+              event="offre"
+              label="Direction Marketing Externalisee"
               className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
             >
               Découvrir la Direction Marketing Externalisée →
-            </Link>
+            </LienTracker>
           </div>
         </div>
       </Section>

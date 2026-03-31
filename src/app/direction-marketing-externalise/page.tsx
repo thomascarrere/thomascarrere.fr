@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Section } from "@/components/section";
 import { Bouton } from "@/components/bouton";
 import { GrilleLogos } from "@/components/grille-logos";
+import { LienTracker } from "@/components/lien-tracker";
 
 export const metadata: Metadata = {
   title:
@@ -330,12 +330,14 @@ export default function DirectionMarketing() {
               90 jours pour que mon intervention mensuelle soit immédiatement
               rentable.
             </p>
-            <Link
+            <LienTracker
               href="/sprint-fondations"
+              event="offre"
+              label="Sprint Fondations"
               className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
             >
               Découvrir le Sprint Fondations →
-            </Link>
+            </LienTracker>
           </div>
         </div>
       </Section>
@@ -358,12 +360,14 @@ export default function DirectionMarketing() {
             <Bouton href={CALENDRIER} externe>
               Réserver mon diagnostic offert (30min) →
             </Bouton>
-            <Link
+            <LienTracker
               href="/qui-suis-je"
+              event="parcours"
+              label="direction-marketing-externalise"
               className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
             >
               En savoir plus sur mon parcours →
-            </Link>
+            </LienTracker>
           </div>
         </div>
       </Section>

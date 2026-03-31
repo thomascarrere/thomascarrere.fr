@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { trackGenerateLead, trackViewOffer } from "@/lib/gtag";
 
 type BoutonProps = {
   href: string;
@@ -6,6 +9,13 @@ type BoutonProps = {
   variante?: "primaire" | "secondaire";
   externe?: boolean;
   className?: string;
+};
+
+const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
+
+const OFFRES: Record<string, string> = {
+  "/sprint-fondations": "Sprint Fondations",
+  "/direction-marketing-externalise": "Direction Marketing Externalisee",
 };
 
 export function Bouton({
@@ -27,10 +37,19 @@ export function Bouton({
     ? { target: "_blank" as const, rel: "noopener noreferrer" }
     : {};
 
+  function handleClick() {
+    if (href === CALENDRIER) {
+      trackGenerateLead(typeof window !== "undefined" ? window.location.pathname : "unknown");
+    } else if (OFFRES[href]) {
+      trackViewOffer(OFFRES[href]);
+    }
+  }
+
   return (
     <Link
       href={href}
       className={`${base} ${styles[variante]} ${className}`}
+      onClick={handleClick}
       {...props}
     >
       {children}

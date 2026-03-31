@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { trackClickLinkedin } from "@/lib/gtag";
 
 const LINKEDIN = "https://www.linkedin.com/in/thomascarrere/";
 
@@ -29,6 +32,7 @@ export function Footer() {
           href={LINKEDIN}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackClickLinkedin("footer")}
           className="w-12 h-12 rounded-full bg-bg-hover flex items-center justify-center hover:bg-border transition-colors"
         >
           <Image

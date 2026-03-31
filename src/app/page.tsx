@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Section } from "@/components/section";
 import { Bouton } from "@/components/bouton";
 import { CarteTemoignage } from "@/components/carte-temoignage";
 import { Accordion } from "@/components/accordion";
 import { GrilleLogos } from "@/components/grille-logos";
+import { LienTracker } from "@/components/lien-tracker";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://thomascarrere.fr" },
@@ -319,12 +319,14 @@ export default function Accueil() {
             durée.
           </p>
           <div className="mt-6">
-            <Link
+            <LienTracker
               href="/qui-suis-je"
+              event="parcours"
+              label="accueil"
               className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
             >
               En savoir plus sur mon parcours →
-            </Link>
+            </LienTracker>
           </div>
         </div>
         <GrilleLogos logos={LOGOS_CLIENTS} />

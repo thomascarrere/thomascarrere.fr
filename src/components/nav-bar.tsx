@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { trackCtaNavbar, trackClickLinkedin } from "@/lib/gtag";
 
 const LIENS = [
   { href: "/sprint-fondations", label: "Sprint Fondations" },
@@ -61,6 +62,7 @@ export function NavBar() {
               href={LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackClickLinkedin("navbar")}
               className="w-10 h-10 rounded-full bg-bg-hover flex items-center justify-center hover:bg-border transition-colors"
             >
               <Image
@@ -75,6 +77,7 @@ export function NavBar() {
             href={CALENDRIER}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackCtaNavbar}
             className="inline-flex items-center justify-center rounded-full bg-violet text-white min-h-[40px] px-6 py-2 text-sm font-medium tracking-[-0.02em] hover:bg-violet-hover transition-colors"
           >
             Discutons →
@@ -131,6 +134,7 @@ export function NavBar() {
                 href={LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackClickLinkedin("navbar-mobile")}
                 className="w-10 h-10 rounded-full bg-bg-hover flex items-center justify-center"
               >
                 <Image
@@ -144,6 +148,7 @@ export function NavBar() {
                 href={CALENDRIER}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackCtaNavbar}
                 className="inline-flex items-center justify-center rounded-full bg-violet text-white min-h-[40px] px-6 py-2 text-sm font-medium hover:bg-violet-hover transition-colors flex-1"
               >
                 Discutons →
