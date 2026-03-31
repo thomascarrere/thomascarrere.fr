@@ -22,6 +22,11 @@ export function trackGenerateLead(label: string) {
     category: "conversion",
     label,
   });
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: "AW-11120283655/SwKqCPuf-ZIcEIegyLYp",
+    });
+  }
 }
 
 export function trackCtaNavbar() {
