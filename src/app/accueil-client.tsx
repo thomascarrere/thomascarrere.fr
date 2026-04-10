@@ -27,7 +27,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
   return (
     <>
       {/* Hero */}
-      <Section bg="dark" className="!py-0">
+      <Section bg="dark" className="!py-0 -mt-[88px] pt-[88px]">
         {/* Glow top-right */}
         <div className="absolute top-[-60px] right-[-40px] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(68,63,222,0.25)_0%,transparent_70%)] blur-[40px] z-0" />
         {/* Glow bottom-left */}

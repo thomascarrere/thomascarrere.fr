@@ -18,49 +18,51 @@
   --font-inter: "Inter", sans-serif;
 }
 
-body {
-  background: #ffffff;
-  color: var(--color-text);
-  font-family: var(--font-inter);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer base {
+  body {
+    background: #ffffff;
+    color: var(--color-text);
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-archivo);
-  color: var(--color-heading);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-archivo);
+    color: var(--color-heading);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
 
-h1 {
-  font-size: 64px;
-  line-height: 1.1;
-}
+  h1 {
+    font-size: 64px;
+    line-height: 1.1;
+  }
 
-h2 {
-  font-size: 56px;
-  line-height: 1.1;
-}
+  h2 {
+    font-size: 56px;
+    line-height: 1.1;
+  }
 
-h3 {
-  font-size: 24px;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-}
+  h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
 
-p {
-  font-size: 16px;
-  line-height: 1.8;
-}
+  p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
 
-@media (max-width: 991px) {
-  h1 { font-size: 48px; }
-  h2 { font-size: 44px; }
-}
+  @media (max-width: 991px) {
+    h1 { font-size: 48px; }
+    h2 { font-size: 44px; }
+  }
 
-@media (max-width: 767px) {
-  h1 { font-size: 42px; }
+  @media (max-width: 767px) {
+    h1 { font-size: 42px; }
+  }
 }
 
 /* Animations */
