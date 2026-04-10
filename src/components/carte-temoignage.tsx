@@ -14,7 +14,7 @@ export function CarteTemoignage({
   avatar,
 }: CarteTemoignageProps) {
   return (
-    <div className="bg-white rounded-xl p-8 shadow-[23px_23px_64px_-16px_#393b6a0f]">
+    <div className="bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
       <div className="flex gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
           <svg
@@ -22,13 +22,13 @@ export function CarteTemoignage({
             width="16"
             height="16"
             viewBox="0 0 24 24"
-            fill="#443fde"
+            fill="#f59e0b"
           >
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
           </svg>
         ))}
       </div>
-      <p className="text-text mb-6 text-[15px] leading-relaxed">{texte}</p>
+      <p className="text-text mb-6 text-[15px] leading-relaxed italic">{texte}</p>
       <div className="flex items-center gap-3">
         {avatar ? (
           <Image

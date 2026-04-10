@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { trackCtaNavbar, trackClickLinkedin } from "@/lib/gtag";
+import { useScrolled } from "@/hooks/use-scrolled";
 
 const LIENS = [
   { href: "/sprint-fondations", label: "Sprint Fondations" },
@@ -21,9 +22,18 @@ const LINKEDIN = "https://www.linkedin.com/in/thomascarrere/";
 export function NavBar() {
   const [menuOuvert, setMenuOuvert] = useState(false);
   const pathname = usePathname();
+  const scrolled = useScrolled(50);
+  const isHome = pathname === "/";
+  const transparent = isHome && !scrolled && !menuOuvert;
 
   return (
-    <nav className="sticky top-0 z-50 bg-white min-h-[88px] px-[5%] py-6">
+    <nav
+      className={`sticky top-0 z-50 min-h-[88px] px-[5%] py-6 transition-all duration-300 ${
+        transparent
+          ? "bg-transparent"
+          : "bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(22,0,66,0.06)]"
+      }`}
+    >
       <div className="max-w-[1280px] mx-auto flex items-center justify-between">
         <Link href="/" className="shrink-0">
           <Image
@@ -31,7 +41,9 @@ export function NavBar() {
             alt="Thomas Carrère"
             width={160}
             height={40}
-            className="h-10 w-auto"
+            className={`h-10 w-auto transition-all duration-300 ${
+              transparent ? "brightness-0 invert" : ""
+            }`}
             priority
           />
         </Link>
@@ -45,9 +57,13 @@ export function NavBar() {
                 key={lien.href}
                 href={lien.href}
                 className={`rounded-full px-6 py-2 text-sm font-medium tracking-[-0.01em] transition-colors ${
-                  actif
-                    ? "text-active-link"
-                    : "text-heading hover:bg-bg-hover"
+                  transparent
+                    ? actif
+                      ? "text-white"
+                      : "text-white/70 hover:text-white"
+                    : actif
+                      ? "text-active-link"
+                      : "text-heading hover:bg-bg-hover"
                 }`}
               >
                 {lien.label}
@@ -57,19 +73,30 @@ export function NavBar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-4">
-          <div className="border-l border-border pl-4">
+          <div
+            className={`border-l pl-4 transition-colors duration-300 ${
+              transparent ? "border-white/20" : "border-border"
+            }`}
+          >
             <a
               href={LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackClickLinkedin("navbar")}
-              className="w-10 h-10 rounded-full bg-bg-hover flex items-center justify-center hover:bg-border transition-colors"
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
+                transparent
+                  ? "bg-white/10 hover:bg-white/20"
+                  : "bg-bg-hover hover:bg-border"
+              }`}
             >
               <Image
                 src="/images/linkedin.png"
                 alt="LinkedIn"
                 width={18}
                 height={18}
+                className={`transition-all duration-300 ${
+                  transparent ? "brightness-0 invert" : ""
+                }`}
               />
             </a>
           </div>
@@ -78,7 +105,11 @@ export function NavBar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackCtaNavbar}
-            className="inline-flex items-center justify-center rounded-full bg-violet text-white min-h-[40px] px-6 py-2 text-sm font-medium tracking-[-0.02em] hover:bg-violet-hover transition-colors"
+            className={`inline-flex items-center justify-center rounded-full min-h-[40px] px-6 py-2 text-sm font-medium tracking-[-0.02em] transition-all duration-300 ${
+              transparent
+                ? "border border-white/30 text-white hover:bg-white/10"
+                : "bg-violet text-white hover:bg-violet-hover"
+            }`}
           >
             Discutons →
           </a>
@@ -91,19 +122,19 @@ export function NavBar() {
           aria-label="Menu"
         >
           <span
-            className={`w-6 h-0.5 bg-heading transition-transform ${
-              menuOuvert ? "rotate-45 translate-y-2" : ""
-            }`}
+            className={`w-6 h-0.5 transition-transform ${
+              transparent ? "bg-white" : "bg-heading"
+            } ${menuOuvert ? "rotate-45 translate-y-2" : ""}`}
           />
           <span
-            className={`w-6 h-0.5 bg-heading transition-opacity ${
-              menuOuvert ? "opacity-0" : ""
-            }`}
+            className={`w-6 h-0.5 transition-opacity ${
+              transparent ? "bg-white" : "bg-heading"
+            } ${menuOuvert ? "opacity-0" : ""}`}
           />
           <span
-            className={`w-6 h-0.5 bg-heading transition-transform ${
-              menuOuvert ? "-rotate-45 -translate-y-2" : ""
-            }`}
+            className={`w-6 h-0.5 transition-transform ${
+              transparent ? "bg-white" : "bg-heading"
+            } ${menuOuvert ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
       </div>

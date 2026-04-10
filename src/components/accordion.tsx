@@ -15,28 +15,22 @@ export function Accordion({ items }: AccordionProps) {
   const [ouvert, setOuvert] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="bg-white border border-border rounded-xl overflow-hidden divide-y divide-border">
       {items.map((item, index) => (
         <div
           key={index}
-          className="border border-border rounded-lg p-6 cursor-pointer"
+          className="px-6 py-5 cursor-pointer"
           onClick={() => setOuvert(ouvert === index ? null : index)}
         >
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-medium text-heading">{item.question}</h3>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              className={`text-heading transition-transform duration-300 shrink-0 ml-4 ${
-                ouvert === index ? "rotate-180" : ""
+            <span
+              className={`text-violet text-xl font-light shrink-0 ml-4 transition-transform duration-300 ${
+                ouvert === index ? "rotate-45" : ""
               }`}
             >
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
+              +
+            </span>
           </div>
           <div
             className={`overflow-hidden transition-all duration-300 ${
