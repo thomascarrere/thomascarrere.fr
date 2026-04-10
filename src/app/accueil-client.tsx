@@ -244,32 +244,18 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             {
               titre: "Gouvernance",
               desc: "Je cadre, je coache vos équipes et je pilote vos prestataires",
-              accent: false,
             },
             {
               titre: "Production",
               desc: "Je crée vos contenus stratégiques (cas clients, séquences mails, pubs, etc.)",
-              accent: true,
             },
             {
               titre: "CMO complet",
               desc: "Je gère l'intégralité de votre marketing comme si c'était ma propre boîte",
-              accent: false,
             },
           ].map((item, i) => (
             <AnimatedSection key={item.titre} delay={i * 100}>
-              <div
-                className={`rounded-xl p-8 text-center border-t-[3px] transition-all duration-200 hover:-translate-y-0.5 ${
-                  item.accent
-                    ? "bg-white border-violet shadow-[0_8px_32px_rgba(68,63,222,0.1)] -translate-y-1 border border-violet"
-                    : "bg-white border-violet-lighter border border-border"
-                }`}
-              >
-                {item.accent && (
-                  <span className="inline-block px-3 py-0.5 bg-violet-bg rounded-full text-xs font-bold text-violet mb-3">
-                    Populaire
-                  </span>
-                )}
+              <div className="bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
                 <h3 className="mb-3">{item.titre}</h3>
                 <p className="text-text text-sm">{item.desc}</p>
               </div>
