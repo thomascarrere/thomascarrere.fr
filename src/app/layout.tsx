@@ -22,18 +22,18 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default:
-      "Consultant Marketing PME — Thomas Carrère, La Réunion",
-    template: "%s — Thomas Carrère",
+      "Consultant Marketing PME :Thomas Carrère, La Réunion",
+    template: "%s :Thomas Carrère",
   },
   description:
     "Consultant marketing pour PME et TPE. J'aide les dirigeants à clarifier leur offre et structurer leurs ventes. 15 ans d'expérience, 120 entreprises accompagnées à La Réunion et en France.",
   metadataBase: new URL("https://thomascarrere.fr"),
   openGraph: {
-    title: "Consultant Marketing PME — Thomas Carrère, La Réunion",
+    title: "Consultant Marketing PME :Thomas Carrère, La Réunion",
     description:
       "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
     url: "https://thomascarrere.fr",
-    siteName: "Thomas Carrère — Consultant Marketing",
+    siteName: "Thomas Carrère :Consultant Marketing",
     locale: "fr_FR",
     type: "website",
     images: [
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
         url: "/images/thomas-conference.jpg",
         width: 1200,
         height: 630,
-        alt: "Thomas Carrère — Consultant Marketing PME",
+        alt: "Thomas Carrère :Consultant Marketing PME",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Consultant Marketing PME — Thomas Carrère",
+    title: "Consultant Marketing PME :Thomas Carrère",
     description:
       "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
     images: ["/images/thomas-conference.jpg"],
@@ -90,7 +90,7 @@ const jsonLdLocalBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://thomascarrere.fr/#business",
-  name: "Thomas Carrère — Consultant Marketing",
+  name: "Thomas Carrère :Consultant Marketing",
   description:
     "Consultant marketing pour PME et TPE. Accompagnement stratégique, direction marketing externalisée et sprints fondations.",
   url: "https://thomascarrere.fr",

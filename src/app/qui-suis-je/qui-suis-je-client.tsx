@@ -30,7 +30,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
-              Consultant marketing — La Réunion
+              Consultant marketing :La Réunion
             </p>
             <h1 className="mb-6 text-white">
               15 ans d&apos;expérience et 120 entreprises accompagnées : je

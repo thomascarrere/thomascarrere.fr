@@ -21,7 +21,7 @@ export function Footer() {
         </Link>
 
         <p className="text-xs font-medium text-white/50 text-center">
-          &copy; 2026 Thomas Carrère — Consultant Marketing
+          &copy; 2026 Thomas Carrère :Consultant Marketing
           <br />
           <span className="text-[11px]">
             La Réunion &middot; France

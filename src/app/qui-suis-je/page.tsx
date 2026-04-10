@@ -3,7 +3,7 @@ import { QuiSuisJeClient } from "./qui-suis-je-client";
 
 export const metadata: Metadata = {
   title:
-    "Thomas Carrère — Consultant Marketing, 15 ans d'expérience",
+    "Thomas Carrère :Consultant Marketing, 15 ans d'expérience",
   description:
     "Découvrez le parcours de Thomas Carrère, consultant marketing à La Réunion. 15 ans d'expérience, 120 entreprises accompagnées. Un regard externe et pragmatique pour structurer votre croissance.",
   alternates: { canonical: "https://thomascarrere.fr/qui-suis-je" },
@@ -38,7 +38,7 @@ const jsonLdPerson = {
   image: "https://thomascarrere.fr/images/thomas-portrait.webp",
   worksFor: {
     "@type": "Organization",
-    name: "Thomas Carrère — Consultant Marketing",
+    name: "Thomas Carrère :Consultant Marketing",
     url: "https://thomascarrere.fr",
   },
 };

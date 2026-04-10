@@ -30,7 +30,7 @@ export function SprintClient() {
               Sprint Fondations
             </p>
             <h1 className="mb-6 text-white">
-              Le sprint &quot;Fondations&quot; — 15 jours pour retrouver de la
+              Le sprint &quot;Fondations&quot; :15 jours pour retrouver de la
               clarté et poser les bases de votre marketing.
             </h1>
             <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
@@ -226,7 +226,7 @@ export function SprintClient() {
                 <span className="text-text-muted text-lg">HT</span>
               </div>
               <p className="text-text-muted text-sm italic">
-                TVA 8,5 % pour les entreprises locales — Pas de frais cachés
+                TVA 8,5 % pour les entreprises locales :Pas de frais cachés
               </p>
             </div>
             <div className="bg-bg-alt rounded-xl p-8 md:p-10">

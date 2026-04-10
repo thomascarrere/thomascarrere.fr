@@ -117,7 +117,7 @@ const jsonLdReviews = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://thomascarrere.fr/#business",
-  name: "Thomas Carrère — Consultant Marketing",
+  name: "Thomas Carrère :Consultant Marketing",
   url: "https://thomascarrere.fr",
   address: {
     "@type": "PostalAddress",

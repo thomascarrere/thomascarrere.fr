@@ -3,7 +3,7 @@ import { DirectionClient } from "./direction-client";
 
 export const metadata: Metadata = {
   title:
-    "Direction Marketing Externalisée — CMO senior, flexibilité en plus",
+    "Direction Marketing Externalisée :CMO senior, flexibilité en plus",
   description:
     "Directeur Marketing externalisé à temps partiel pour PME. Pilotage stratégique, production de contenus et coordination de vos équipes. La puissance d'un CMO senior, la flexibilité en plus.",
   alternates: {
