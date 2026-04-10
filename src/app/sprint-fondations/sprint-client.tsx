@@ -11,25 +11,37 @@ export function SprintClient() {
   return (
     <>
       {/* Hero */}
-      <Section>
+      <Section bg="dark" className="!py-0 -mt-[88px] pt-[88px]">
+        {/* Glow effects */}
+        <div className="absolute top-[-60px] right-[-40px] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(68,63,222,0.25)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
+        <div className="absolute bottom-[-40px] left-[-20px] w-[250px] h-[250px] bg-[radial-gradient(circle,rgba(157,154,234,0.15)_0%,transparent_70%)] blur-[50px] z-0 pointer-events-none" />
+        {/* Grid pattern */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
         <AnimatedSection>
-          <div className="max-w-[840px] mx-auto text-center py-12 md:py-20">
-            <p className="text-sm font-bold tracking-[0.08em] uppercase text-violet mb-4">
+          <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
+            <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
               Sprint Fondations
             </p>
-            <h1 className="mb-6">
+            <h1 className="mb-6 text-white">
               Le sprint &quot;Fondations&quot; — 15 jours pour retrouver de la
               clarté et poser les bases de votre marketing.
             </h1>
-            <p className="text-lg leading-8 text-text mb-8 tracking-[-0.02em]">
-              Le <strong className="text-heading">Sprint Fondations</strong> est
+            <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
+              Le <strong className="text-white/90">Sprint Fondations</strong> est
               une immersion marketing de 15 jours conçue pour les{" "}
-              <strong className="text-heading">dirigeants de PME</strong> qui
+              <strong className="text-white/90">dirigeants de PME</strong> qui
               veulent clarifier leur offre, structurer leurs outils de vente et
               tracer une feuille de route concrète pour les 90 prochains jours.
               Sans jargon, sans détours.
             </p>
-            <Bouton href={CALENDRIER} externe>
+            <Bouton href={CALENDRIER} externe variante="glow">
               Réserver mon diagnostic offert (30min) →
             </Bouton>
           </div>
@@ -326,7 +338,7 @@ export function SprintClient() {
 
       {/* CTA final */}
       <Section bg="dark">
-        <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[radial-gradient(ellipse,rgba(68,63,222,0.2)_0%,transparent_70%)] blur-[40px] z-0" />
+        <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[radial-gradient(ellipse,rgba(68,63,222,0.2)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
         <div className="max-w-[840px] mx-auto text-center py-8">
           <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
             On y va ?

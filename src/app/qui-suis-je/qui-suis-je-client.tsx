@@ -14,23 +14,35 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
   return (
     <>
       {/* Hero */}
-      <Section>
+      <Section bg="dark" className="!py-0 -mt-[88px] pt-[88px]">
+        {/* Glow effects */}
+        <div className="absolute top-[-60px] right-[-40px] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(68,63,222,0.25)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
+        <div className="absolute bottom-[-40px] left-[-20px] w-[250px] h-[250px] bg-[radial-gradient(circle,rgba(157,154,234,0.15)_0%,transparent_70%)] blur-[50px] z-0 pointer-events-none" />
+        {/* Grid pattern */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
         <AnimatedSection>
-          <div className="max-w-[840px] mx-auto text-center py-12 md:py-20">
-            <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
+          <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
+            <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
               Consultant marketing — La Réunion
             </p>
-            <h1 className="mb-6">
+            <h1 className="mb-6 text-white">
               15 ans d&apos;expérience et 120 entreprises accompagnées : je
               simplifie votre marketing pour libérer votre croissance.
             </h1>
-            <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-              <strong className="text-heading">Thomas Carrère</strong>,{" "}
-              <strong className="text-heading">consultant marketing</strong>{" "}
+            <p className="text-lg leading-8 text-white/60 tracking-[-0.02em]">
+              <strong className="text-white/90">Thomas Carrère</strong>,{" "}
+              <strong className="text-white/90">consultant marketing</strong>{" "}
               basé à La Réunion. Le marketing ne devrait pas être une source de
               stress, mais un levier de clarté. Après avoir fondé l&apos;agence
               Du Simple au Double et accompagné plus de{" "}
-              <strong className="text-heading">120 entreprises</strong> à La
+              <strong className="text-white/90">120 entreprises</strong> à La
               Réunion et en Métropole, j&apos;ai fait un constat simple : la
               complexité est l&apos;ennemi de l&apos;efficacité.
             </p>
@@ -186,7 +198,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
 
       {/* CTA final */}
       <Section bg="dark">
-        <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[radial-gradient(ellipse,rgba(68,63,222,0.2)_0%,transparent_70%)] blur-[40px] z-0" />
+        <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[radial-gradient(ellipse,rgba(68,63,222,0.2)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center py-8">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
