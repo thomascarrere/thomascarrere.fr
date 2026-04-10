@@ -40,7 +40,7 @@ export function Footer() {
             alt="LinkedIn"
             width={18}
             height={18}
-            className="brightness-0 invert"
+            className="rounded-sm"
           />
         </a>
       </div>
