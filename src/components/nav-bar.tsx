@@ -94,9 +94,7 @@ export function NavBar() {
                 alt="LinkedIn"
                 width={18}
                 height={18}
-                className={`transition-all duration-300 ${
-                  transparent ? "brightness-0 invert" : ""
-                }`}
+                className="transition-all duration-300"
               />
             </a>
           </div>
