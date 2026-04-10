@@ -6,7 +6,7 @@ import { trackGenerateLead, trackViewOffer } from "@/lib/gtag";
 type BoutonProps = {
   href: string;
   children: React.ReactNode;
-  variante?: "primaire" | "secondaire";
+  variante?: "primaire" | "secondaire" | "glow";
   externe?: boolean;
   className?: string;
 };
@@ -31,6 +31,7 @@ export function Bouton({
     primaire: "bg-violet text-white hover:bg-violet-hover",
     secondaire:
       "bg-white text-heading border border-border hover:bg-bg-hover hover:border-transparent",
+    glow: "bg-violet text-white hover:bg-violet-hover animate-glow-pulse",
   };
 
   const props = externe
