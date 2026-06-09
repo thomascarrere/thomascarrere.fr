@@ -52,10 +52,6 @@ export const metadata: Metadata = {
       "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
     images: ["/images/thomas-conference.jpg"],
   },
-  icons: {
-    icon: "/images/favicon.png",
-    apple: "/images/favicon.png",
-  },
   alternates: {
     canonical: "https://thomascarrere.fr",
   },
