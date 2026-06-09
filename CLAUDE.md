@@ -20,6 +20,9 @@ src/
     accueil-client.tsx      — Accueil (client component : toutes les sections visuelles)
     globals.css             — Tailwind + design tokens + typographie responsive + keyframes
     sitemap.ts              — Sitemap XML auto-genere (4 URLs)
+    icon.svg                — Favicon vectoriel (crochets [ ] blancs sur violet)
+    favicon.ico             — Favicon legacy 32x32 (genere depuis icon.svg)
+    apple-icon.png          — Apple touch icon 180x180 (genere depuis icon.svg)
     sprint-fondations/
       page.tsx              — Server component (metadata, JSON-LD Service)
       sprint-client.tsx     — Client component (sections visuelles)
@@ -135,7 +138,7 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - Pas de tiret cadratin ( — ) dans le contenu, utiliser " :" a la place
 - Nav links : "Sprint Fondations", "Direction Marketing externalisee", "Qui suis-je ?"
 - Bouton navbar : "Discutons →" (seul CTA avec un texte different)
-- Favicon : carre violet #443fde avec crochets blancs [ ]
+- Favicon : carre violet #443fde avec crochets blancs [ ], gere par les conventions de fichiers Next (`src/app/icon.svg` + `favicon.ico` + `apple-icon.png`), pas via metadata.icons. Source vectorielle = `icon.svg` ; les .ico/.png se regenerent depuis le SVG avec sharp.
 
 ## Audits realises
 
