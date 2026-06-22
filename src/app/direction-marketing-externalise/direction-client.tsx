@@ -64,7 +64,22 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
       <Section bg="alt">
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center mb-12">
-            <h2>Pourquoi choisir une Direction Marketing Externalisée ?</h2>
+            <h2 className="mb-4">
+              Pourquoi choisir une Direction Marketing Externalisée ?
+            </h2>
+            <p className="text-text">
+              Pour comprendre le métier de directeur marketing externalisé,
+              consultez le{" "}
+              <LienTracker
+                href="/guide/directeur-marketing-externalise"
+                event="offre"
+                label="guide-dme"
+                className="text-violet font-medium hover:text-violet-hover transition-colors"
+              >
+                guide complet
+              </LienTracker>
+              .
+            </p>
           </div>
         </AnimatedSection>
         <div className="grid md:grid-cols-2 gap-6">
@@ -285,6 +300,19 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
                 Découvrir le Sprint Fondations →
+              </LienTracker>
+              <p className="text-text leading-relaxed mt-6 mb-3">
+                Pas encore prêt à déléguer l&apos;exécution ? On peut commencer
+                par un accompagnement plus léger, où je drive votre équipe une
+                heure par semaine.
+              </p>
+              <LienTracker
+                href="/coaching-hebdo"
+                event="offre"
+                label="Coaching Hebdo"
+                className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+              >
+                Découvrir Le Coaching Hebdo →
               </LienTracker>
             </div>
           </div>

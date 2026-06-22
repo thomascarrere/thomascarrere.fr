@@ -117,10 +117,11 @@ Charte graphique complete : `docs/charte-graphique.md`
 ## SEO / GEO
 
 - Metadata (title 50-60 chars, description 150-160 chars) sur chaque page
-- JSON-LD : Person, LocalBusiness, FAQPage, Service, Review/AggregateRating
+- JSON-LD : Person, LocalBusiness, FAQPage, Service (+ serviceType / Offer / AggregateOffer / OfferCatalog selon la page)
+- Pas de Review/AggregateRating sur les temoignages du site (juge "self-serving" par Google, ineligible aux rich results, risque d'action manuelle). A baliser plus tard depuis une source tierce (Google Business Profile)
 - Sitemap XML + robots.txt (crawlers IA autorises)
-- Canonical URLs sur chaque page
-- Open Graph + Twitter cards configures
+- Canonical URLs sur chaque page, sans slash final (coherent avec sitemap)
+- Open Graph + Twitter cards : valeurs par defaut + template de title dans layout.tsx, bloc openGraph propre par page (corrige og:url qui pointait sur l'accueil partout)
 
 ## Workflow de deploiement
 
@@ -135,8 +136,9 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - Lien calendrier : `https://calendar.app.google/xaB44wDhgrkCX8Rj8`
 - LinkedIn : `https://www.linkedin.com/in/thomascarrere/`
 - Hierarchie headings : h1 > h2 > h3 (pas de h4/h5/h6)
-- Pas de tiret cadratin ( — ) dans le contenu, utiliser " :" a la place
-- Nav links : "Sprint Fondations", "Direction Marketing externalisee", "Qui suis-je ?"
+- Pas de tiret cadratin ( — ) dans le contenu, utiliser le deux-points a la place
+- Deux-points avec une espace avant ET apres dans le texte affiche : "Titre : sous-titre" (jamais collo au mot suivant)
+- Nav links : "Sprint Fondations", "Coaching Hebdo", "Direction Marketing externalisee", "Qui suis-je ?"
 - Bouton navbar : "Discutons →" (seul CTA avec un texte different)
 - Favicon : carre violet #443fde avec crochets blancs [ ], gere par les conventions de fichiers Next (`src/app/icon.svg` + `favicon.ico` + `apple-icon.png`), pas via metadata.icons. Source vectorielle = `icon.svg` ; les .ico/.png se regenerent depuis le SVG avec sharp.
 
@@ -146,3 +148,4 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - **GEO** (skill `geo-fundamentals`) : JSON-LD, robots.txt AI crawlers, definitions citables — score 34% → 67%
 - **UX Content Design** (skill `content-design`) : CTAs, heading hierarchy, jargon, parcours utilisateur
 - **Visual Redesign** (avril 2026) : hybride dark/light, animations scroll, navbar transparente, favicon custom
+- **Correctifs SEO** (juin 2026) : Open Graph propre par page, title.absolute sur Qui-suis-je (anti-doublon de marque), serviceType + Offer/AggregateOffer sur Sprint/DME, suppression du balisage Review/AggregateRating, normalisation des deux-points, sizes sur l'image conference, compteurs initialises a la valeur cible

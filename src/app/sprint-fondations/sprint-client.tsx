@@ -324,6 +324,19 @@ export function SprintClient() {
               </LienTracker>
               .
             </p>
+            <p className="text-text mb-6">
+              Pour comprendre le métier de directeur marketing externalisé,
+              consultez le{" "}
+              <LienTracker
+                href="/guide/directeur-marketing-externalise"
+                event="offre"
+                label="guide-sprint"
+                className="text-violet font-medium hover:text-violet-hover transition-colors"
+              >
+                guide complet
+              </LienTracker>
+              .
+            </p>
             <LienTracker
               href="/qui-suis-je"
               event="parcours"

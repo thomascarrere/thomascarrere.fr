@@ -9,6 +9,7 @@ import { useScrolled } from "@/hooks/use-scrolled";
 
 const LIENS = [
   { href: "/sprint-fondations", label: "Sprint Fondations" },
+  { href: "/coaching-hebdo", label: "Coaching Hebdo" },
   {
     href: "/direction-marketing-externalise",
     label: "Direction Marketing externalisée",

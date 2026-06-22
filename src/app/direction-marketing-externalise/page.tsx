@@ -2,19 +2,17 @@ import type { Metadata } from "next";
 import { DirectionClient } from "./direction-client";
 
 export const metadata: Metadata = {
-  title:
-    "Direction Marketing Externalisée : CMO senior, flexibilité en plus",
-  description:
-    "Directeur Marketing externalisé à temps partiel pour PME. Pilotage stratégique, production de contenus et coordination de vos équipes. La puissance d'un CMO senior, la flexibilité en plus.",
-  alternates: {
-    canonical: "https://thomascarrere.fr/direction-marketing-externalise",
+  title: {
+    absolute: "Direction marketing externalisée : un CMO senior sans recruter",
   },
+  description:
+    "Pilotez votre marketing avec un directeur externalisé : la puissance d'un CMO senior (15 ans d'expérience), sans recruter ni vous engager. Diagnostic offert (30 min).",
+  alternates: { canonical: "/direction-marketing-externalise" },
   openGraph: {
-    title:
-      "Direction Marketing Externalisée : CMO senior, flexibilité en plus",
+    title: "Direction marketing externalisée : un CMO senior sans recruter",
     description:
-      "Le pilotage de votre stratégie marketing par un expert senior, à temps partiel. 3 niveaux d'intensité, sans engagement long terme.",
-    url: "https://thomascarrere.fr/direction-marketing-externalise",
+      "La puissance d'un CMO senior, la flexibilité en plus. 3 niveaux d'intensité, sans engagement long terme.",
+    url: "/direction-marketing-externalise",
   },
 };
 
