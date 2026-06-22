@@ -113,48 +113,12 @@ const jsonLdFaq = {
   })),
 };
 
-const jsonLdReviews = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://thomascarrere.fr/#business",
-  name: "Thomas Carrère :Consultant Marketing",
-  url: "https://thomascarrere.fr",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "L'Étang-Salé",
-    addressRegion: "La Réunion",
-    postalCode: "97427",
-    addressCountry: "FR",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: String(TEMOIGNAGES.length),
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: TEMOIGNAGES.map((t) => ({
-    "@type": "Review",
-    author: { "@type": "Person", name: t.nom },
-    reviewBody: t.texte,
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
-  })),
-};
-
 export default function Accueil() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdReviews) }}
       />
       <AccueilClient
         logoClients={LOGOS_CLIENTS}

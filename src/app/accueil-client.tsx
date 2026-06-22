@@ -173,6 +173,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
                 src="/images/thomas-conference.jpg"
                 alt="Thomas Carrère en conférence"
                 fill
+                sizes="(max-width: 768px) 100vw, 550px"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#160042]/10 to-transparent" />

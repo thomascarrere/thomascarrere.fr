@@ -2,11 +2,19 @@ import type { Metadata } from "next";
 import { QuiSuisJeClient } from "./qui-suis-je-client";
 
 export const metadata: Metadata = {
-  title:
-    "Thomas Carrère :Consultant Marketing, 15 ans d'expérience",
+  // absolute : on ignore le template "%s : Thomas Carrère" pour éviter le doublon de marque
+  title: {
+    absolute: "Qui suis-je : Thomas Carrère, consultant marketing à La Réunion",
+  },
   description:
     "Découvrez le parcours de Thomas Carrère, consultant marketing à La Réunion. 15 ans d'expérience, 120 entreprises accompagnées. Un regard externe et pragmatique pour structurer votre croissance.",
   alternates: { canonical: "https://thomascarrere.fr/qui-suis-je" },
+  openGraph: {
+    title: "Qui suis-je : Thomas Carrère, consultant marketing à La Réunion",
+    description:
+      "Le parcours de Thomas Carrère : ancien dirigeant d'agence, 15 ans d'expérience, 120 entreprises accompagnées à La Réunion et en métropole.",
+    url: "https://thomascarrere.fr/qui-suis-je",
+  },
 };
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
@@ -38,7 +46,7 @@ const jsonLdPerson = {
   image: "https://thomascarrere.fr/images/thomas-portrait.webp",
   worksFor: {
     "@type": "Organization",
-    name: "Thomas Carrère :Consultant Marketing",
+    name: "Thomas Carrère : Consultant Marketing",
     url: "https://thomascarrere.fr",
   },
 };

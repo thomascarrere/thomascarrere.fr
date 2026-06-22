@@ -6,12 +6,19 @@ export const metadata: Metadata = {
   description:
     "Sprint Fondations : une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. 2 900 EUR HT, sans engagement long terme.",
   alternates: { canonical: "https://thomascarrere.fr/sprint-fondations" },
+  openGraph: {
+    title: "Sprint Fondations : 15 jours pour structurer votre marketing",
+    description:
+      "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing.",
+    url: "https://thomascarrere.fr/sprint-fondations",
+  },
 };
 
 const jsonLdService = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Sprint Fondations",
+  serviceType: "Audit et structuration marketing",
   description:
     "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. Inclut la fiche offre, le kit prospection, le cockpit Notion et la roadmap 90 jours.",
   provider: {
@@ -27,6 +34,8 @@ const jsonLdService = {
     "@type": "Offer",
     price: "2900",
     priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+    url: "https://thomascarrere.fr/sprint-fondations",
     priceSpecification: {
       "@type": "PriceSpecification",
       price: "2900",

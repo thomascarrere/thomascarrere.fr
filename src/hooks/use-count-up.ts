@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 
 export function useCountUp(target: number, duration = 1500, active = false) {
-  const [count, setCount] = useState(0);
+  // Valeur finale par defaut : les chiffres restent lisibles avant le scroll
+  // (rendu statique / haut de page). L'animation count-up n'est qu'une amelioration.
+  const [count, setCount] = useState(target);
 
   useEffect(() => {
     if (!active) return;
