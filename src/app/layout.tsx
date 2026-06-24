@@ -4,6 +4,7 @@ import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
 import { Footer } from "@/components/footer";
+import { BandeauCookies } from "@/components/bandeau-cookies";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -121,15 +122,28 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* Consent Mode v2 : tout refusé par défaut, avant le chargement de gtag (conformité CNIL) */}
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied',
+              wait_for_update: 500
+            });
+            gtag('js', new Date());
+          `}
+        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-Q2Y0BZEN2C"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
             gtag('config', 'G-Q2Y0BZEN2C');
             gtag('config', 'AW-11120283655');
           `}
@@ -153,6 +167,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <BandeauCookies />
       </body>
     </html>
   );

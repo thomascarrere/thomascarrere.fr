@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { trackClickLinkedin } from "@/lib/gtag";
+import { OUVRIR_COOKIES_EVENT } from "@/components/bandeau-cookies";
 
 const LINKEDIN = "https://www.linkedin.com/in/thomascarrere/";
 
@@ -30,7 +31,17 @@ export function Footer() {
               className="hover:text-white/80 transition-colors underline underline-offset-2"
             >
               Mentions légales
-            </Link>
+            </Link>{" "}
+            &middot;{" "}
+            <button
+              type="button"
+              onClick={() =>
+                window.dispatchEvent(new Event(OUVRIR_COOKIES_EVENT))
+              }
+              className="hover:text-white/80 transition-colors underline underline-offset-2 cursor-pointer"
+            >
+              Gérer les cookies
+            </button>
           </span>
         </p>
 
