@@ -19,7 +19,34 @@ export const metadata: Metadata = {
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
 
+const jsonLdBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: "https://thomascarrere.fr",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Qui suis-je",
+      item: "https://thomascarrere.fr/qui-suis-je",
+    },
+  ],
+};
+
 // Le schema Person est injecte globalement par app/layout.tsx : pas de doublon ici.
 export default function QuiSuisJe() {
-  return <QuiSuisJeClient calendrier={CALENDRIER} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <QuiSuisJeClient calendrier={CALENDRIER} />
+    </>
+  );
 }

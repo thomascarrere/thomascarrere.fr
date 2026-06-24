@@ -60,12 +60,35 @@ const jsonLdFaq = {
   })),
 };
 
+const jsonLdBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: "https://thomascarrere.fr",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Directeur marketing externalisé : le guide",
+      item: "https://thomascarrere.fr/guide/directeur-marketing-externalise",
+    },
+  ],
+};
+
 export default function GuideDirecteurMarketing() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
       <GuideClient faq={GUIDE_FAQ} />
     </>

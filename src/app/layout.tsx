@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s : Thomas Carrère",
   },
   description:
-    "Consultant marketing pour PME et TPE. J'aide les dirigeants à clarifier leur offre et structurer leurs ventes. 15 ans d'expérience, 120 entreprises accompagnées à La Réunion et en France.",
+    "Consultant marketing PME/TPE à La Réunion. Je clarifie votre offre et structure vos ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
   metadataBase: new URL("https://thomascarrere.fr"),
   openGraph: {
     title: "Consultant Marketing PME : Thomas Carrère, La Réunion",
@@ -61,6 +61,7 @@ export const metadata: Metadata = {
 const jsonLdPerson = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://thomascarrere.fr/#person",
   name: "Thomas Carrère",
   jobTitle: "Consultant Marketing",
   description:
@@ -91,7 +92,6 @@ const jsonLdLocalBusiness = {
   description:
     "Consultant marketing pour PME et TPE. Accompagnement stratégique, direction marketing externalisée et sprints fondations.",
   url: "https://thomascarrere.fr",
-  telephone: "",
   address: {
     "@type": "PostalAddress",
     addressLocality: "L'Étang-Salé",
@@ -112,6 +112,33 @@ const jsonLdLocalBusiness = {
   image: "https://thomascarrere.fr/images/thomas-portrait.webp",
   sameAs: ["https://www.linkedin.com/in/thomascarrere/"],
   priceRange: "€€",
+};
+
+const jsonLdOrganization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://thomascarrere.fr/#organization",
+  name: "Thomas Carrère : Consultant Marketing",
+  url: "https://thomascarrere.fr",
+  logo: "https://thomascarrere.fr/images/logo.png",
+  description:
+    "Cabinet de conseil marketing pour PME et TPE : direction marketing externalisée, sprints fondations et coaching. La Réunion et France.",
+  founder: { "@id": "https://thomascarrere.fr/#person" },
+  areaServed: [
+    { "@type": "Place", name: "La Réunion" },
+    { "@type": "Country", name: "France" },
+  ],
+  sameAs: ["https://www.linkedin.com/in/thomascarrere/"],
+};
+
+const jsonLdWebSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://thomascarrere.fr/#website",
+  name: "Thomas Carrère : Consultant Marketing",
+  url: "https://thomascarrere.fr",
+  inLanguage: "fr-FR",
+  publisher: { "@id": "https://thomascarrere.fr/#organization" },
 };
 
 export default function RootLayout({
@@ -162,6 +189,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(jsonLdLocalBusiness),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdOrganization),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdWebSite),
           }}
         />
         <NavBar />

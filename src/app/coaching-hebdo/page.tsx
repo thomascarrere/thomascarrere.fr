@@ -90,12 +90,35 @@ const jsonLdFaq = {
   })),
 };
 
+const jsonLdBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: "https://thomascarrere.fr",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Coaching Hebdo",
+      item: "https://thomascarrere.fr/coaching-hebdo",
+    },
+  ],
+};
+
 export default function CoachingHebdo() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
       <script
         type="application/ld+json"

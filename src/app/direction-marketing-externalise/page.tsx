@@ -86,12 +86,35 @@ const jsonLdService = {
   url: "https://thomascarrere.fr/direction-marketing-externalise",
 };
 
+const jsonLdBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: "https://thomascarrere.fr",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Direction marketing externalisée",
+      item: "https://thomascarrere.fr/direction-marketing-externalise",
+    },
+  ],
+};
+
 export default function DirectionMarketing() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
       <DirectionClient logoClients={LOGOS_CLIENTS} />
     </>

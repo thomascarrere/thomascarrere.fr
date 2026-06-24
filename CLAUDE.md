@@ -58,6 +58,7 @@ src/
 public/
   images/                   — Photos Thomas, logos clients, avatars temoignages, favicon
   robots.txt                — Autorise GPTBot, PerplexityBot, Claude-Web, Googlebot
+  llms.txt                  — Guide de comprehension IA (format llmstxt.org) : resume + liens vers pages/offres
 docs/
   charte-graphique.md       — Charte graphique complete (couleurs, typo, composants, animations)
 ```
@@ -162,3 +163,4 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - **Visual Redesign** (avril 2026) : hybride dark/light, animations scroll, navbar transparente, favicon custom
 - **Correctifs SEO** (juin 2026) : Open Graph propre par page, title.absolute sur Qui-suis-je (anti-doublon de marque), serviceType + Offer/AggregateOffer sur Sprint/DME, suppression du balisage Review/AggregateRating, normalisation des deux-points, sizes sur l'image conference, compteurs initialises a la valeur cible
 - **Conformite RGPD** (juin 2026) : page `/mentions-legales` (mentions legales + politique de confidentialite), bandeau de consentement cookies + Google Consent Mode v2 (consentement refuse par defaut). Voir section "Conformite RGPD / cookies".
+- **Passe GEO** (juin 2026, suite audit IA) : ajout `public/llms.txt` ; JSON-LD Organization + WebSite (site-wide dans layout.tsx) + BreadcrumbList sur les 5 sous-pages ; suppression du champ `telephone` vide du LocalBusiness (erreur de validation) + `@id` sur Person pour resoudre les references `founder` ; meta description home raccourcie (185 -> 143 car.) ; security headers dans `next.config.ts` (CSP whitelistant GA4/Ads/Calendar, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy). A faire plus tard : completer Google Business Profile (signal de marque + avis tiers), E-E-A-T (signature auteur, dates), tableau comparatif des offres.

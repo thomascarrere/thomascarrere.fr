@@ -46,12 +46,35 @@ const jsonLdService = {
   url: "https://thomascarrere.fr/sprint-fondations",
 };
 
+const jsonLdBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: "https://thomascarrere.fr",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Sprint Fondations",
+      item: "https://thomascarrere.fr/sprint-fondations",
+    },
+  ],
+};
+
 export default function SprintFondations() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
       <SprintClient />
     </>
