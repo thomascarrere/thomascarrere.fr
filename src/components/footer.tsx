@@ -24,7 +24,13 @@ export function Footer() {
           &copy; 2026 Thomas Carrère : Consultant Marketing
           <br />
           <span className="text-[11px]">
-            La Réunion &middot; France
+            La Réunion &middot; France &middot;{" "}
+            <Link
+              href="/mentions-legales"
+              className="hover:text-white/80 transition-colors underline underline-offset-2"
+            >
+              Mentions légales
+            </Link>
           </span>
         </p>
 
