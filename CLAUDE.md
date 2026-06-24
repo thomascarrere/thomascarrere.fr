@@ -19,7 +19,7 @@ src/
     page.tsx                — Accueil (server component : metadata, JSON-LD, donnees)
     accueil-client.tsx      — Accueil (client component : toutes les sections visuelles)
     globals.css             — Tailwind + design tokens + typographie responsive + keyframes
-    sitemap.ts              — Sitemap XML auto-genere (4 URLs)
+    sitemap.ts              — Sitemap XML auto-genere (6 URLs ; /mentions-legales exclue car noindex)
     icon.svg                — Favicon vectoriel (crochets [ ] blancs sur violet)
     favicon.ico             — Favicon legacy 32x32 (genere depuis icon.svg)
     apple-icon.png          — Apple touch icon 180x180 (genere depuis icon.svg)
@@ -32,9 +32,13 @@ src/
     qui-suis-je/
       page.tsx              — Server component (metadata, JSON-LD Person)
       qui-suis-je-client.tsx — Client component (sections visuelles)
+    mentions-legales/
+      page.tsx              — Server component (metadata, noindex)
+      mentions-legales-client.tsx — Client component (mentions legales + politique de confidentialite RGPD)
   components/
     nav-bar.tsx             — Navigation sticky, transparent sur hero / blanche au scroll ("use client")
-    footer.tsx              — Pied de page, fond dark #160042 ("use client")
+    footer.tsx              — Pied de page, fond dark #160042, liens Mentions legales + Gerer les cookies ("use client")
+    bandeau-cookies.tsx     — Bandeau de consentement cookies + Google Consent Mode v2 ("use client")
     bouton.tsx              — CTA : primaire (violet) / secondaire (blanc) / glow (violet + pulse)
     section.tsx             — Wrapper section : blanc / alt / dark
     animated-section.tsx    — Wrapper fade-in au scroll via IntersectionObserver ("use client")
@@ -64,7 +68,9 @@ Chaque page est splitee en 2 fichiers :
 - **page.tsx** (server component) : metadata, JSON-LD, constantes de donnees
 - **xxx-client.tsx** (client component) : tout le JSX visuel, animations, interactions
 
-Les composants "use client" : NavBar, Footer, Bouton, AnimatedSection, Compteurs, Accordion, LienTracker.
+Les composants "use client" : NavBar, Footer, Bouton, AnimatedSection, Compteurs, Accordion, LienTracker, BandeauCookies.
+
+Exception : `/mentions-legales` n'a pas de JSON-LD (page legale, `robots: noindex`, hors sitemap).
 
 ## Commandes
 
@@ -77,6 +83,12 @@ Les composants "use client" : NavBar, Footer, Bouton, AnimatedSection, Compteurs
 - Heberge sur **Vercel** (projet `thomascarrere.fr`)
 - Domaine : `thomascarrere.fr` (DNS via Hodi, A record → 76.76.21.21)
 - Repo GitHub : `thomascarrere/thomascarrere.fr`
+
+## Conformite RGPD / cookies
+
+- Page `/mentions-legales` : mentions legales (editeur, hebergeur Vercel, PI, responsabilite) + politique de confidentialite RGPD. Source du contenu : `~/Documents/Claude/Structure/Juridique-Social/Mentions_legales_et_confidentialite.md`. Editeur : Thomas Carrere, EI, Directeur Marketing Externalise (plus de nom commercial "Bras Droit Marketing").
+- **Google Consent Mode v2** dans `layout.tsx` : script `google-consent-default` en `beforeInteractive` qui passe `ad_storage`, `ad_user_data`, `ad_personalization`, `analytics_storage` a `denied` AVANT le chargement de gtag. GA4 et Ads ne deposent aucun cookie sans consentement.
+- `bandeau-cookies.tsx` : bandeau "Tout refuser" / "Tout accepter" (poids egal = exigence CNIL), choix stocke en localStorage (`cookie-consent`, validite 13 mois) et reapplique via `gtag('consent','update', ...)`. Lien "Gerer les cookies" dans le footer qui re-ouvre le bandeau via l'event `ouvrir-parametres-cookies`.
 
 ## Design : Hybride Dark/Light
 
@@ -149,3 +161,4 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - **UX Content Design** (skill `content-design`) : CTAs, heading hierarchy, jargon, parcours utilisateur
 - **Visual Redesign** (avril 2026) : hybride dark/light, animations scroll, navbar transparente, favicon custom
 - **Correctifs SEO** (juin 2026) : Open Graph propre par page, title.absolute sur Qui-suis-je (anti-doublon de marque), serviceType + Offer/AggregateOffer sur Sprint/DME, suppression du balisage Review/AggregateRating, normalisation des deux-points, sizes sur l'image conference, compteurs initialises a la valeur cible
+- **Conformite RGPD** (juin 2026) : page `/mentions-legales` (mentions legales + politique de confidentialite), bandeau de consentement cookies + Google Consent Mode v2 (consentement refuse par defaut). Voir section "Conformite RGPD / cookies".
