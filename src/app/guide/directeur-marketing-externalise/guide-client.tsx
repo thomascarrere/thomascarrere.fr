@@ -76,6 +76,12 @@ export function GuideClient({ faq }: GuideClientProps) {
             <h1 className="mb-6 text-white">
               Directeur marketing externalisé : rôle, missions et prix
             </h1>
+            <p className="text-sm text-white/50 mb-6">
+              Par{" "}
+              <span className="font-medium text-white/80">Thomas Carrère</span>{" "}
+              &middot; Publié le 22 juin 2026 &middot; Mis à jour le 25 juin 2026
+              &middot; 6 min de lecture
+            </p>
             <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
               Recruter un directeur marketing coûte cher, prend des mois, et
               reste un pari quand on est une PME. D&apos;où une troisième voie de

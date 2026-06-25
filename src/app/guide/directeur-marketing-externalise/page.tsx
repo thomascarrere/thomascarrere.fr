@@ -60,6 +60,22 @@ const jsonLdFaq = {
   })),
 };
 
+const jsonLdArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Directeur marketing externalisé : rôle, missions et prix",
+  description:
+    "Rôle, missions, coût et différence avec un CMO interne ou une agence : le guide clair du directeur marketing externalisé, par un consultant qui le fait depuis 15 ans.",
+  author: { "@id": "https://thomascarrere.fr/#person" },
+  publisher: { "@id": "https://thomascarrere.fr/#organization" },
+  datePublished: "2026-06-22",
+  dateModified: "2026-06-25",
+  inLanguage: "fr-FR",
+  mainEntityOfPage:
+    "https://thomascarrere.fr/guide/directeur-marketing-externalise",
+  image: "https://thomascarrere.fr/images/thomas-conference.jpg",
+};
+
 const jsonLdBreadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -82,6 +98,10 @@ const jsonLdBreadcrumb = {
 export default function GuideDirecteurMarketing() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
