@@ -27,7 +27,6 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
             backgroundSize: "60px 60px",
           }}
         />
-        <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
               Consultant marketing : La Réunion
@@ -47,7 +46,6 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
               complexité est l&apos;ennemi de l&apos;efficacité.
             </p>
           </div>
-        </AnimatedSection>
       </Section>
 
       {/* Expertise */}
@@ -131,8 +129,8 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
             },
           ].map((item, index) => (
             <AnimatedSection key={item.titre} delay={index * 100}>
-              <div className="bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
-                <h3 className="mb-3">{item.titre}</h3>
+              <div className="h-full bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+                <h3 className="mb-3 flex min-h-[62px] items-center justify-center text-center">{item.titre}</h3>
                 <p className="text-text text-[15px]">{item.texte}</p>
               </div>
             </AnimatedSection>

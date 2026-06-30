@@ -29,7 +29,6 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
             backgroundSize: "60px 60px",
           }}
         />
-        <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
               Direction Marketing externalisée
@@ -57,7 +56,6 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
               Réserver mon diagnostic offert (30min) →
             </Bouton>
           </div>
-        </AnimatedSection>
       </Section>
 
       {/* C'est pour qui */}
@@ -265,7 +263,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
             },
           ].map((item, i) => (
             <AnimatedSection key={item.titre} delay={i * 80}>
-              <div className="bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+              <div className="h-full bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
                 <h3 className="mb-3">{item.titre}</h3>
                 <p className="text-text text-[15px]">{item.texte}</p>
               </div>

@@ -104,7 +104,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             },
           ].map((item, i) => (
             <AnimatedSection key={item.titre} delay={i * 100}>
-              <div className="bg-white rounded-xl p-10 text-center flex flex-col items-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+              <div className="h-full bg-white rounded-xl p-10 text-center flex flex-col items-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
                 <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-violet-bg to-violet-lighter flex items-center justify-center mb-4">
                   {item.icone}
                 </div>
@@ -256,7 +256,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             },
           ].map((item, i) => (
             <AnimatedSection key={item.titre} delay={i * 100}>
-              <div className="bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+              <div className="h-full bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
                 <h3 className="mb-3">{item.titre}</h3>
                 <p className="text-text text-sm">{item.desc}</p>
               </div>
