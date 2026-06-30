@@ -108,7 +108,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
                 <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-violet-bg to-violet-lighter flex items-center justify-center mb-4">
                   {item.icone}
                 </div>
-                <h3 className="mb-3">{item.titre}</h3>
+                <h3 className="mb-3 flex min-h-[62px] items-center justify-center text-center">{item.titre}</h3>
                 <p className="text-text">{item.texte}</p>
               </div>
             </AnimatedSection>

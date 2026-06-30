@@ -57,7 +57,7 @@ export function NavBar() {
               <Link
                 key={lien.href}
                 href={lien.href}
-                className={`rounded-full px-6 py-2 text-sm font-medium tracking-[-0.01em] transition-colors ${
+                className={`whitespace-nowrap rounded-full px-6 py-2 text-sm font-medium tracking-[-0.01em] transition-colors ${
                   transparent
                     ? actif
                       ? "text-white"
@@ -119,6 +119,8 @@ export function NavBar() {
           className="lg:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOuvert(!menuOuvert)}
           aria-label="Menu"
+          aria-expanded={menuOuvert}
+          aria-controls="menu-mobile"
         >
           <span
             className={`w-6 h-0.5 transition-transform ${
@@ -140,7 +142,7 @@ export function NavBar() {
 
       {/* Mobile menu */}
       {menuOuvert && (
-        <div className="lg:hidden mt-4 pb-4 border-t border-border pt-4">
+        <div id="menu-mobile" className="lg:hidden mt-4 pb-4 border-t border-border pt-4">
           <div className="flex flex-col gap-2 max-w-[1280px] mx-auto">
             {LIENS.map((lien) => {
               const actif = pathname === lien.href;

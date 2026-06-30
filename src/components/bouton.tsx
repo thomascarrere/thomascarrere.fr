@@ -26,12 +26,12 @@ export function Bouton({
   className = "",
 }: BoutonProps) {
   const base =
-    "inline-flex items-center justify-center rounded-full min-h-[48px] px-8 py-3 text-sm font-medium tracking-[-0.02em] transition-colors duration-300 cursor-pointer";
+    "inline-flex items-center justify-center rounded-full min-h-[48px] px-8 py-3 text-sm font-medium tracking-[-0.02em] transition-all duration-300 cursor-pointer";
   const styles = {
     primaire: "bg-violet text-white hover:bg-violet-hover",
     secondaire:
       "bg-white text-heading border border-border hover:bg-bg-hover hover:border-transparent",
-    glow: "bg-violet text-white hover:bg-violet-hover animate-glow-pulse",
+    glow: "bg-violet text-white hover:bg-violet-hover shadow-[0_0_24px_rgba(68,63,222,0.35)] hover:shadow-[0_0_40px_rgba(68,63,222,0.55)]",
   };
 
   const props = externe

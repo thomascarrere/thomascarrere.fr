@@ -10,6 +10,12 @@ export function useInView(options?: { threshold?: number; once?: boolean }) {
     const element = ref.current;
     if (!element) return;
 
+    // Reduced-motion : on revele immediatement (pas d'apparition au scroll)
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setInView(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -21,7 +27,13 @@ export function useInView(options?: { threshold?: number; once?: boolean }) {
           setInView(false);
         }
       },
-      { threshold: options?.threshold ?? 0.1 }
+      // rootMargin positif en bas : etend la zone de detection sous le viewport
+      // pour declencher le reveal un peu avant que la section soit visible,
+      // ce qui evite les zones blanches perceptibles au scroll.
+      {
+        threshold: options?.threshold ?? 0,
+        rootMargin: "0px 0px 15% 0px",
+      }
     );
 
     observer.observe(element);

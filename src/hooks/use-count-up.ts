@@ -10,6 +10,13 @@ export function useCountUp(target: number, duration = 1500, active = false) {
   useEffect(() => {
     if (!active) return;
 
+    // Reduced-motion : on garde la valeur finale (deja l'etat par defaut),
+    // pas d'animation de comptage.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCount(target);
+      return;
+    }
+
     let start: number | null = null;
     let rafId: number;
 
