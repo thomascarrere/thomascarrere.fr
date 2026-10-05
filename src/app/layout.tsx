@@ -52,6 +52,12 @@ export const metadata: Metadata = {
   },
 };
 
+// Profils tiers de l'activite (sameAs de LocalBusiness et Organization)
+const PROFILS_ENTREPRISE = [
+  "https://www.linkedin.com/in/thomascarrere/",
+  "https://annuaire.lafrenchtech-lareunion.com/organisations/thomas-carrere",
+];
+
 const jsonLdPerson = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -104,7 +110,7 @@ const jsonLdLocalBusiness = {
   ],
   founder: { "@id": "https://thomascarrere.fr/#person" },
   image: "https://thomascarrere.fr/images/thomas-portrait.webp",
-  sameAs: ["https://www.linkedin.com/in/thomascarrere/"],
+  sameAs: PROFILS_ENTREPRISE,
   priceRange: "€€",
 };
 
@@ -122,7 +128,7 @@ const jsonLdOrganization = {
     { "@type": "Place", name: "La Réunion" },
     { "@type": "Country", name: "France" },
   ],
-  sameAs: ["https://www.linkedin.com/in/thomascarrere/"],
+  sameAs: PROFILS_ENTREPRISE,
 };
 
 const jsonLdWebSite = {
