@@ -5,6 +5,7 @@ import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
 import { Footer } from "@/components/footer";
 import { BandeauCookies } from "@/components/bandeau-cookies";
+import { IMAGE_OG } from "@/lib/seo";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -37,14 +38,7 @@ export const metadata: Metadata = {
     siteName: "Thomas Carrère : Consultant Marketing",
     locale: "fr_FR",
     type: "website",
-    images: [
-      {
-        url: "/images/thomas-conference.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Thomas Carrère : Consultant Marketing PME",
-      },
-    ],
+    images: [IMAGE_OG],
   },
   twitter: {
     card: "summary_large_image",

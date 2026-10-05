@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IMAGE_OG } from "@/lib/seo";
 import { DirectionClient } from "./direction-client";
 
 export const metadata: Metadata = {
@@ -6,13 +7,14 @@ export const metadata: Metadata = {
     absolute: "Direction marketing externalisée : un CMO senior sans recruter",
   },
   description:
-    "Pilotez votre marketing avec un directeur externalisé : la puissance d'un CMO senior (15 ans d'expérience), sans recruter ni vous engager. Diagnostic offert (30 min).",
+    "Pilotez votre marketing avec un directeur externalisé : un CMO senior (15 ans d'expérience), sans recruter ni vous engager. Diagnostic offert (30 min).",
   alternates: { canonical: "/direction-marketing-externalise" },
   openGraph: {
     title: "Direction marketing externalisée : un CMO senior sans recruter",
     description:
       "La puissance d'un CMO senior, la flexibilité en plus. 3 niveaux d'intensité, sans engagement long terme.",
     url: "/direction-marketing-externalise",
+    images: [IMAGE_OG],
   },
 };
 

@@ -27,6 +27,13 @@ export function Footer() {
           <span className="text-[11px]">
             La Réunion &middot; France &middot;{" "}
             <Link
+              href="/guide/directeur-marketing-externalise"
+              className="hover:text-white/80 transition-colors underline underline-offset-2"
+            >
+              Guide : directeur marketing externalisé
+            </Link>{" "}
+            &middot;{" "}
+            <Link
               href="/mentions-legales"
               className="hover:text-white/80 transition-colors underline underline-offset-2"
             >

@@ -29,6 +29,21 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Anciennes URL de la version precedente du site, encore indexees par Google
+  async redirects() {
+    return [
+      {
+        source: "/coaching-marketing-regulier",
+        destination: "/coaching-hebdo",
+        permanent: true,
+      },
+      {
+        source: "/conseil-et-coaching-digital",
+        destination: "/coaching-hebdo",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

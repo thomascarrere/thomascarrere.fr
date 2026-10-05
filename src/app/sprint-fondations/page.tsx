@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
+import { IMAGE_OG } from "@/lib/seo";
 import { SprintClient } from "./sprint-client";
 
 export const metadata: Metadata = {
-  title: "Sprint Fondations : 15 jours pour structurer votre marketing",
+  // absolute : le template "%s : Thomas Carrère" depassait 60 caracteres
+  title: {
+    absolute: "Sprint Fondations : structurer votre marketing en 15 jours",
+  },
   description:
-    "Sprint Fondations : une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. 2 900 EUR HT, sans engagement long terme.",
+    "Sprint Fondations : 15 jours pour clarifier votre offre, outiller vos ventes et tracer votre feuille de route marketing. 2 900 EUR HT, sans engagement.",
   alternates: { canonical: "https://thomascarrere.fr/sprint-fondations" },
   openGraph: {
-    title: "Sprint Fondations : 15 jours pour structurer votre marketing",
+    title: "Sprint Fondations : structurer votre marketing en 15 jours",
     description:
       "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing.",
     url: "https://thomascarrere.fr/sprint-fondations",
+    images: [IMAGE_OG],
   },
 };
 

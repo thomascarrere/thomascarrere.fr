@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IMAGE_OG } from "@/lib/seo";
 import { MentionsLegalesClient } from "./mentions-legales-client";
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     description:
       "Mentions légales et politique de confidentialité du site thomascarrere.fr.",
     url: "https://thomascarrere.fr/mentions-legales",
+    images: [IMAGE_OG],
   },
 };
 

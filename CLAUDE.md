@@ -53,11 +53,12 @@ src/
     use-count-up.ts         — Animation count-up avec requestAnimationFrame
   lib/
     gtag.ts                 — Fonctions tracking Google Analytics / Ads
+    seo.ts                  — IMAGE_OG partagee (a repeter dans chaque bloc openGraph de page)
   types/
     gtag.d.ts               — Types Window.gtag
 public/
   images/                   — Photos Thomas, logos clients, avatars temoignages, favicon
-  robots.txt                — Autorise GPTBot, PerplexityBot, Claude-Web, Googlebot
+  robots.txt                — Autorise Googlebot, Google-Extended, GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User
   llms.txt                  — Guide de comprehension IA (format llmstxt.org) : resume + liens vers pages/offres
 docs/
   charte-graphique.md       — Charte graphique complete (couleurs, typo, composants, animations)
@@ -134,7 +135,8 @@ Charte graphique complete : `docs/charte-graphique.md`
 - Pas de Review/AggregateRating sur les temoignages du site (juge "self-serving" par Google, ineligible aux rich results, risque d'action manuelle). A baliser plus tard depuis une source tierce (Google Business Profile)
 - Sitemap XML + robots.txt (crawlers IA autorises)
 - Canonical URLs sur chaque page, sans slash final (coherent avec sitemap)
-- Open Graph + Twitter cards : valeurs par defaut + template de title dans layout.tsx, bloc openGraph propre par page (corrige og:url qui pointait sur l'accueil partout)
+- Open Graph + Twitter cards : valeurs par defaut + template de title dans layout.tsx, bloc openGraph propre par page (corrige og:url qui pointait sur l'accueil partout). Next remplace l'objet openGraph du layout sans fusion : chaque page doit reprendre `images: [IMAGE_OG]`
+- Redirections 301 des anciennes URL encore indexees (`/coaching-marketing-regulier`, `/conseil-et-coaching-digital` -> `/coaching-hebdo`) dans `next.config.ts`
 
 ## Workflow de deploiement
 
@@ -164,3 +166,4 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - **Correctifs SEO** (juin 2026) : Open Graph propre par page, title.absolute sur Qui-suis-je (anti-doublon de marque), serviceType + Offer/AggregateOffer sur Sprint/DME, suppression du balisage Review/AggregateRating, normalisation des deux-points, sizes sur l'image conference, compteurs initialises a la valeur cible
 - **Conformite RGPD** (juin 2026) : page `/mentions-legales` (mentions legales + politique de confidentialite), bandeau de consentement cookies + Google Consent Mode v2 (consentement refuse par defaut). Voir section "Conformite RGPD / cookies".
 - **Passe GEO** (juin 2026, suite audit IA) : ajout `public/llms.txt` ; JSON-LD Organization + WebSite (site-wide dans layout.tsx) + BreadcrumbList sur les 5 sous-pages ; suppression du champ `telephone` vide du LocalBusiness (erreur de validation) + `@id` sur Person pour resoudre les references `founder` ; meta description home raccourcie (185 -> 143 car.) ; security headers dans `next.config.ts` (CSP whitelistant GA4/Ads/Calendar, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy). A faire plus tard : completer Google Business Profile (signal de marque + avis tiers), E-E-A-T (signature auteur, dates), tableau comparatif des offres.
+- **Audit SEO/GEO** (oct. 2026) : redirections des anciennes URL en 404, og:image sur toutes les sous-pages, meta descriptions ramenees a 150-160 car., title Sprint en absolute (77 -> 58 car.), mot-cle dans le H1 de l'accueil (surtitre integre au h1), h2 sr-only avant les cartes problematiques, lien vers le guide dans le footer, robots.txt mis a jour (crawlers IA actuels). Reste cote Thomas : redirection www -> apex dans Vercel, NAP (Saint-Pierre vs L'Etang-Sale) a aligner, sameAs a enrichir, FAQ sur la page DME, Qui suis-je a etoffer, contenus blog.

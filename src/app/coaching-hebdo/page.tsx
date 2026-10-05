@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IMAGE_OG } from "@/lib/seo";
 import { CoachingClient } from "./coaching-client";
 
 export const metadata: Metadata = {
@@ -6,13 +7,14 @@ export const metadata: Metadata = {
     absolute: "Coaching marketing hebdomadaire pour votre équipe marketing",
   },
   description:
-    "La séniorité d'un directeur marketing pour la personne qui pilote votre marketing, 1h par semaine. On regarde les chiffres, on décide, on cale les actions. À distance, 800 EUR HT/mois. Diagnostic offert.",
+    "Un directeur marketing senior coache la personne qui pilote votre marketing, 1h par semaine : chiffres, décisions, actions. À distance, 800 EUR HT/mois.",
   alternates: { canonical: "https://thomascarrere.fr/coaching-hebdo" },
   openGraph: {
     title: "Coaching marketing hebdomadaire pour votre équipe marketing",
     description:
       "Un coach senior qui drive la personne aux commandes de votre marketing, 1h par semaine. À distance, 800 EUR HT/mois.",
     url: "https://thomascarrere.fr/coaching-hebdo",
+    images: [IMAGE_OG],
   },
 };
 

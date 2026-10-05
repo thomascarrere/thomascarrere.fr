@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IMAGE_OG } from "@/lib/seo";
 import { GuideClient } from "./guide-client";
 
 export const metadata: Metadata = {
@@ -6,13 +7,14 @@ export const metadata: Metadata = {
     absolute: "Directeur marketing externalisé : rôle, missions et prix (2026)",
   },
   description:
-    "Qu'est-ce qu'un directeur marketing externalisé ? Rôle, missions, coût, différence avec un CMO interne ou une agence. Le guide clair par un consultant qui le fait depuis 15 ans.",
+    "Directeur marketing externalisé : rôle, missions, prix et différence avec un CMO interne ou une agence. Le guide d'un consultant qui le fait depuis 15 ans.",
   alternates: { canonical: "/guide/directeur-marketing-externalise" },
   openGraph: {
     title: "Directeur marketing externalisé : rôle, missions et prix",
     description:
       "Le guide clair : définition, missions, prix, et différence avec un recrutement ou une agence. Par un consultant qui le fait depuis 15 ans.",
     url: "/guide/directeur-marketing-externalise",
+    images: [IMAGE_OG],
   },
 };
 

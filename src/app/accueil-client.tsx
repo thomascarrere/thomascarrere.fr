@@ -42,10 +42,10 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
           }}
         />
         <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
-          <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
-            Consultant marketing pour PME et TPE
-          </p>
           <h1 className="mb-6 text-white">
+            <span className="block text-sm font-bold leading-normal tracking-[0.12em] uppercase text-violet-light mb-4 font-[family-name:var(--font-inter)]">
+              Consultant marketing pour PME et TPE à La Réunion
+            </span>
             Le marketing de votre entreprise devient enfin{" "}
             <span className="bg-gradient-to-r from-violet-light to-violet bg-clip-text text-transparent">
               clair et organisé
@@ -70,6 +70,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
 
       {/* Problématiques */}
       <Section bg="alt">
+        <h2 className="sr-only">Vos besoins</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
