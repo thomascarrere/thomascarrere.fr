@@ -56,6 +56,8 @@ export const metadata: Metadata = {
 const PROFILS_ENTREPRISE = [
   "https://www.linkedin.com/in/thomascarrere/",
   "https://annuaire.lafrenchtech-lareunion.com/organisations/thomas-carrere",
+  // Fiche Google Business Profile (URL canonique par CID)
+  "https://www.google.com/maps?cid=14714125723362832827",
 ];
 
 const jsonLdPerson = {
