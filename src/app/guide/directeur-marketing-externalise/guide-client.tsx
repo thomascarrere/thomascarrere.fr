@@ -78,7 +78,7 @@ export function GuideClient({ faq }: GuideClientProps) {
             <p className="text-sm text-white/50 mb-6">
               Par{" "}
               <span className="font-medium text-white/80">Thomas Carrère</span>{" "}
-              &middot; Publié le 22 juin 2026 &middot; Mis à jour le 25 juin 2026
+              &middot; Publié le 22 juin 2026 &middot; Mis à jour le 5 octobre 2026
               &middot; 6 min de lecture
             </p>
             <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
@@ -117,7 +117,17 @@ export function GuideClient({ faq }: GuideClientProps) {
               En clair : vous avez la tête stratégique d&apos;un directeur
               marketing, sans le salaire ni l&apos;engagement d&apos;un
               recrutement à temps plein. Il intervient quelques jours par mois,
-              ou via un accompagnement cadencé, selon vos besoins.
+              ou via un accompagnement cadencé, selon vos besoins. Si vous
+              cherchez directement un accompagnement, voici{" "}
+              <LienTracker
+                href="/direction-marketing-externalise"
+                event="offre"
+                label="guide-dme-definition"
+                className="text-violet font-medium hover:text-violet-hover transition-colors"
+              >
+                mon offre de direction marketing externalisée
+              </LienTracker>
+              .
             </p>
           </div>
         </AnimatedSection>

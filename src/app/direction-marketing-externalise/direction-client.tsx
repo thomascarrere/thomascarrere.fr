@@ -43,14 +43,15 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
               </strong>{" "}
               consiste à confier le pilotage de sa stratégie marketing à un
               expert externe, à temps partiel, plutôt que de recruter un
-              directeur marketing en interne. Je deviens votre bras droit
-              stratégique pour piloter votre marketing, animer vos équipes et
+              directeur ou un responsable marketing en interne. Je deviens
+              votre bras droit stratégique pour piloter votre marketing
+              (digital comme commercial), animer vos équipes et
               garantir l&apos;exécution de votre feuille de route. La puissance
               d&apos;un{" "}
               <strong className="text-white/90">
                 CMO senior (Chief Marketing Officer)
               </strong>
-              , la flexibilité en plus.
+              {" "}en freelance, la flexibilité en plus.
             </p>
             <Bouton href={CALENDRIER} externe variante="glow">
               Réserver mon diagnostic offert (30min) →

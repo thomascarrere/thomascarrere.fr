@@ -4,13 +4,13 @@ import { DirectionClient } from "./direction-client";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Direction marketing externalisée : un CMO senior sans recruter",
+    absolute: "Directeur marketing externalisé (CMO) dès 1 600 € HT/mois",
   },
   description:
-    "Pilotez votre marketing avec un directeur externalisé : un CMO senior (15 ans d'expérience), sans recruter ni vous engager. Diagnostic offert (30 min).",
+    "Direction marketing externalisée pour PME : un CMO freelance senior pilote votre marketing digital à temps partiel, sans recruter. Diagnostic offert.",
   alternates: { canonical: "/direction-marketing-externalise" },
   openGraph: {
-    title: "Direction marketing externalisée : un CMO senior sans recruter",
+    title: "Directeur marketing externalisé (CMO) dès 1 600 € HT/mois",
     description:
       "La puissance d'un CMO senior, la flexibilité en plus. 3 niveaux d'intensité, sans engagement long terme.",
     url: "/direction-marketing-externalise",

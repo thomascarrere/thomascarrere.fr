@@ -4,13 +4,13 @@ import { GuideClient } from "./guide-client";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Directeur marketing externalisé : rôle, missions et prix (2026)",
+    absolute: "Combien coûte un directeur marketing externalisé ? Guide 2026",
   },
   description:
-    "Directeur marketing externalisé : rôle, missions, prix et différence avec un CMO interne ou une agence. Le guide d'un consultant qui le fait depuis 15 ans.",
+    "Prix, rôle et missions d'un directeur marketing externalisé, et différence avec un CMO salarié ou une agence. Le guide d'un consultant qui le fait depuis 15 ans.",
   alternates: { canonical: "/guide/directeur-marketing-externalise" },
   openGraph: {
-    title: "Directeur marketing externalisé : rôle, missions et prix",
+    title: "Combien coûte un directeur marketing externalisé ?",
     description:
       "Le guide clair : définition, missions, prix, et différence avec un recrutement ou une agence. Par un consultant qui le fait depuis 15 ans.",
     url: "/guide/directeur-marketing-externalise",
@@ -71,7 +71,7 @@ const jsonLdArticle = {
   author: { "@id": "https://thomascarrere.fr/#person" },
   publisher: { "@id": "https://thomascarrere.fr/#organization" },
   datePublished: "2026-06-22",
-  dateModified: "2026-06-25",
+  dateModified: "2026-10-05",
   inLanguage: "fr-FR",
   mainEntityOfPage:
     "https://thomascarrere.fr/guide/directeur-marketing-externalise",
