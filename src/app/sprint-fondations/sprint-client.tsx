@@ -224,7 +224,7 @@ export function SprintClient() {
                 <span className="text-text-muted text-lg">HT</span>
               </div>
               <p className="text-text-muted text-sm italic">
-                TVA 8,5 % pour les entreprises locales : Pas de frais cachés
+                Pas de frais cachés
               </p>
             </div>
             <div className="bg-bg-alt rounded-xl p-8 md:p-10">
