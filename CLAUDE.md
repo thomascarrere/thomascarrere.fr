@@ -42,7 +42,6 @@ src/
     bouton.tsx              — CTA : primaire (violet) / secondaire (blanc) / glow (violet + pulse)
     section.tsx             — Wrapper section : blanc / alt / dark
     animated-section.tsx    — Wrapper fade-in au scroll via IntersectionObserver ("use client")
-    compteurs.tsx           — Compteurs animes (count-up au scroll) ("use client")
     carte-temoignage.tsx    — Carte avis client (avatar, etoiles amber, texte italic)
     accordion.tsx           — FAQ toggle, conteneur unique, icone +/x ("use client")
     grille-logos.tsx        — Grille logos clients (Image ou fallback texte)
@@ -50,7 +49,6 @@ src/
   hooks/
     use-scrolled.ts         — Detection scroll pour navbar (threshold configurable)
     use-in-view.ts          — IntersectionObserver pour animations scroll
-    use-count-up.ts         — Animation count-up avec requestAnimationFrame
   lib/
     gtag.ts                 — Fonctions tracking Google Analytics / Ads
     seo.ts                  — IMAGE_OG partagee (a repeter dans chaque bloc openGraph de page)
@@ -70,7 +68,7 @@ Chaque page est splitee en 2 fichiers :
 - **page.tsx** (server component) : metadata, JSON-LD, constantes de donnees
 - **xxx-client.tsx** (client component) : tout le JSX visuel, animations, interactions
 
-Les composants "use client" : NavBar, Footer, Bouton, AnimatedSection, Compteurs, Accordion, LienTracker, BandeauCookies.
+Les composants "use client" : NavBar, Footer, Bouton, AnimatedSection, Accordion, LienTracker, BandeauCookies.
 
 Exception : `/mentions-legales` n'a pas de JSON-LD (page legale, `robots: noindex`, hors sitemap).
 
@@ -116,7 +114,7 @@ Direction visuelle : hero dark + CTA final dark "bookendent" la page. Sections i
 
 - Fade-in au scroll : `AnimatedSection` (IntersectionObserver, 600ms ease-out)
 - Stagger : delai 100ms entre elements (prop `delay`)
-- Count-up : compteurs de 0 a N (1500ms, requestAnimationFrame)
+- Pas de compteurs animes : les chiffres sont ecrits en dur dans le HTML (lisibles par Google et les IA)
 - Hover lift : cartes `translateY(-2px)` + ombre renforcee (200ms)
 - Glow pulse : CTA dark, box-shadow 2s infinite
 
@@ -169,3 +167,4 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - **Audit SEO/GEO** (oct. 2026) : redirections des anciennes URL en 404, og:image sur toutes les sous-pages, meta descriptions ramenees a 150-160 car., title Sprint en absolute (77 -> 58 car.), mot-cle dans le H1 de l'accueil (surtitre integre au h1), h2 sr-only avant les cartes problematiques, lien vers le guide dans le footer, robots.txt mis a jour (crawlers IA actuels), sameAs LocalBusiness/Organization = LinkedIn + French Tech + fiche Google Business (maps?cid=). Reste cote Thomas : NAP : L'Etang-Sale est la ville de reference (corriger les annuaires qui disent Saint-Pierre), FAQ sur la page DME, Qui suis-je a etoffer, contenus blog.
 - **Analyse Search Console** (5 oct. 2026, MCP `gsc`, periode 5 juil. -> 3 oct.) : ~47 clics / 7 800 impressions, 80 % des impressions sur `/direction-marketing-externalise`. Constats : (1) CTR anormalement bas malgre de bonnes positions ("directeur marketing externalise" pos 2,8 / 1 683 impr / 0,7 % ; "direction marketing externalisee" pos 2,1 / 1 024 impr / 0,2 % ; "responsable marketing externalise" pos 5,3 / 587 impr / 0 clic) -> AI Overview ou snippet peu attractif ; (2) cannibalisation : le guide sort sur les memes requetes en pos 24-29 ; (3) requetes pos 5-25 a gagner : marketing externalise (813 impr, pos 9,8), cmo externalise (363, pos 9,8), directeur marketing (et) digital externalise (~300, pos 13-16), cmo externalise freelance (164, pos 25) ; (4) local Reunion quasi nul, l'accueil ne capte que la marque ; (5) www renvoie encore 200 et le sitemap declare dans GSC est l'ancien en www. Corrections : title DME avec prix ("dès 1 600 € HT/mois") + meta avec PME / CMO freelance / marketing digital, vocabulaire "responsable marketing" et "digital" dans l'intro DME ; guide repositionne sur l'intention prix ("Combien coûte...") + lien contextuel vers l'offre des la definition + dateModified ; sitemap avec dates fixes (plus de `new Date()`). Redirection www -> apex faite le 7 oct. 2026 (308 Vercel). Sitemap apex soumis dans GSC et ancien www supprime le 7 oct. 2026. Reste cote Thomas : verifier la SERP des requetes a CTR bas, suivre l'effet du nouveau title a 4-6 semaines.
 - **Enseignements strategiques Search Console** (7 oct. 2026) : audience de recherche = metropole (94 % des impressions), SEO = credibilite plutot qu'acquisition, demandes voisines (directeur commercial externalise, CMO externalise SaaS/ESN). Detail et pistes non tranchees dans `~/Documents/Claude/status_thomas-carrere-ei.md` (section SEO / GEO), point de suivi prevu le 15 nov. 2026.
+- **Refonte accueil** (30 oct. 2026, brief inspire du site d'Emmanuelle Benoliel Kleinmann, Fractional CMO) : sections ancrees `#parcours` (bio en 3 phrases + photo + logos), `#role` (organigramme HTML Vous > Thomas > equipe/prestataires/outils + "Je fais / Je ne fais pas"), `#pourquoi` (6 preuves), `#offres` (parcours Pack Fondations -> DME ou Coaching Hebdo, prix affiches), `#contact`. Compteurs animes supprimes (chiffres en dur). Meta description accueil orientee "directeur marketing externalise". JSON-LD : LocalBusiness devient ProfessionalService avec hasOfferCatalog (3 offres, prix HT), Person.jobTitle = Directeur Marketing Externalise. llms.txt enrichi (parcours, offres en 2 etapes). Puis harmonisation : "90 jours" pour le plan du Pack Fondations et "150 entreprises" sur tout le site ; FAQ accueil refaite (6 questions : definition, cout, DME vs Coaching Hebdo, distance, par quoi commencer, B2C).

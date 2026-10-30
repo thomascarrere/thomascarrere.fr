@@ -28,12 +28,12 @@ export const metadata: Metadata = {
     template: "%s : Thomas Carrère",
   },
   description:
-    "Consultant marketing PME/TPE à La Réunion. Je clarifie votre offre et structure vos ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
+    "Consultant marketing PME/TPE à La Réunion. Je clarifie votre offre et structure vos ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
   metadataBase: new URL("https://thomascarrere.fr"),
   openGraph: {
     title: "Consultant Marketing PME : Thomas Carrère, La Réunion",
     description:
-      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
+      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
     url: "https://thomascarrere.fr",
     siteName: "Thomas Carrère : Consultant Marketing",
     locale: "fr_FR",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Consultant Marketing PME : Thomas Carrère",
     description:
-      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
+      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
     images: ["/images/thomas-conference.jpg"],
   },
   alternates: {
@@ -65,9 +65,9 @@ const jsonLdPerson = {
   "@type": "Person",
   "@id": "https://thomascarrere.fr/#person",
   name: "Thomas Carrère",
-  jobTitle: "Consultant Marketing",
+  jobTitle: "Directeur Marketing Externalisé",
   description:
-    "Consultant marketing pour PME et TPE. 15 ans d'expérience, 120 entreprises accompagnées à La Réunion et en France métropolitaine.",
+    "Directeur marketing externalisé pour PME et TPE. Ancien dirigeant de l'agence Du Simple au Double, environ 150 entreprises accompagnées depuis 2011 à La Réunion et en France métropolitaine. Enseignant en Master depuis 2013.",
   url: "https://thomascarrere.fr",
   sameAs: ["https://www.linkedin.com/in/thomascarrere/"],
   knowsAbout: [
@@ -88,7 +88,7 @@ const jsonLdPerson = {
 
 const jsonLdLocalBusiness = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   "@id": "https://thomascarrere.fr/#business",
   name: "Thomas Carrère : Consultant Marketing",
   description:
@@ -114,6 +114,53 @@ const jsonLdLocalBusiness = {
   image: "https://thomascarrere.fr/images/thomas-portrait.webp",
   sameAs: PROFILS_ENTREPRISE,
   priceRange: "€€",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Offres",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Pack Fondations",
+        description:
+          "15 jours : positionnement clarifié, diagnostic complet et plan d'action sur 90 jours.",
+        url: "https://thomascarrere.fr/sprint-fondations",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: 2900,
+          priceCurrency: "EUR",
+          valueAddedTaxIncluded: false,
+        },
+      },
+      {
+        "@type": "Offer",
+        name: "Direction Marketing Externalisée",
+        description: "Direction marketing à temps partagé, 2 à 5 jours par mois.",
+        url: "https://thomascarrere.fr/direction-marketing-externalise",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          minPrice: 1600,
+          maxPrice: 4500,
+          priceCurrency: "EUR",
+          unitCode: "MON",
+          valueAddedTaxIncluded: false,
+        },
+      },
+      {
+        "@type": "Offer",
+        name: "Coaching Hebdo",
+        description:
+          "1 h par semaine pour cadencer la personne qui pilote le marketing.",
+        url: "https://thomascarrere.fr/coaching-hebdo",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: 800,
+          priceCurrency: "EUR",
+          unitCode: "MON",
+          valueAddedTaxIncluded: false,
+        },
+      },
+    ],
+  },
 };
 
 const jsonLdOrganization = {

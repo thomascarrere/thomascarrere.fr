@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
+import { IMAGE_OG } from "@/lib/seo";
 import { AccueilClient } from "./accueil-client";
 
+const DESCRIPTION =
+  "Directeur marketing externalisé pour dirigeants de PME : stratégie, pilotage des prestataires et coaching d'équipe, à La Réunion et à distance.";
+
 export const metadata: Metadata = {
+  description: DESCRIPTION,
   alternates: { canonical: "https://thomascarrere.fr" },
+  openGraph: {
+    title: "Consultant Marketing PME : Thomas Carrère, La Réunion",
+    description: DESCRIPTION,
+    url: "https://thomascarrere.fr",
+    siteName: "Thomas Carrère : Consultant Marketing",
+    locale: "fr_FR",
+    type: "website",
+    images: [IMAGE_OG],
+  },
 };
 
 const LOGOS_CLIENTS = [
@@ -18,19 +32,35 @@ const LOGOS_CLIENTS = [
 
 const FAQ = [
   {
-    question: "Je suis en Hexagone, on peut travailler ensemble ?",
+    question: "Qu'est-ce qu'un directeur marketing externalisé ?",
     reponse:
-      "Absolument. Bien que basé physiquement à La Réunion, je travaille en mode \"Remote-First\" avec des outils collaboratifs (Notion, Visio). L'avantage ? Vous profitez d'une expertise senior avec une TVA locale de 8,5 %.",
+      "C'est un directeur marketing qui travaille pour votre entreprise à temps partagé, sans être salarié. Il prend la place du directeur marketing que vous n'avez pas encore : vous gardez la décision, il traduit votre vision en plan, coordonne ceux qui exécutent (votre équipe, vos prestataires, vos outils) et vous rend des comptes chaque mois.",
+  },
+  {
+    question: "Combien coûte un directeur marketing externalisé ?",
+    reponse:
+      "Ma Direction Marketing Externalisée coûte de 1 600 à 4 500 € HT par mois, selon le temps consacré : 2 à 5 jours par mois. On commence par le Pack Fondations (2 900 € HT, 15 jours), qui pose le diagnostic et le plan d'action sur 90 jours.",
+  },
+  {
+    question:
+      "Quelle différence entre la Direction Marketing Externalisée et le Coaching Hebdo ?",
+    reponse:
+      "Avec la Direction Marketing Externalisée, je prends les commandes : 2 à 5 jours par mois pour fixer les priorités, piloter vos prestataires et lire les chiffres avec vous (1 600 à 4 500 € HT par mois). Avec le Coaching Hebdo, votre équipe garde les commandes : 1 h par semaine pour cadencer et faire progresser votre responsable marketing (800 € HT par mois).",
+  },
+  {
+    question: "Travaillez-vous à distance ?",
+    reponse:
+      "Oui. Je suis basé à L'Étang-Salé, à La Réunion, et je travaille avec des entreprises à La Réunion comme en métropole, en visio et avec des outils partagés (Notion). Le Coaching Hebdo se fait entièrement à distance.",
+  },
+  {
+    question: "Par quoi commencer ?",
+    reponse:
+      "Par un échange de 30 minutes : vous me dites où vous en êtes et ce qui coince, je vous dis franchement si je peux vous aider, et comment. Si on travaille ensemble, on commence par le Pack Fondations : en 15 jours, positionnement clarifié, diagnostic complet et plan d'action sur 90 jours. Il vous reste, même si on s'arrête là.",
   },
   {
     question: "Je fais du B2C, c'est pour moi ?",
     reponse:
       "Oui, si vous vendez des produits ou services à forte valeur ajoutée (immobilier, santé, services premium). Si votre vente demande de la réflexion et de la réassurance, mon système fonctionne.",
-  },
-  {
-    question: "Comment se passent les échanges ?",
-    reponse:
-      "Je privilégie toujours la clarté : un point hebdomadaire, un espace partagé disponible H24 et une réactivité totale par message.",
   },
 ];
 

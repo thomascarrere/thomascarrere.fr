@@ -356,7 +356,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center mb-8">
             <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted">
-              Plus de 120 entreprises déjà accompagnées, dont :
+              Près de 150 entreprises déjà accompagnées, dont :
             </p>
           </div>
           <GrilleLogos logos={logoClients} />
