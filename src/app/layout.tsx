@@ -28,12 +28,12 @@ export const metadata: Metadata = {
     template: "%s : Thomas Carrère",
   },
   description:
-    "Consultant marketing PME/TPE à La Réunion. Je clarifie votre offre et structure vos ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
+    "Consultant marketing PME/TPE à La Réunion. Je clarifie votre offre et structure vos ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
   metadataBase: new URL("https://thomascarrere.fr"),
   openGraph: {
     title: "Consultant Marketing PME : Thomas Carrère, La Réunion",
     description:
-      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
+      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
     url: "https://thomascarrere.fr",
     siteName: "Thomas Carrère : Consultant Marketing",
     locale: "fr_FR",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Consultant Marketing PME : Thomas Carrère",
     description:
-      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 120 entreprises accompagnées.",
+      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
     images: ["/images/thomas-conference.jpg"],
   },
   alternates: {
@@ -122,7 +122,7 @@ const jsonLdLocalBusiness = {
         "@type": "Offer",
         name: "Pack Fondations",
         description:
-          "15 jours : positionnement clarifié, diagnostic complet et plan d'action sur 6 mois.",
+          "15 jours : positionnement clarifié, diagnostic complet et plan d'action sur 90 jours.",
         url: "https://thomascarrere.fr/sprint-fondations",
         priceSpecification: {
           "@type": "PriceSpecification",

@@ -329,7 +329,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
               nom="Pack Fondations"
               prix="2 900 €"
               unite="HT, 15 jours"
-              texte="Positionnement clarifié, diagnostic complet et plan d'action sur 6 mois. Il vous reste, même si on s'arrête là."
+              texte="Positionnement clarifié, diagnostic complet et plan d'action sur 90 jours. Il vous reste, même si on s'arrête là."
               href="/sprint-fondations"
               offre="Sprint Fondations"
             />

@@ -8,12 +8,12 @@ export const metadata: Metadata = {
     absolute: "Qui suis-je : Thomas Carrère, consultant marketing à La Réunion",
   },
   description:
-    "Le parcours de Thomas Carrère, consultant marketing à La Réunion : 15 ans d'expérience, 120 entreprises accompagnées. Un regard externe et pragmatique.",
+    "Le parcours de Thomas Carrère, consultant marketing à La Réunion : 15 ans d'expérience, 150 entreprises accompagnées. Un regard externe et pragmatique.",
   alternates: { canonical: "https://thomascarrere.fr/qui-suis-je" },
   openGraph: {
     title: "Qui suis-je : Thomas Carrère, consultant marketing à La Réunion",
     description:
-      "Le parcours de Thomas Carrère : ancien dirigeant d'agence, 15 ans d'expérience, 120 entreprises accompagnées à La Réunion et en métropole.",
+      "Le parcours de Thomas Carrère : ancien dirigeant d'agence, 15 ans d'expérience, 150 entreprises accompagnées à La Réunion et en métropole.",
     url: "https://thomascarrere.fr/qui-suis-je",
     images: [IMAGE_OG],
   },
