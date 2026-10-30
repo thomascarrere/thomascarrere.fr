@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
+import { IMAGE_OG } from "@/lib/seo";
 import { AccueilClient } from "./accueil-client";
 
+const DESCRIPTION =
+  "Directeur marketing externalisé pour dirigeants de PME : stratégie, pilotage des prestataires et coaching d'équipe, à La Réunion et à distance.";
+
 export const metadata: Metadata = {
+  description: DESCRIPTION,
   alternates: { canonical: "https://thomascarrere.fr" },
+  openGraph: {
+    title: "Consultant Marketing PME : Thomas Carrère, La Réunion",
+    description: DESCRIPTION,
+    url: "https://thomascarrere.fr",
+    siteName: "Thomas Carrère : Consultant Marketing",
+    locale: "fr_FR",
+    type: "website",
+    images: [IMAGE_OG],
+  },
 };
 
 const LOGOS_CLIENTS = [
