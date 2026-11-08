@@ -26,14 +26,14 @@ export function SprintClient() {
         />
           <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
-              Sprint Fondations
+              Pack Fondations
             </p>
             <h1 className="mb-6 text-white">
-              Le sprint &quot;Fondations&quot; : 15 jours pour retrouver de la
+              Le Pack Fondations : 15 jours pour retrouver de la
               clarté et poser les bases de votre marketing.
             </h1>
             <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
-              Le <strong className="text-white/90">Sprint Fondations</strong> est
+              Le <strong className="text-white/90">Pack Fondations</strong> est
               une immersion marketing de 15 jours conçue pour les{" "}
               <strong className="text-white/90">dirigeants de PME</strong> qui
               veulent clarifier leur offre, structurer leurs outils de vente et
@@ -146,7 +146,7 @@ export function SprintClient() {
                 texte:
                   "Je retravaille ou crée vos scripts de vente et vos modèles d'emails.",
                 livrable:
-                  "Un système de relance prêt à l'envoi pour vos prospects \"froids\" et vos anciens clients. Objectif : générer vos premiers rendez-vous et rentabiliser le Sprint avant même la fin de ma mission.",
+                  "Un système de relance prêt à l'envoi pour vos prospects \"froids\" et vos anciens clients. Objectif : générer vos premiers rendez-vous et rentabiliser le Pack avant même la fin de ma mission.",
               },
               {
                 num: "03",
@@ -192,14 +192,14 @@ export function SprintClient() {
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center">
             <h2 className="mb-6">
-              Pourquoi choisir le format &quot;Sprint&quot; ?
+              Pourquoi choisir le Pack Fondations ?
             </h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em]">
               Pour obtenir ce niveau de résultat, une PME a normalement deux
               choix : recruter un Directeur Marketing interne (coût minimum :
               60 000 EUR/an) ou mandater une agence sur plusieurs mois.{" "}
               <strong className="text-heading">
-                Le Sprint est la troisième voie
+                Le Pack Fondations est la troisième voie
               </strong>{" "}
               : l&apos;impact immédiat d&apos;un expert senior de 15 ans
               d&apos;expérience, sans engagement long terme, pour le prix
@@ -245,7 +245,7 @@ export function SprintClient() {
                   },
                   {
                     titre: "Suivi",
-                    desc: "Un accès direct à moi par messagerie pendant toute la durée du Sprint.",
+                    desc: "Un accès direct à moi par messagerie pendant toute la durée du Pack.",
                   },
                 ].map((item) => (
                   <div key={item.titre} className="flex gap-3">
@@ -273,7 +273,7 @@ export function SprintClient() {
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto">
             <div className="text-center mb-8">
-              <h2 className="mb-4">Ce Sprint est-il fait pour vous ?</h2>
+              <h2 className="mb-4">Le Pack Fondations est-il fait pour vous ?</h2>
               <p className="text-lg leading-8 text-text tracking-[-0.02em]">
                 Pour garantir ces résultats en 15 jours, je ne sélectionne que des
                 projets où je peux avoir un impact immédiat. Ce format est idéal
@@ -308,9 +308,9 @@ export function SprintClient() {
       <Section bg="alt">
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center">
-            <h2 className="mb-4">Et après le Sprint ?</h2>
+            <h2 className="mb-4">Et après le Pack Fondations ?</h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em] mb-6">
-              Le Sprint Fondations pose les bases. Pour maintenir la dynamique
+              Le Pack Fondations pose les bases. Pour maintenir la dynamique
               sur le long terme, je propose un accompagnement régulier en{" "}
               <LienTracker
                 href="/direction-marketing-externalise"

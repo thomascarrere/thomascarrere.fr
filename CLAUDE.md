@@ -151,7 +151,7 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - Hierarchie headings : h1 > h2 > h3 (pas de h4/h5/h6)
 - Pas de tiret cadratin ( — ) dans le contenu, utiliser le deux-points a la place
 - Deux-points avec une espace avant ET apres dans le texte affiche : "Titre : sous-titre" (jamais collo au mot suivant)
-- Nav links : "Sprint Fondations", "Coaching Hebdo", "Direction Marketing externalisee", "Qui suis-je ?"
+- Nav links : "Pack Fondations", "Coaching Hebdo", "Direction Marketing externalisee", "Qui suis-je ?"
 - Bouton navbar : "Discutons →" (seul CTA avec un texte different)
 - Favicon : carre violet #443fde avec crochets blancs [ ], gere par les conventions de fichiers Next (`src/app/icon.svg` + `favicon.ico` + `apple-icon.png`), pas via metadata.icons. Source vectorielle = `icon.svg` ; les .ico/.png se regenerent depuis le SVG avec sharp.
 

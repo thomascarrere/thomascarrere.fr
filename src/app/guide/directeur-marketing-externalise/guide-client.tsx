@@ -317,7 +317,7 @@ export function GuideClient({ faq }: GuideClientProps) {
                   label="guide-sprint"
                   className="text-violet font-medium hover:text-violet-hover transition-colors"
                 >
-                  Sprint Fondations
+                  Pack Fondations
                 </LienTracker>
                 ), un coaching hebdomadaire pour faire monter votre équipe (
                 <LienTracker

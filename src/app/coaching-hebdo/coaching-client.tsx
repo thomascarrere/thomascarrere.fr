@@ -225,10 +225,10 @@ export function CoachingClient({ faq }: CoachingClientProps) {
             <div className="space-y-4">
               {[
                 {
-                  titre: "Sprint Fondations",
+                  titre: "Pack Fondations",
                   texte: "On pose les rails (une fois).",
                   href: "/sprint-fondations",
-                  lien: "Découvrir le Sprint Fondations →",
+                  lien: "Découvrir le Pack Fondations →",
                   label: "Sprint Fondations",
                 },
                 {
