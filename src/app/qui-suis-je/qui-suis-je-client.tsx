@@ -153,7 +153,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
           <AnimatedSection delay={0}>
             <div className="bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
               <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
-                Sprint Fondations
+                15 jours
               </p>
               <h3 className="mb-3">Le Pack Fondations</h3>
               <p className="text-text text-[15px] mb-6">
