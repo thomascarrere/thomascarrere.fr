@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Consultant Marketing PME : Thomas Carrère",
     description:
       "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
-    images: ["/images/thomas-conference.jpg"],
+    images: [IMAGE_OG.url],
   },
   alternates: {
     canonical: "https://thomascarrere.fr",
