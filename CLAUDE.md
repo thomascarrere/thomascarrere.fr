@@ -51,7 +51,7 @@ src/
     use-in-view.ts          — IntersectionObserver pour animations scroll
   lib/
     gtag.ts                 — Fonctions tracking Google Analytics / Ads
-    seo.ts                  — IMAGE_OG partagee (a repeter dans chaque bloc openGraph de page)
+    seo.ts                  — IMAGE_OG partagee (public/images/og-thomas-carrere.jpg, 1200x630 ; a repeter dans chaque bloc openGraph de page)
   types/
     gtag.d.ts               — Types Window.gtag
 public/
