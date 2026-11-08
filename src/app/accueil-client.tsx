@@ -412,7 +412,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             si je peux vous aider, et comment.
           </p>
           <Bouton href={CALENDRIER} externe variante="glow">
-            Réserver 30 minutes →
+            Réserver mon diagnostic offert (30min) →
           </Bouton>
         </div>
       </Section>
