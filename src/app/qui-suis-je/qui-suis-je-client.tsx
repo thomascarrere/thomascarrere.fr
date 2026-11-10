@@ -83,7 +83,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                   </div>
                   <div>
                     <h3 className="mb-2">{item.titre}</h3>
-                    <p className="text-text text-[15px]">{item.texte}</p>
+                    <p className="text-text">{item.texte}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -120,7 +120,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
             {
               titre: "Des solutions immédiatement actionnables",
               texte:
-                "Pas de rapports théoriques. Je construis avec vous des systèmes (Notion, CRM, scripts) que vous pouvez piloter dès le lendemain.",
+                "Pas de rapports théoriques. Je construis avec vous des systèmes (espace de pilotage, CRM, scripts) que vous pouvez piloter dès le lendemain.",
             },
             {
               titre: "Un partenaire de confiance à La Réunion",
@@ -131,7 +131,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
             <AnimatedSection key={item.titre} delay={index * 100}>
               <div className="h-full bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
                 <h3 className="mb-3 flex min-h-[62px] items-center justify-center text-center">{item.titre}</h3>
-                <p className="text-text text-[15px]">{item.texte}</p>
+                <p className="text-text">{item.texte}</p>
               </div>
             </AnimatedSection>
           ))}
@@ -156,7 +156,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                 15 jours
               </p>
               <h3 className="mb-3">Diagnostic et plan d&apos;action</h3>
-              <p className="text-text text-[15px] mb-6">
+              <p className="text-text mb-6">
                 Une immersion de 15 jours pour remettre votre marketing à plat,
                 clarifier vos messages et organiser vos outils de vente.
               </p>
@@ -164,7 +164,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                 href="/diagnostic-plan-action"
                 event="offre"
                 label="Sprint Fondations"
-                className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+                className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
                 Découvrir le Diagnostic et plan d&apos;action →
               </LienTracker>
@@ -176,7 +176,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                 Accompagnement régulier
               </p>
               <h3 className="mb-3">Direction Marketing Externalisée</h3>
-              <p className="text-text text-[15px] mb-6">
+              <p className="text-text mb-6">
                 Un accompagnement régulier pour piloter votre stratégie dans
                 la durée : priorités tenues, prestataires coordonnés, chiffres
                 lus chaque mois.
@@ -185,7 +185,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                 href="/direction-marketing-externalise"
                 event="offre"
                 label="Direction Marketing Externalisee"
-                className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+                className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
                 Découvrir la Direction Marketing Externalisée →
               </LienTracker>
@@ -197,7 +197,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                 1 h par semaine
               </p>
               <h3 className="mb-3">Le Coaching Hebdo</h3>
-              <p className="text-text text-[15px] mb-6">
+              <p className="text-text mb-6">
                 Une visio d&apos;une heure par semaine pour cadencer et faire
                 progresser la personne qui pilote votre marketing. 100 % à
                 distance.
@@ -206,7 +206,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                 href="/coaching-hebdo"
                 event="offre"
                 label="Coaching Hebdo"
-                className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+                className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
                 Découvrir Le Coaching Hebdo →
               </LienTracker>

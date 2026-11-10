@@ -220,7 +220,7 @@ export function GuideClient({ faq }: GuideClientProps) {
                 className="bg-white rounded-xl p-8 border border-border h-full"
               >
                 <h3 className="mb-2">{item.titre}</h3>
-                <p className="text-text text-[15px] leading-relaxed">
+                <p className="text-text leading-relaxed">
                   {item.texte}
                 </p>
               </div>
@@ -352,7 +352,7 @@ export function GuideClient({ faq }: GuideClientProps) {
               Directeur externalisé, recrutement interne ou agence : que choisir ?
             </h2>
             <div className="overflow-x-auto rounded-xl border border-border">
-              <table className="w-full text-left text-[15px] border-collapse min-w-[640px]">
+              <table className="w-full text-left border-collapse min-w-[640px]">
                 <thead>
                   <tr className="bg-bg-alt">
                     <th className="p-4 font-semibold text-heading">Critère</th>
@@ -429,7 +429,7 @@ export function GuideClient({ faq }: GuideClientProps) {
                   </span>
                   <div>
                     <h3 className="mb-2">{item.titre}</h3>
-                    <p className="text-text text-[15px] leading-relaxed">
+                    <p className="text-text leading-relaxed">
                       {item.texte}
                     </p>
                   </div>

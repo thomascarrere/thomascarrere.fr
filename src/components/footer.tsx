@@ -13,44 +13,50 @@ export function Footer() {
       <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src="/images/logo-horizontal.png"
             alt="Thomas Carrère"
-            width={120}
-            height={30}
-            className="h-8 w-auto brightness-0 invert"
+            width={88}
+            height={44}
+            className="h-11 w-auto brightness-0 invert"
           />
         </Link>
 
-        <p className="text-xs font-medium text-white/50 text-center">
-          &copy; 2026 Thomas Carrère : Directeur Marketing Externalisé
-          <br />
-          <span className="text-[11px]">
-            La Réunion &middot; France &middot;{" "}
-            <Link
-              href="/guide/directeur-marketing-externalise"
-              className="hover:text-white/80 transition-colors underline underline-offset-2"
-            >
-              Guide : directeur marketing externalisé
-            </Link>{" "}
-            &middot;{" "}
-            <Link
-              href="/mentions-legales"
-              className="hover:text-white/80 transition-colors underline underline-offset-2"
-            >
-              Mentions légales
-            </Link>{" "}
-            &middot;{" "}
-            <button
-              type="button"
-              onClick={() =>
-                window.dispatchEvent(new Event(OUVRIR_COOKIES_EVENT))
-              }
-              className="hover:text-white/80 transition-colors underline underline-offset-2 cursor-pointer"
-            >
-              Gérer les cookies
-            </button>
-          </span>
-        </p>
+        {/* Liens en 13 px, zone cliquable de 44 px de haut */}
+        <div className="flex flex-col items-center text-[13px] font-medium text-white/70 text-center">
+          <p className="text-[13px] leading-normal">
+            &copy; 2026 Thomas Carrère : Directeur Marketing Externalisé
+            &middot; La Réunion, France
+          </p>
+          <ul className="flex flex-wrap items-center justify-center gap-x-6">
+            <li>
+              <Link
+                href="/guide/directeur-marketing-externalise"
+                className="inline-flex items-center min-h-[44px] hover:text-white transition-colors underline underline-offset-2"
+              >
+                Guide : directeur marketing externalisé
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/mentions-legales"
+                className="inline-flex items-center min-h-[44px] hover:text-white transition-colors underline underline-offset-2"
+              >
+                Mentions légales
+              </Link>
+            </li>
+            <li>
+              <button
+                type="button"
+                onClick={() =>
+                  window.dispatchEvent(new Event(OUVRIR_COOKIES_EVENT))
+                }
+                className="inline-flex items-center min-h-[44px] hover:text-white transition-colors underline underline-offset-2 cursor-pointer"
+              >
+                Gérer les cookies
+              </button>
+            </li>
+          </ul>
+        </div>
 
         <a
           href={LINKEDIN}

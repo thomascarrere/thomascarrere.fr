@@ -8,7 +8,8 @@
   --color-violet-bg: #f3f3fc;
   --color-heading: #160042;
   --color-text: #3e404c;
-  --color-text-muted: #6b7094;
+  /* #666b90 : 4,68:1 sur le fond violet clair (#f3f3fc), 5,16:1 sur blanc */
+  --color-text-muted: #666b90;
   --color-border: #e4e6f1;
   --color-bg-hover: #f3f5fb;
   --color-bg-alt: #f9f9fb;
@@ -53,6 +54,14 @@
   p {
     font-size: 16px;
     line-height: 1.65;
+  }
+
+  /* Focus clavier : anneau violet, double d'un lisere blanc pour rester
+     visible sur les fonds sombres (hero, pied de page). */
+  :focus-visible {
+    outline: 2px solid var(--color-violet);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9);
   }
 
   @media (max-width: 991px) {
