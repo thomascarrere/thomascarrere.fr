@@ -89,7 +89,7 @@ const jsonLdLocalBusiness = {
   "@id": "https://thomascarrere.fr/#business",
   name: "Thomas Carrère : Directeur Marketing Externalisé",
   description:
-    "Directeur marketing externalisé pour TPE et PME : Pack Fondations, direction marketing externalisée et Coaching Hebdo.",
+    "Directeur marketing externalisé pour TPE et PME : Diagnostic et plan d'action, direction marketing externalisée et Coaching Hebdo.",
   url: "https://thomascarrere.fr",
   address: {
     "@type": "PostalAddress",
@@ -117,10 +117,10 @@ const jsonLdLocalBusiness = {
     itemListElement: [
       {
         "@type": "Offer",
-        name: "Pack Fondations",
+        name: "Diagnostic et plan d'action",
         description:
           "15 jours : positionnement clarifié, diagnostic complet et plan d'action sur 90 jours.",
-        url: "https://thomascarrere.fr/sprint-fondations",
+        url: "https://thomascarrere.fr/diagnostic-plan-action",
         priceSpecification: {
           "@type": "PriceSpecification",
           price: 2900,
@@ -168,7 +168,7 @@ const jsonLdOrganization = {
   url: "https://thomascarrere.fr",
   logo: "https://thomascarrere.fr/images/logo.png",
   description:
-    "Cabinet de conseil marketing pour PME et TPE : direction marketing externalisée, Pack Fondations et coaching. La Réunion et France.",
+    "Cabinet de conseil marketing pour PME et TPE : diagnostic et plan d'action, direction marketing externalisée et coaching. La Réunion et France.",
   founder: { "@id": "https://thomascarrere.fr/#person" },
   areaServed: [
     { "@type": "Place", name: "La Réunion" },

@@ -8,7 +8,7 @@ import { trackCtaNavbar, trackClickLinkedin } from "@/lib/gtag";
 import { useScrolled } from "@/hooks/use-scrolled";
 
 const LIENS = [
-  { href: "/sprint-fondations", label: "Pack Fondations" },
+  { href: "/diagnostic-plan-action", label: "Diagnostic" },
   { href: "/coaching-hebdo", label: "Coaching Hebdo" },
   {
     href: "/direction-marketing-externalise",

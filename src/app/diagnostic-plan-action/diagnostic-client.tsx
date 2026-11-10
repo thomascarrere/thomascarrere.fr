@@ -7,7 +7,7 @@ import { AnimatedSection } from "@/components/animated-section";
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
 
-export function SprintClient() {
+export function DiagnosticClient() {
   return (
     <>
       {/* Hero */}
@@ -26,15 +26,18 @@ export function SprintClient() {
         />
           <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
-              Pack Fondations
+              Diagnostic et plan d&apos;action
             </p>
             <h1 className="mb-6 text-white">
-              Le Pack Fondations : 15 jours pour retrouver de la
-              clarté et poser les bases de votre marketing.
+              Diagnostic et plan d&apos;action : 15 jours pour retrouver de
+              la clarté et poser les bases de votre marketing.
             </h1>
             <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
-              Le <strong className="text-white/90">Pack Fondations</strong> est
-              une immersion marketing de 15 jours conçue pour les{" "}
+              Le{" "}
+              <strong className="text-white/90">
+                Diagnostic et plan d&apos;action
+              </strong>{" "}
+              est une immersion marketing de 15 jours conçue pour les{" "}
               <strong className="text-white/90">dirigeants de PME</strong> qui
               veulent clarifier leur offre, structurer leurs outils de vente et
               tracer une feuille de route concrète pour les 90 prochains jours.
@@ -123,7 +126,7 @@ export function SprintClient() {
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center mb-12">
             <h2 className="mb-4">
-              Les 4 livrables du Pack Fondations
+              Ce que vous recevez : 4 livrables
             </h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em]">
               Je ne vous livre pas un rapport théorique. Je construis des actifs
@@ -192,14 +195,14 @@ export function SprintClient() {
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center">
             <h2 className="mb-6">
-              Pourquoi choisir le Pack Fondations ?
+              Pourquoi commencer par un diagnostic ?
             </h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em]">
               Pour obtenir ce niveau de résultat, une PME a normalement deux
               choix : recruter un Directeur Marketing interne (coût minimum :
               60 000 €/an) ou mandater une agence sur plusieurs mois.{" "}
               <strong className="text-heading">
-                Le Pack Fondations est la troisième voie
+                Le Diagnostic et plan d&apos;action est la troisième voie
               </strong>{" "}
               : le regard d&apos;un profil senior, sans engagement long, pour
               un budget ponctuel et connu d&apos;avance.
@@ -244,7 +247,7 @@ export function SprintClient() {
                   },
                   {
                     titre: "Suivi",
-                    desc: "Un accès direct à moi par messagerie pendant toute la durée du Pack.",
+                    desc: "Un accès direct à moi par messagerie pendant toute la durée de la mission.",
                   },
                 ].map((item) => (
                   <div key={item.titre} className="flex gap-3">
@@ -272,7 +275,7 @@ export function SprintClient() {
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto">
             <div className="text-center mb-8">
-              <h2 className="mb-4">Le Pack Fondations est-il fait pour vous ?</h2>
+              <h2 className="mb-4">Est-ce fait pour vous ?</h2>
               <p className="text-lg leading-8 text-text tracking-[-0.02em]">
                 Quinze jours, c&apos;est court. Ce format fonctionne si :
               </p>
@@ -305,9 +308,9 @@ export function SprintClient() {
       <Section bg="alt">
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center">
-            <h2 className="mb-4">Et après le Pack Fondations ?</h2>
+            <h2 className="mb-4">Et après le diagnostic ?</h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em] mb-6">
-              Le Pack Fondations pose les bases. Pour maintenir la dynamique
+              Le Diagnostic et plan d&apos;action pose les bases. Pour maintenir la dynamique
               sur le long terme, je propose un accompagnement régulier en{" "}
               <LienTracker
                 href="/direction-marketing-externalise"

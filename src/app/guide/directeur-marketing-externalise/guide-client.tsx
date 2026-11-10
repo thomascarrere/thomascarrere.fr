@@ -312,12 +312,12 @@ export function GuideClient({ faq }: GuideClientProps) {
                 Côté pratique, je propose trois formats selon votre besoin : un
                 audit de cadrage ponctuel (
                 <LienTracker
-                  href="/sprint-fondations"
+                  href="/diagnostic-plan-action"
                   event="offre"
                   label="guide-sprint"
                   className="text-violet font-medium hover:text-violet-hover transition-colors"
                 >
-                  Pack Fondations
+                  Diagnostic et plan d&apos;action
                 </LienTracker>
                 ), un coaching hebdomadaire pour faire monter votre équipe (
                 <LienTracker

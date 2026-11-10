@@ -39,7 +39,7 @@ const FAQ = [
   {
     question: "Combien coûte un directeur marketing externalisé ?",
     reponse:
-      "Ma Direction Marketing Externalisée coûte de 1 600 à 4 500 € HT par mois, selon le temps consacré : 2 à 5 jours par mois. On commence par le Pack Fondations (2 900 € HT, 15 jours), qui pose le diagnostic et le plan d'action sur 90 jours.",
+      "Ma Direction Marketing Externalisée coûte de 1 600 à 4 500 € HT par mois, selon le temps consacré : 2 à 5 jours par mois. On commence par le Diagnostic et plan d'action : 2 900 € HT, 15 jours.",
   },
   {
     question:
@@ -55,7 +55,7 @@ const FAQ = [
   {
     question: "Par quoi commencer ?",
     reponse:
-      "Par un échange de 30 minutes : vous me dites où vous en êtes et ce qui coince, je vous dis franchement si je peux vous aider, et comment. Si on travaille ensemble, on commence par le Pack Fondations : en 15 jours, positionnement clarifié, diagnostic complet et plan d'action sur 90 jours. Il vous reste, même si on s'arrête là.",
+      "Par un échange de 30 minutes : vous me dites où vous en êtes et ce qui coince, je vous dis franchement si je peux vous aider, et comment. Si on travaille ensemble, on commence par le Diagnostic et plan d'action : en 15 jours, votre positionnement clarifié, un diagnostic complet et un plan sur 90 jours. Il vous reste, même si on s'arrête là.",
   },
   {
     question: "Je fais du B2C, c'est pour moi ?",

@@ -6,12 +6,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // quand une page change (une date dynamique ferait croire a Google que tout
   // change a chaque deploiement).
   const dates = {
-    accueil: "2026-10-05",
-    sprint: "2026-10-05",
-    direction: "2026-10-05",
-    coaching: "2026-10-05",
-    quiSuisJe: "2026-10-05",
-    guide: "2026-10-05",
+    accueil: "2026-11-10",
+    sprint: "2026-11-10",
+    direction: "2026-11-10",
+    coaching: "2026-11-10",
+    quiSuisJe: "2026-11-10",
+    guide: "2026-11-10",
   };
 
   return [
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/sprint-fondations`,
+      url: `${baseUrl}/diagnostic-plan-action`,
       lastModified: dates.sprint,
       changeFrequency: "monthly",
       priority: 0.9,

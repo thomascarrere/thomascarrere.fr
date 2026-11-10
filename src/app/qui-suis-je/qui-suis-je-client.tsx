@@ -144,7 +144,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
           <div className="max-w-[840px] mx-auto text-center mb-12">
             <h2>Comment nous pouvons travailler ensemble ?</h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em] mt-4">
-              On commence par les fondations. Ensuite, vous choisissez qui
+              On commence par le diagnostic. Ensuite, vous choisissez qui
               pilote.
             </p>
           </div>
@@ -155,18 +155,18 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
               <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
                 15 jours
               </p>
-              <h3 className="mb-3">Le Pack Fondations</h3>
+              <h3 className="mb-3">Diagnostic et plan d&apos;action</h3>
               <p className="text-text text-[15px] mb-6">
                 Une immersion de 15 jours pour remettre votre marketing à plat,
                 clarifier vos messages et organiser vos outils de vente.
               </p>
               <LienTracker
-                href="/sprint-fondations"
+                href="/diagnostic-plan-action"
                 event="offre"
                 label="Sprint Fondations"
                 className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
-                Découvrir l&apos;offre &quot;Fondations&quot; →
+                Découvrir le Diagnostic et plan d&apos;action →
               </LienTracker>
             </div>
           </AnimatedSection>

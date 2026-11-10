@@ -32,6 +32,12 @@ const nextConfig: NextConfig = {
   // Anciennes URL de la version precedente du site, encore indexees par Google
   async redirects() {
     return [
+      // Ancienne adresse de l'offre d'entree (Sprint puis Pack Fondations)
+      {
+        source: "/sprint-fondations",
+        destination: "/diagnostic-plan-action",
+        permanent: true,
+      },
       {
         source: "/coaching-marketing-regulier",
         destination: "/coaching-hebdo",

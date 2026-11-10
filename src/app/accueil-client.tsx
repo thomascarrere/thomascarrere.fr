@@ -285,7 +285,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             {
               titre: "Opérationnel vite",
               phrase: "Diagnostic et plan dès le premier mois.",
-              preuve: "Pack Fondations : 15 jours",
+              preuve: "Diagnostic et plan d'action : 15 jours",
             },
             {
               titre: "Une passation propre",
@@ -311,7 +311,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
               Offres
             </p>
-            <h2>On commence par les fondations. Ensuite, vous choisissez.</h2>
+            <h2>On commence par le diagnostic. Ensuite, vous choisissez.</h2>
           </div>
         </AnimatedSection>
         <AnimatedSection>
@@ -319,11 +319,11 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             <div>
             <CarteOffre
               etape="Étape 1"
-              nom="Pack Fondations"
+              nom="Diagnostic et plan d'action"
               prix="2 900 €"
               unite="HT, 15 jours"
               texte="Positionnement clarifié, diagnostic complet et plan d'action sur 90 jours. Il vous reste, même si on s'arrête là."
-              href="/sprint-fondations"
+              href="/diagnostic-plan-action"
               offre="Sprint Fondations"
             />
             </div>

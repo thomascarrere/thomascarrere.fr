@@ -283,8 +283,8 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
               </h3>
               <p className="text-text leading-relaxed mb-4">
                 Pour que mon pilotage soit efficace, je ne prends pas de mission
-                de Direction Marketing sans être passé par le Pack Fondations
-                (ou un audit approfondi équivalent).
+                de Direction Marketing sans être passé par le Diagnostic et plan
+                d&apos;action (ou un audit approfondi équivalent).
               </p>
               <p className="text-text leading-relaxed mb-6">
                 Pourquoi ? Parce que je refuse de piloter sur du flou. Nous devons
@@ -293,12 +293,12 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 rentable.
               </p>
               <LienTracker
-                href="/sprint-fondations"
+                href="/diagnostic-plan-action"
                 event="offre"
                 label="Sprint Fondations"
                 className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
-                Découvrir le Pack Fondations →
+                Découvrir le Diagnostic et plan d&apos;action →
               </LienTracker>
               <p className="text-text leading-relaxed mt-6 mb-3">
                 Pas encore prêt à déléguer l&apos;exécution ? On peut commencer
