@@ -153,11 +153,11 @@ export function DiagnosticClient() {
               },
               {
                 num: "03",
-                titre: "Le cockpit \"Notion\"",
+                titre: "Votre espace de pilotage",
                 texte:
-                  "Je centralise votre marketing dans un outil simple, visuel et collaboratif.",
+                  "Je centralise votre marketing dans un outil dédié, construit sur mesure : votre cockpit personnel.",
                 livrable:
-                  "Votre espace Notion sur mesure incluant votre CRM simplifié (ou optimisé), votre bibliothèque de contenus (textes, logos, témoignages) et votre tableau de bord de performance.",
+                  "Un seul endroit pour tout retrouver : votre CRM simplifié (ou optimisé), votre bibliothèque de contenus (textes, logos, témoignages) et votre tableau de bord.",
               },
               {
                 num: "04",

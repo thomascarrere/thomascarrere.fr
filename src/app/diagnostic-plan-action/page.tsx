@@ -25,7 +25,7 @@ const jsonLdService = {
   name: "Diagnostic et plan d'action",
   serviceType: "Audit et structuration marketing",
   description:
-    "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. Inclut la fiche offre, le kit prospection, le cockpit Notion et la feuille de route à 90 jours.",
+    "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. Inclut la fiche offre, le kit prospection, l'espace de pilotage sur mesure et la feuille de route à 90 jours.",
   provider: {
     "@type": "Person",
     name: "Thomas Carrère",

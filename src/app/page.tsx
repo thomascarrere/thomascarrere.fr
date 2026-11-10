@@ -50,7 +50,7 @@ const FAQ = [
   {
     question: "Travaillez-vous à distance ?",
     reponse:
-      "Oui. Je suis basé à L'Étang-Salé, à La Réunion, et je travaille avec des entreprises à La Réunion comme en métropole, en visio et avec des outils partagés (Notion). Le Coaching Hebdo se fait entièrement à distance.",
+      "Oui. Je suis basé à L'Étang-Salé, à La Réunion, et je travaille avec des entreprises à La Réunion comme en métropole, en visio, avec un espace de pilotage dédié, construit sur mesure pour votre entreprise. Le Coaching Hebdo se fait entièrement à distance.",
   },
   {
     question: "Par quoi commencer ?",

@@ -120,7 +120,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
             {
               titre: "Des solutions immédiatement actionnables",
               texte:
-                "Pas de rapports théoriques. Je construis avec vous des systèmes (Notion, CRM, scripts) que vous pouvez piloter dès le lendemain.",
+                "Pas de rapports théoriques. Je construis avec vous des systèmes (espace de pilotage, CRM, scripts) que vous pouvez piloter dès le lendemain.",
             },
             {
               titre: "Un partenaire de confiance à La Réunion",

@@ -166,7 +166,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 "Vous avez déjà une équipe interne ou des prestataires, mais ils manquent de direction.",
               role: "Je suis l'architecte. Je définis la stratégie, je fixe les priorités et je m'assure que tout le monde avance dans la même direction.",
               livrables:
-                "1 session de travail hebdomadaire (1h), pilotage de vos prestataires, bilan mensuel des résultats, mise à jour du cockpit Notion.",
+                "1 session de travail hebdomadaire (1h), pilotage de vos prestataires, bilan mensuel des résultats, mise à jour de votre espace de pilotage.",
               tarif: "À partir de 1 600 € HT / mois",
             },
             {
@@ -248,9 +248,9 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              titre: "Cockpit Notion",
+              titre: "Un espace de pilotage dédié",
               texte:
-                "Vous voyez l'avancement de chaque tâche, les ressources créées, les décisions prises, les comptes rendus de réunions...",
+                "Un outil sur mesure, rien que pour votre entreprise. Vous y voyez l'avancement de chaque tâche, les ressources créées, les décisions prises et les comptes rendus de réunions.",
             },
             {
               titre: "Rythme hebdomadaire",
