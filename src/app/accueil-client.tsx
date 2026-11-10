@@ -75,6 +75,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
               alt=""
               width={104}
               height={104}
+              loading="eager"
               className="w-[52px] h-[52px] rounded-full object-cover object-top ring-2 ring-white/25 shrink-0"
             />
             <p className="text-sm leading-snug text-white/70 text-left">
@@ -89,6 +90,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
               alt="Thomas Carrère"
               fill
               sizes="340px"
+              loading="eager"
               className="object-cover object-top"
             />
           </div>
