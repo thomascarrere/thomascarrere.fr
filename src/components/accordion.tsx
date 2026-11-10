@@ -50,7 +50,7 @@ export function Accordion({ items }: AccordionProps) {
                 isOpen ? "max-h-[600px] pb-5" : "max-h-0"
               }`}
             >
-              <p className="text-text text-[15px] leading-relaxed">
+              <p className="text-text leading-relaxed">
                 {item.reponse}
               </p>
             </div>

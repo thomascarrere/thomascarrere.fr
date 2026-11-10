@@ -2,29 +2,35 @@
 
 import { useRef, useState, useEffect } from "react";
 
+// Etats d'apparition d'un bloc :
+// - "initial" : rendu serveur et premier affichage. Le contenu est visible,
+//   rien n'est masque tant que le script n'a pas tourne (ni sans script).
+// - "cache"   : bloc situe sous la zone visible, masque apres hydratation
+//   en attendant le scroll.
+// - "visible" : bloc revele au scroll, avec transition.
+export type EtatApparition = "initial" | "cache" | "visible";
+
 export function useInView(options?: { threshold?: number; once?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [inView, setInView] = useState(false);
+  const [etat, setEtat] = useState<EtatApparition>("initial");
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
-    // Reduced-motion : on revele immediatement (pas d'apparition au scroll)
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setInView(true);
-      return;
-    }
+    // Reduced-motion : on garde l'etat initial (visible, sans animation)
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setInView(true);
+          // Deja a l'ecran au chargement : on reste en "initial", sans animation.
+          setEtat((precedent) => (precedent === "cache" ? "visible" : precedent));
           if (options?.once !== false) {
             observer.unobserve(element);
           }
-        } else if (options?.once === false) {
-          setInView(false);
+        } else {
+          setEtat("cache");
         }
       },
       // rootMargin positif en bas : etend la zone de detection sous le viewport
@@ -40,5 +46,5 @@ export function useInView(options?: { threshold?: number; once?: boolean }) {
     return () => observer.disconnect();
   }, [options?.threshold, options?.once]);
 
-  return { ref, inView };
+  return { ref, etat, inView: etat !== "cache" };
 }

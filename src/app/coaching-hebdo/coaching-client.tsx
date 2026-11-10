@@ -123,7 +123,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
                 </span>
                 <div>
                   <h3 className="mb-2">{item.titre}</h3>
-                  <p className="text-text text-[15px]">{item.texte}</p>
+                  <p className="text-text">{item.texte}</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -255,13 +255,13 @@ export function CoachingClient({ faq }: CoachingClientProps) {
                   }`}
                 >
                   <h3 className="mb-2">{item.titre}</h3>
-                  <p className="text-text text-[15px] mb-3">{item.texte}</p>
+                  <p className="text-text mb-3">{item.texte}</p>
                   {item.href && item.lien && item.label && (
                     <LienTracker
                       href={item.href}
                       event="offre"
                       label={item.label}
-                      className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+                      className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
                     >
                       {item.lien}
                     </LienTracker>
@@ -336,7 +336,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
                 href="/qui-suis-je"
                 event="parcours"
                 label="coaching-hebdo"
-                className="text-violet-light font-medium text-sm hover:text-white transition-colors"
+                className="inline-flex min-h-[44px] items-center text-violet-light font-medium text-sm hover:text-white transition-colors"
               >
                 En savoir plus sur mon parcours →
               </LienTracker>

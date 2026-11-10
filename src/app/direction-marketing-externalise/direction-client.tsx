@@ -131,7 +131,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 </div>
                 <div>
                   <h3 className="mb-2">{item.titre}</h3>
-                  <p className="text-text text-[15px]">{item.texte}</p>
+                  <p className="text-text">{item.texte}</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -204,13 +204,13 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                       <p className="text-sm font-semibold text-heading mb-1">
                         Idéal si :
                       </p>
-                      <p className="text-text text-[15px]">{item.ideal}</p>
+                      <p className="text-text">{item.ideal}</p>
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-heading mb-1">
                         Mon rôle :
                       </p>
-                      <p className="text-text text-[15px]">{item.role}</p>
+                      <p className="text-text">{item.role}</p>
                     </div>
                   </div>
                   <div className="space-y-4">
@@ -218,7 +218,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                       <p className="text-sm font-semibold text-heading mb-1">
                         Livrables récurrents :
                       </p>
-                      <p className="text-text text-[15px]">{item.livrables}</p>
+                      <p className="text-text">{item.livrables}</p>
                     </div>
                     <p className="text-lg font-bold text-heading font-[family-name:var(--font-archivo)]">
                       {item.tarif}
@@ -266,7 +266,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
             <AnimatedSection key={item.titre} delay={i * 80}>
               <div className="h-full bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
                 <h3 className="mb-3">{item.titre}</h3>
-                <p className="text-text text-[15px]">{item.texte}</p>
+                <p className="text-text">{item.texte}</p>
               </div>
             </AnimatedSection>
           ))}
@@ -296,7 +296,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 href="/diagnostic-plan-action"
                 event="offre"
                 label="Sprint Fondations"
-                className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+                className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
                 Découvrir le Diagnostic et plan d&apos;action →
               </LienTracker>
@@ -309,7 +309,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 href="/coaching-hebdo"
                 event="offre"
                 label="Coaching Hebdo"
-                className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+                className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
                 Découvrir Le Coaching Hebdo →
               </LienTracker>
@@ -342,7 +342,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 href="/qui-suis-je"
                 event="parcours"
                 label="direction-marketing-externalise"
-                className="text-violet-light font-medium text-sm hover:text-white transition-colors"
+                className="inline-flex min-h-[44px] items-center text-violet-light font-medium text-sm hover:text-white transition-colors"
               >
                 En savoir plus sur mon parcours →
               </LienTracker>

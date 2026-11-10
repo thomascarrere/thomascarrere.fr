@@ -69,12 +69,12 @@ export function MentionsLegalesClient() {
           <AnimatedSection>
             <div className="mb-10">
               <h3 className="mb-3">Éditeur du site</h3>
-              <p className="text-text text-[15px] leading-7">
+              <p className="text-text leading-7">
                 Le site <strong>thomascarrere.fr</strong> est édité par{" "}
                 <strong>Thomas Carrère</strong>, entrepreneur individuel (EI),
                 Directeur Marketing Externalisé.
               </p>
-              <ul className="mt-4 space-y-1.5 text-text text-[15px] leading-7">
+              <ul className="mt-4 space-y-1.5 text-text leading-7">
                 <li>
                   Siège : 24 chemin de la Ravine Sèche, 97427 L’Étang-Salé, La
                   Réunion.
@@ -97,7 +97,7 @@ export function MentionsLegalesClient() {
                   .
                 </li>
               </ul>
-              <p className="text-text text-[15px] leading-7 mt-4">
+              <p className="text-text leading-7 mt-4">
                 <strong>Directeur de la publication</strong> : Thomas Carrère.
               </p>
             </div>
@@ -106,7 +106,7 @@ export function MentionsLegalesClient() {
           <AnimatedSection>
             <div className="mb-10">
               <h3 className="mb-3">Hébergeur</h3>
-              <p className="text-text text-[15px] leading-7">
+              <p className="text-text leading-7">
                 Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.{" "}
                 <a
                   href="https://vercel.com"
@@ -124,7 +124,7 @@ export function MentionsLegalesClient() {
           <AnimatedSection>
             <div className="mb-10">
               <h3 className="mb-3">Propriété intellectuelle</h3>
-              <p className="text-text text-[15px] leading-7">
+              <p className="text-text leading-7">
                 L’ensemble des contenus du site (textes, visuels, logo,
                 structure) est protégé par le droit de la propriété
                 intellectuelle et demeure la propriété de Thomas Carrère, sauf
@@ -137,7 +137,7 @@ export function MentionsLegalesClient() {
           <AnimatedSection>
             <div>
               <h3 className="mb-3">Responsabilité</h3>
-              <p className="text-text text-[15px] leading-7">
+              <p className="text-text leading-7">
                 L’éditeur s’efforce d’assurer l’exactitude des informations
                 publiées mais ne saurait être tenu responsable des erreurs,
                 omissions ou de l’indisponibilité du site. Les liens externes
@@ -161,7 +161,7 @@ export function MentionsLegalesClient() {
           <AnimatedSection>
             <div className="mb-10">
               <h3 className="mb-3">Responsable du traitement</h3>
-              <p className="text-text text-[15px] leading-7">
+              <p className="text-text leading-7">
                 Thomas Carrère, 24 chemin de la Ravine Sèche, 97427
                 L’Étang-Salé, La Réunion. Email :{" "}
                 <a
@@ -221,7 +221,7 @@ export function MentionsLegalesClient() {
                     key={d.donnee}
                     className="rounded-xl border border-border bg-white p-5"
                   >
-                    <p className="font-semibold text-heading text-[15px] mb-2">
+                    <p className="font-semibold text-heading mb-2">
                       {d.donnee}
                     </p>
                     <p className="text-text text-[14px] leading-6">
@@ -242,10 +242,10 @@ export function MentionsLegalesClient() {
           <AnimatedSection>
             <div className="mb-10">
               <h3 className="mb-3">Cookies et outils tiers</h3>
-              <p className="text-text text-[15px] leading-7 mb-4">
+              <p className="text-text leading-7 mb-4">
                 Le site utilise, sous réserve de votre consentement :
               </p>
-              <ul className="space-y-1.5 text-text text-[15px] leading-7">
+              <ul className="space-y-1.5 text-text leading-7">
                 <li>
                   <strong>Google Analytics 4</strong> (G-Q2Y0BZEN2C) : mesure
                   d’audience.
@@ -261,7 +261,7 @@ export function MentionsLegalesClient() {
           <AnimatedSection>
             <div className="mb-10">
               <h3 className="mb-3">Destinataires</h3>
-              <p className="text-text text-[15px] leading-7">
+              <p className="text-text leading-7">
                 Les données ne sont ni vendues ni cédées. Elles peuvent être
                 traitées par des sous-traitants techniques (hébergeur, Google,
                 outil d’emailing) agissant pour le compte du responsable de
@@ -273,7 +273,7 @@ export function MentionsLegalesClient() {
           <AnimatedSection>
             <div className="mb-10">
               <h3 className="mb-3">Durée de conservation</h3>
-              <ul className="space-y-1.5 text-text text-[15px] leading-7">
+              <ul className="space-y-1.5 text-text leading-7">
                 <li>
                   Prospects / contacts : 3 ans à compter du dernier contact.
                 </li>
@@ -289,7 +289,7 @@ export function MentionsLegalesClient() {
           <AnimatedSection>
             <div>
               <h3 className="mb-3">Vos droits</h3>
-              <p className="text-text text-[15px] leading-7 mb-4">
+              <p className="text-text leading-7 mb-4">
                 Conformément au RGPD et à la loi Informatique et Libertés, vous
                 disposez des droits d’<strong>accès</strong>, de{" "}
                 <strong>rectification</strong>, d’<strong>effacement</strong>,
@@ -304,7 +304,7 @@ export function MentionsLegalesClient() {
                 </a>
                 .
               </p>
-              <p className="text-text text-[15px] leading-7">
+              <p className="text-text leading-7">
                 Vous pouvez également introduire une réclamation auprès de la{" "}
                 <strong>CNIL</strong> (
                 <a

@@ -28,7 +28,7 @@ export function CarteTemoignage({
           </svg>
         ))}
       </div>
-      <p className="text-text mb-6 text-[15px] leading-relaxed italic">{texte}</p>
+      <p className="text-text mb-6 leading-relaxed italic">{texte}</p>
       <div className="flex items-center gap-3">
         {avatar ? (
           <Image
@@ -48,7 +48,7 @@ export function CarteTemoignage({
         )}
         <div>
           <p className="text-heading font-medium text-sm">{nom}</p>
-          <p className="text-text-muted text-xs">{entreprise}</p>
+          <p className="text-text-muted text-sm">{entreprise}</p>
         </div>
       </div>
     </div>

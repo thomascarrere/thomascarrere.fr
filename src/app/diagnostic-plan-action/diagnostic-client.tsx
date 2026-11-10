@@ -113,7 +113,7 @@ export function DiagnosticClient() {
                 </div>
                 <div>
                   <h3 className="mb-2">{item.titre}</h3>
-                  <p className="text-text text-[15px]">{item.texte}</p>
+                  <p className="text-text">{item.texte}</p>
                 </div>
               </div>
             ))}
@@ -177,7 +177,7 @@ export function DiagnosticClient() {
                 <div>
                   <h3 className="mb-2">{item.titre}</h3>
                   <p className="text-text mb-3">{item.texte}</p>
-                  <p className="text-text text-[15px]">
+                  <p className="text-text">
                     <span className="font-semibold text-heading">
                       Le livrable :{" "}
                     </span>
@@ -339,7 +339,7 @@ export function DiagnosticClient() {
               href="/qui-suis-je"
               event="parcours"
               label="sprint-fondations"
-              className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+              className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
             >
               En savoir plus sur mon parcours →
             </LienTracker>

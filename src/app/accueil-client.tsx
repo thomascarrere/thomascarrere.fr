@@ -143,7 +143,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
                   href="/qui-suis-je"
                   event="parcours"
                   label="accueil"
-                  className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+                  className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
                 >
                   En savoir plus sur mon parcours →
                 </LienTracker>
@@ -355,6 +355,14 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             </div>
           </div>
         </AnimatedSection>
+        {/* Bouton de réservation au milieu de la page, juste après les prix */}
+        <AnimatedSection>
+          <div className="mt-10 text-center">
+            <Bouton href={CALENDRIER} externe>
+              Réserver un échange de 30 minutes →
+            </Bouton>
+          </div>
+        </AnimatedSection>
       </Section>
 
       {/* Témoignages */}
@@ -368,8 +376,20 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
           </div>
         </AnimatedSection>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Sur mobile : 3 témoignages affichés, les autres au clic.
+              Case à cocher + label : fonctionne sans script. Masquée sur
+              ordinateur, où tous les témoignages restent affichés. */}
+          <input
+            type="checkbox"
+            id="tous-les-temoignages"
+            className="peer sr-only md:hidden"
+          />
           {temoignages.map((t, i) => (
-            <AnimatedSection key={t.nom} delay={i * 100}>
+            <AnimatedSection
+              key={t.nom}
+              delay={(i % 3) * 100}
+              className={i >= 3 ? "max-md:hidden peer-checked:max-md:block" : ""}
+            >
               <CarteTemoignage
                 nom={t.nom}
                 entreprise={t.entreprise}
@@ -378,6 +398,14 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
               />
             </AnimatedSection>
           ))}
+          {temoignages.length > 3 && (
+            <label
+              htmlFor="tous-les-temoignages"
+              className="md:hidden peer-checked:hidden justify-self-center inline-flex items-center justify-center rounded-full min-h-[48px] px-8 py-3 text-sm font-medium text-heading bg-white border border-border cursor-pointer peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-violet"
+            >
+              Voir les {temoignages.length - 3} autres témoignages
+            </label>
+          )}
         </div>
       </Section>
 
@@ -473,7 +501,7 @@ function CarteOffre({
         href={href}
         event="offre"
         label={offre}
-        className="mt-auto text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+        className="mt-auto -mb-3 self-start inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
       >
         Voir le détail →
       </LienTracker>
