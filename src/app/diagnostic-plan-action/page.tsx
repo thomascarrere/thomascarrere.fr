@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import { IMAGE_OG } from "@/lib/seo";
-import { SprintClient } from "./sprint-client";
+import { DiagnosticClient } from "./diagnostic-client";
 
 export const metadata: Metadata = {
   // absolute : le template "%s : Thomas Carrère" depassait 60 caracteres
   title: {
-    absolute: "Pack Fondations : structurer votre marketing en 15 jours",
+    absolute: "Diagnostic et plan d'action marketing en 15 jours",
   },
   description:
-    "Pack Fondations : 15 jours pour clarifier votre offre, outiller vos ventes et tracer votre feuille de route marketing. 2 900 € HT, sans engagement.",
-  alternates: { canonical: "https://thomascarrere.fr/sprint-fondations" },
+    "Diagnostic et plan d'action : 15 jours pour clarifier votre offre, outiller vos ventes et tracer votre feuille de route marketing. 2 900 € HT, sans engagement.",
+  alternates: { canonical: "https://thomascarrere.fr/diagnostic-plan-action" },
   openGraph: {
-    title: "Pack Fondations : structurer votre marketing en 15 jours",
+    title: "Diagnostic et plan d'action marketing en 15 jours",
     description:
       "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing.",
-    url: "https://thomascarrere.fr/sprint-fondations",
+    url: "https://thomascarrere.fr/diagnostic-plan-action",
     images: [IMAGE_OG],
   },
 };
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const jsonLdService = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Pack Fondations",
+  name: "Diagnostic et plan d'action",
   serviceType: "Audit et structuration marketing",
   description:
     "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. Inclut la fiche offre, le kit prospection, le cockpit Notion et la feuille de route à 90 jours.",
@@ -40,7 +40,7 @@ const jsonLdService = {
     price: "2900",
     priceCurrency: "EUR",
     availability: "https://schema.org/InStock",
-    url: "https://thomascarrere.fr/sprint-fondations",
+    url: "https://thomascarrere.fr/diagnostic-plan-action",
     priceSpecification: {
       "@type": "PriceSpecification",
       price: "2900",
@@ -48,7 +48,7 @@ const jsonLdService = {
       valueAddedTaxIncluded: false,
     },
   },
-  url: "https://thomascarrere.fr/sprint-fondations",
+  url: "https://thomascarrere.fr/diagnostic-plan-action",
 };
 
 const jsonLdBreadcrumb = {
@@ -64,13 +64,13 @@ const jsonLdBreadcrumb = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Pack Fondations",
-      item: "https://thomascarrere.fr/sprint-fondations",
+      name: "Diagnostic et plan d'action",
+      item: "https://thomascarrere.fr/diagnostic-plan-action",
     },
   ],
 };
 
-export default function SprintFondations() {
+export default function DiagnosticPlanAction() {
   return (
     <>
       <script
@@ -81,7 +81,7 @@ export default function SprintFondations() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
-      <SprintClient />
+      <DiagnosticClient />
     </>
   );
 }

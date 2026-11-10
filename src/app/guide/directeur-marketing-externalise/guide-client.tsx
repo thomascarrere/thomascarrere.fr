@@ -94,7 +94,7 @@ export function GuideClient({ faq }: GuideClientProps) {
               c&apos;est pertinent, et combien ça coûte. Sans jargon.
             </p>
             <Bouton href={CALENDRIER} externe variante="glow">
-              Réserver mon diagnostic offert (30min) →
+              Réserver un échange de 30 minutes →
             </Bouton>
           </div>
       </Section>
@@ -312,12 +312,12 @@ export function GuideClient({ faq }: GuideClientProps) {
                 Côté pratique, je propose trois formats selon votre besoin : un
                 audit de cadrage ponctuel (
                 <LienTracker
-                  href="/sprint-fondations"
+                  href="/diagnostic-plan-action"
                   event="offre"
                   label="guide-sprint"
                   className="text-violet font-medium hover:text-violet-hover transition-colors"
                 >
-                  Pack Fondations
+                  Diagnostic et plan d&apos;action
                 </LienTracker>
                 ), un coaching hebdomadaire pour faire monter votre équipe (
                 <LienTracker
@@ -498,7 +498,7 @@ export function GuideClient({ faq }: GuideClientProps) {
               engagement.
             </p>
             <Bouton href={CALENDRIER} externe variante="glow">
-              Réserver mon diagnostic offert (30min) →
+              Réserver un échange de 30 minutes →
             </Bouton>
           </div>
         </AnimatedSection>

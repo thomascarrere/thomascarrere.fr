@@ -23,9 +23,9 @@ src/
     icon.svg                — Favicon vectoriel (crochets [ ] blancs sur violet)
     favicon.ico             — Favicon legacy 32x32 (genere depuis icon.svg)
     apple-icon.png          — Apple touch icon 180x180 (genere depuis icon.svg)
-    sprint-fondations/
+    diagnostic-plan-action/ — offre d'entree « Diagnostic et plan d'action » (ex Pack Fondations ; /sprint-fondations redirige ici)
       page.tsx              — Server component (metadata, JSON-LD Service)
-      sprint-client.tsx     — Client component (sections visuelles)
+      diagnostic-client.tsx — Client component (sections visuelles)
     direction-marketing-externalise/
       page.tsx              — Server component (metadata, JSON-LD Service + OfferCatalog)
       direction-client.tsx  — Client component (sections visuelles)
@@ -145,13 +145,13 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 ## Conventions
 
 - Langue du site : francais
-- Tous les CTAs principaux : "Reserver mon diagnostic offert (30min) →"
+- Tous les CTAs principaux : "Reserver un echange de 30 minutes →" (le mot « diagnostic » est reserve a l'offre payante)
 - Lien calendrier : `https://calendar.app.google/xaB44wDhgrkCX8Rj8`
 - LinkedIn : `https://www.linkedin.com/in/thomascarrere/`
 - Hierarchie headings : h1 > h2 > h3 (pas de h4/h5/h6)
 - Pas de tiret cadratin ( — ) dans le contenu, utiliser le deux-points a la place
 - Deux-points avec une espace avant ET apres dans le texte affiche : "Titre : sous-titre" (jamais collo au mot suivant)
-- Nav links : "Pack Fondations", "Coaching Hebdo", "Direction Marketing externalisee", "Qui suis-je ?"
+- Nav links : "Diagnostic", "Coaching Hebdo", "Direction Marketing externalisee", "Qui suis-je ?"
 - Bouton navbar : "Discutons →" (seul CTA avec un texte different)
 - Favicon : carre violet #443fde avec crochets blancs [ ], gere par les conventions de fichiers Next (`src/app/icon.svg` + `favicon.ico` + `apple-icon.png`), pas via metadata.icons. Source vectorielle = `icon.svg` ; les .ico/.png se regenerent depuis le SVG avec sharp.
 

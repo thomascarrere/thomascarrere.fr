@@ -14,7 +14,7 @@ type BoutonProps = {
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
 
 const OFFRES: Record<string, string> = {
-  "/sprint-fondations": "Sprint Fondations",
+  "/diagnostic-plan-action": "Sprint Fondations",
   "/direction-marketing-externalise": "Direction Marketing Externalisee",
 };
 
