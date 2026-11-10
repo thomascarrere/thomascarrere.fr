@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: "Pack Fondations : structurer votre marketing en 15 jours",
   },
   description:
-    "Pack Fondations : 15 jours pour clarifier votre offre, outiller vos ventes et tracer votre feuille de route marketing. 2 900 EUR HT, sans engagement.",
+    "Pack Fondations : 15 jours pour clarifier votre offre, outiller vos ventes et tracer votre feuille de route marketing. 2 900 € HT, sans engagement.",
   alternates: { canonical: "https://thomascarrere.fr/sprint-fondations" },
   openGraph: {
     title: "Pack Fondations : structurer votre marketing en 15 jours",
@@ -25,7 +25,7 @@ const jsonLdService = {
   name: "Pack Fondations",
   serviceType: "Audit et structuration marketing",
   description:
-    "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. Inclut la fiche offre, le kit prospection, le cockpit Notion et la roadmap 90 jours.",
+    "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing. Inclut la fiche offre, le kit prospection, le cockpit Notion et la feuille de route à 90 jours.",
   provider: {
     "@type": "Person",
     name: "Thomas Carrère",

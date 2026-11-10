@@ -42,9 +42,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Consultant Marketing PME : Thomas Carrère",
-    description:
-      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
     images: [IMAGE_OG.url],
   },
   alternates: {
@@ -92,7 +89,7 @@ const jsonLdLocalBusiness = {
   "@id": "https://thomascarrere.fr/#business",
   name: "Thomas Carrère : Consultant Marketing",
   description:
-    "Consultant marketing pour PME et TPE. Accompagnement stratégique, direction marketing externalisée et sprints fondations.",
+    "Consultant marketing pour PME et TPE. Accompagnement stratégique, direction marketing externalisée et Pack Fondations.",
   url: "https://thomascarrere.fr",
   address: {
     "@type": "PostalAddress",
@@ -171,7 +168,7 @@ const jsonLdOrganization = {
   url: "https://thomascarrere.fr",
   logo: "https://thomascarrere.fr/images/logo.png",
   description:
-    "Cabinet de conseil marketing pour PME et TPE : direction marketing externalisée, sprints fondations et coaching. La Réunion et France.",
+    "Cabinet de conseil marketing pour PME et TPE : direction marketing externalisée, Pack Fondations et coaching. La Réunion et France.",
   founder: { "@id": "https://thomascarrere.fr/#person" },
   areaServed: [
     { "@type": "Place", name: "La Réunion" },

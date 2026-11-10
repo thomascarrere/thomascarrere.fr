@@ -28,7 +28,7 @@ const GUIDE_FAQ = [
   {
     question: "Combien coûte un directeur marketing externalisé ?",
     reponse:
-      "Selon l'intensité, de quelques centaines d'euros par mois pour un coaching à 1 500-5 000 EUR HT par mois pour un pilotage récurrent. À comparer aux 60 000 à 90 000 EUR annuels d'un directeur marketing salarié.",
+      "Selon l'intensité, de quelques centaines d'euros par mois pour un coaching à 1 500-5 000 € HT par mois pour un pilotage récurrent. À comparer aux 60 000 à 90 000 € annuels d'un directeur marketing salarié.",
   },
   {
     question:
@@ -40,7 +40,7 @@ const GUIDE_FAQ = [
     question:
       "Peut-on travailler à distance avec un directeur marketing externalisé ?",
     reponse:
-      "Oui. Le métier se prête très bien au format remote : pilotage par visio, tableau de bord partagé, suivi régulier. La proximité physique n'est pas un prérequis.",
+      "Oui. Le métier se prête très bien au travail à distance : pilotage par visio, tableau de bord partagé, suivi régulier. La proximité physique n'est pas un prérequis.",
   },
   {
     question: "Directeur marketing externalisé ou agence : que choisir ?",

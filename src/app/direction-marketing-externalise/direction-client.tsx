@@ -86,7 +86,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
             {
               titre: "Expertise immédiate",
               texte:
-                "15 ans d'expérience en direction d'agence et en consulting",
+                "15 ans d'expérience en direction d'agence et en conseil",
               icone: (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -104,7 +104,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
               ),
             },
             {
-              titre: "Focus Résultats",
+              titre: "Priorité aux résultats",
               texte:
                 "Je ne suis pas là pour \"occuper un poste\", mais pour faire avancer les chantiers",
               icone: (
@@ -166,8 +166,8 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 "Vous avez déjà une équipe interne ou des prestataires, mais ils manquent de direction.",
               role: "Je suis l'architecte. Je définis la stratégie, je fixe les priorités et je m'assure que tout le monde avance dans la même direction.",
               livrables:
-                "1 session de travail hebdomadaire (1h), pilotage de vos prestataires, reporting mensuel de performance, mise à jour du cockpit Notion.",
-              tarif: "À partir de 1 600 EUR HT / mois",
+                "1 session de travail hebdomadaire (1h), pilotage de vos prestataires, bilan mensuel des résultats, mise à jour du cockpit Notion.",
+              tarif: "À partir de 1 600 € HT / mois",
             },
             {
               niveau: "Niveau 2",
@@ -176,8 +176,8 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 "Vous voulez que la stratégie avance, mais vous manquez de ressources pour produire.",
               role: "Je suis l'architecte ET le bâtisseur. En plus du pilotage, je prends en charge la création de vos actifs majeurs.",
               livrables:
-                "Tout le Niveau 1 + La production d'un actif clé par mois (ex: rédaction d'un cas client, création d'une séquence email complexe, optimisation de vos campagnes Ads).",
-              tarif: "À partir de 2 800 EUR HT / mois",
+                "Tout le Niveau 1 + La production d'un actif clé par mois (ex: rédaction d'un cas client, création d'une séquence email complexe, optimisation de vos campagnes publicitaires).",
+              tarif: "À partir de 2 800 € HT / mois",
             },
             {
               niveau: "Niveau 3",
@@ -186,7 +186,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 "Vous voulez déléguer l'intégralité du pôle marketing pour vous concentrer sur votre métier de dirigeant.",
               role: "Je gère votre marketing comme une entreprise à part entière.",
               livrables:
-                "Tout le Niveau 2 + Présence renforcée, recrutement et formation de vos futurs collaborateurs internes, gestion globale du budget marketing et ROI consolidé.",
+                "Tout le Niveau 2 + Présence renforcée, recrutement et formation de vos futurs collaborateurs internes, gestion globale du budget marketing et retour sur investissement consolidé.",
               tarif: "Sur devis (selon complexité)",
             },
           ].map((item, i) => (
@@ -250,7 +250,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
             {
               titre: "Cockpit Notion",
               texte:
-                "Vous voyez l'avancement de chaque tâche, les ressources créées, les décisions prises, les CR de réunions...",
+                "Vous voyez l'avancement de chaque tâche, les ressources créées, les décisions prises, les comptes rendus de réunions...",
             },
             {
               titre: "Rythme hebdomadaire",
@@ -288,7 +288,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
               </p>
               <p className="text-text leading-relaxed mb-6">
                 Pourquoi ? Parce que je refuse de piloter sur du flou. Nous devons
-                d&apos;abord valider votre message, vos outils et votre roadmap de
+                d&apos;abord valider votre message, vos outils et votre feuille de route à
                 90 jours pour que mon intervention mensuelle soit immédiatement
                 rentable.
               </p>
@@ -302,7 +302,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
               </LienTracker>
               <p className="text-text leading-relaxed mt-6 mb-3">
                 Pas encore prêt à déléguer l&apos;exécution ? On peut commencer
-                par un accompagnement plus léger, où je drive votre équipe une
+                par un accompagnement plus léger, où je cadence votre équipe une
                 heure par semaine.
               </p>
               <LienTracker

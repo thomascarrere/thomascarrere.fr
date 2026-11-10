@@ -199,7 +199,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             <div className="grid md:grid-cols-3 gap-3 md:gap-4 w-full">
               {[
                 { titre: "Votre équipe", desc: "Chargé·e de com, commerciaux" },
-                { titre: "Vos prestataires", desc: "Agence, CM, photographe" },
+                { titre: "Vos prestataires", desc: "Agence, community manager, photographe" },
                 { titre: "Vos outils", desc: "Site, CRM, publicité" },
               ].map((item) => (
                 <div key={item.titre} className="flex flex-col items-center">

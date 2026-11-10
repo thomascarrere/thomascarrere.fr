@@ -39,11 +39,11 @@ export function CoachingClient({ faq }: CoachingClientProps) {
             <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
               Vous avez confié votre marketing à quelqu&apos;un en interne :
               souvent une personne seule, parfois junior, sans profil senior pour
-              la guider. Résultat : ça part dans tous les sens, au doigt mouillé,
-              et la semaine passe sans cap clair.{" "}
+              la guider. Résultat : ça part dans tous les sens, et la semaine
+              passe sans cap clair.{" "}
               <strong className="text-white/90">Le Coaching Hebdo</strong>, c&apos;est
-              le rendez-vous qui change ça : chaque semaine, je drive la personne
-              aux commandes de votre marketing. On regarde les chiffres, on
+              le rendez-vous qui change ça : chaque semaine, je cadence et je
+              fais progresser la personne aux commandes de votre marketing. On regarde les chiffres, on
               décide, et elle repart avec un cap clair pour les 7 jours qui
               suivent.{" "}
               <strong className="text-white/90">
@@ -137,7 +137,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
           <div className="max-w-[840px] mx-auto text-center">
             <h2 className="mb-6">Ce que ça vous apporte</h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-              Une cadence que vous ne tiendriez pas tout seul. Un oeil senior et
+              Une cadence que vous ne tiendriez pas tout seul. Un œil senior et
               extérieur sur vos décisions. Et surtout, la fin du marketing qui
               dort : chaque semaine, quelque chose avance.
             </p>
@@ -160,7 +160,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
                     d&apos;une seule personne).
                   </strong>{" "}
                   Un profil qui exécute le marketing au quotidien, souvent seul,
-                  parfois junior, et qui a besoin d&apos;un oeil senior chaque
+                  parfois junior, et qui a besoin d&apos;un œil senior chaque
                   semaine pour prioriser, décider et progresser. Pour vous,
                   dirigeant, c&apos;est la séniorité d&apos;un directeur marketing
                   pour faire grandir votre recrue, sans le coût d&apos;un
@@ -171,10 +171,10 @@ export function CoachingClient({ faq }: CoachingClientProps) {
               <div className="bg-bg-alt rounded-xl p-8 md:p-10">
                 <p className="text-text leading-relaxed mb-4">
                   <strong className="text-heading">
-                    Ça marche aussi pour le dirigeant hands-on
+                    Ça marche aussi pour le dirigeant qui fait lui-même
                   </strong>
                   , à une condition : avoir réellement le temps de mettre en
-                  oeuvre les actions entre deux rendez-vous. Si votre agenda est
+                  œuvre les actions entre deux rendez-vous. Si votre agenda est
                   déjà saturé, le coaching tournera à vide : dans ce cas,
                   c&apos;est plutôt la{" "}
                   <LienTracker
@@ -233,7 +233,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
                 },
                 {
                   titre: "Le Coaching Hebdo",
-                  texte: "Je vous drive chaque semaine, vous exécutez.",
+                  texte: "Je donne le cap chaque semaine, votre équipe exécute.",
                   href: null,
                   lien: null,
                   label: null,
@@ -282,7 +282,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
             </p>
             <div className="flex items-baseline justify-center gap-2 mb-4">
               <span className="text-5xl md:text-6xl font-bold text-heading font-[family-name:var(--font-archivo)] tracking-[-0.04em]">
-                800 EUR
+                800 €
               </span>
               <span className="text-text-muted text-lg">HT / mois</span>
             </div>

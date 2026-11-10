@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     absolute: "Coaching marketing hebdomadaire pour votre équipe marketing",
   },
   description:
-    "Un directeur marketing senior coache la personne qui pilote votre marketing, 1h par semaine : chiffres, décisions, actions. À distance, 800 EUR HT/mois.",
+    "Un directeur marketing senior coache la personne qui pilote votre marketing, 1h par semaine : chiffres, décisions, actions. À distance, 800 € HT/mois.",
   alternates: { canonical: "https://thomascarrere.fr/coaching-hebdo" },
   openGraph: {
     title: "Coaching marketing hebdomadaire pour votre équipe marketing",
     description:
-      "Un coach senior qui drive la personne aux commandes de votre marketing, 1h par semaine. À distance, 800 EUR HT/mois.",
+      "Un directeur marketing senior qui cadence la personne aux commandes de votre marketing, 1h par semaine. À distance, 800 € HT/mois.",
     url: "https://thomascarrere.fr/coaching-hebdo",
     images: [IMAGE_OG],
   },
@@ -33,7 +33,7 @@ const COACHING_FAQ = [
   {
     question: "Qui participe aux séances : moi ou mon équipe ?",
     reponse:
-      "Idéalement la personne qui exécute votre marketing au quotidien, car c'est elle qui met en oeuvre entre les séances. Je peux aussi driver le dirigeant directement, à condition qu'il ait le temps d'agir entre deux rendez-vous.",
+      "Idéalement la personne qui exécute votre marketing au quotidien, car c'est elle qui met en œuvre entre les séances. Je peux aussi accompagner directement le dirigeant, à condition qu'il ait le temps d'agir entre deux rendez-vous.",
   },
   {
     question: "Je dois m'engager combien de temps ?",
