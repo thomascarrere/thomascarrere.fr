@@ -40,7 +40,10 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             backgroundSize: "60px 60px",
           }}
         />
-        <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
+        {/* Portrait : grand, à droite, à partir de 1280 px ; en dessous, une
+            signature sous le bouton pour garder le bouton visible sur mobile. */}
+        <div className="py-20 md:py-28 xl:grid xl:grid-cols-[minmax(0,1fr)_340px] xl:gap-12 xl:items-center">
+          <div className="max-w-[840px] mx-auto text-center xl:mx-0 xl:text-left">
           <h1 className="mb-6 text-white">
             <span className="block text-sm font-bold leading-normal tracking-[0.12em] uppercase text-violet-light mb-4 font-[family-name:var(--font-inter)]">
               Directeur marketing externalisé pour TPE et PME
@@ -65,105 +68,31 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
           <Bouton href={CALENDRIER} externe variante="glow">
             Réserver un échange de 30 minutes →
           </Bouton>
-        </div>
-      </Section>
-
-      {/* Problématiques */}
-      <Section bg="alt">
-        <h2 className="sr-only">Vos besoins</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              titre: "Besoin de clarté",
-              texte:
-                "Votre offre est excellente, mais elle mérite d'être expliquée plus simplement pour convaincre plus vite.",
-              icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-                </svg>
-              ),
-            },
-            {
-              titre: "Besoin de structure",
-              texte:
-                "Vos équipes ont besoin de méthodes et d'outils concrets pour ne plus perdre de temps au quotidien.",
-              icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
-                </svg>
-              ),
-            },
-            {
-              titre: "Besoin d'accompagnement",
-              texte:
-                "Vous n'avez pas besoin d'une agence de plus, mais d'un partenaire qui s'implique vraiment à vos côtés.",
-              icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              ),
-            },
-          ].map((item, i) => (
-            <AnimatedSection key={item.titre} delay={i * 100}>
-              <div className="h-full bg-white rounded-xl p-10 text-center flex flex-col items-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
-                <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-violet-bg to-violet-lighter flex items-center justify-center mb-4">
-                  {item.icone}
-                </div>
-                <h3 className="mb-3 flex min-h-[62px] items-center justify-center text-center">{item.titre}</h3>
-                <p className="text-text">{item.texte}</p>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-      </Section>
-
-      {/* Parcours */}
-      <Section id="parcours">
-        <AnimatedSection>
-          <div className="grid md:grid-cols-[minmax(0,1fr)_380px] gap-12 items-center">
-            <div>
-              <p className="text-sm font-bold tracking-[0.08em] uppercase text-violet mb-4">
-                Qui suis-je
-              </p>
-              <h2 className="mb-6">Mon parcours en 3 phrases</h2>
-              <p className="text-lg md:text-xl leading-8 md:leading-9 text-text tracking-[-0.02em] max-w-[62ch]">
-                J&apos;ai été chef d&apos;entreprise avant d&apos;être consultant :
-                dans le digital depuis 2011, j&apos;ai dirigé pendant 7 ans Du
-                Simple au Double, une agence de 10 à 15 personnes à La Réunion,
-                avec la trésorerie, les recrutements et les nuits courtes qui vont
-                avec. En accompagnant environ 150 entreprises, plus de 120 avec
-                l&apos;agence puis une trentaine en direct, j&apos;ai vu ce qui
-                fait perdre de l&apos;argent en marketing : des actions isolées,
-                des prestataires sans cap, des chiffres que personne ne regarde.
-                Mon métier aujourd&apos;hui : poser le système qui manque, puis le
-                piloter avec vous.
-              </p>
-              <div className="mt-6">
-                <LienTracker
-                  href="/qui-suis-je"
-                  event="parcours"
-                  label="accueil"
-                  className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
-                >
-                  En savoir plus sur mon parcours →
-                </LienTracker>
-              </div>
-            </div>
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden">
-              <Image
-                src="/images/thomas-conference.jpg"
-                alt="Thomas Carrère en conférence"
-                fill
-                sizes="(max-width: 768px) 100vw, 380px"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#160042]/10 to-transparent" />
-            </div>
+          <div className="mt-8 flex items-center justify-center gap-3 xl:hidden">
+            {/* alt vide : le nom est écrit juste à côté */}
+            <Image
+              src="/images/thomas-portrait.webp"
+              alt=""
+              width={104}
+              height={104}
+              className="w-[52px] h-[52px] rounded-full object-cover object-top ring-2 ring-white/25 shrink-0"
+            />
+            <p className="text-sm leading-snug text-white/70 text-left">
+              <span className="block font-medium text-white">Thomas Carrère</span>
+              Ancien dirigeant d&apos;agence, basé à La Réunion
+            </p>
           </div>
-          <div className="mt-16">
-            <GrilleLogos logos={logoClients} />
           </div>
-        </AnimatedSection>
+          <div className="hidden xl:block relative aspect-[4/5] rounded-xl overflow-hidden ring-1 ring-white/15">
+            <Image
+              src="/images/thomas-portrait.webp"
+              alt="Thomas Carrère"
+              fill
+              sizes="340px"
+              className="object-cover object-top"
+            />
+          </div>
+        </div>
       </Section>
 
       {/* Mon rôle */}
@@ -249,6 +178,104 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
                 </ul>
               </div>
             </div>
+          </div>
+        </AnimatedSection>
+      </Section>
+
+      {/* Problématiques */}
+      <Section>
+        <h2 className="sr-only">Vos besoins</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              titre: "Besoin de clarté",
+              texte:
+                "Votre offre est excellente, mais elle mérite d'être expliquée plus simplement pour convaincre plus vite.",
+              icone: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              ),
+            },
+            {
+              titre: "Besoin de structure",
+              texte:
+                "Vos équipes ont besoin de méthodes et d'outils concrets pour ne plus perdre de temps au quotidien.",
+              icone: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
+                </svg>
+              ),
+            },
+            {
+              titre: "Besoin d'accompagnement",
+              texte:
+                "Vous n'avez pas besoin d'une agence de plus, mais d'un partenaire qui s'implique vraiment à vos côtés.",
+              icone: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              ),
+            },
+          ].map((item, i) => (
+            <AnimatedSection key={item.titre} delay={i * 100}>
+              <div className="h-full bg-white rounded-xl p-10 text-center flex flex-col items-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+                <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-violet-bg to-violet-lighter flex items-center justify-center mb-4">
+                  {item.icone}
+                </div>
+                <h3 className="mb-3 flex min-h-[62px] items-center justify-center text-center">{item.titre}</h3>
+                <p className="text-text">{item.texte}</p>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+      </Section>
+
+      {/* Parcours */}
+      <Section bg="alt" id="parcours">
+        <AnimatedSection>
+          <div className="grid md:grid-cols-[minmax(0,1fr)_380px] gap-12 items-center">
+            <div>
+              <p className="text-sm font-bold tracking-[0.08em] uppercase text-violet mb-4">
+                Qui suis-je
+              </p>
+              <h2 className="mb-6">Mon parcours en 3 phrases</h2>
+              <p className="text-lg md:text-xl leading-8 md:leading-9 text-text tracking-[-0.02em] max-w-[62ch]">
+                J&apos;ai été chef d&apos;entreprise avant d&apos;être consultant :
+                dans le digital depuis 2011, j&apos;ai dirigé pendant 7 ans Du
+                Simple au Double, une agence de 10 à 15 personnes à La Réunion,
+                avec la trésorerie, les recrutements et les nuits courtes qui vont
+                avec. En accompagnant environ 150 entreprises, plus de 120 avec
+                l&apos;agence puis une trentaine en direct, j&apos;ai vu ce qui
+                fait perdre de l&apos;argent en marketing : des actions isolées,
+                des prestataires sans cap, des chiffres que personne ne regarde.
+                Mon métier aujourd&apos;hui : poser le système qui manque, puis le
+                piloter avec vous.
+              </p>
+              <div className="mt-6">
+                <LienTracker
+                  href="/qui-suis-je"
+                  event="parcours"
+                  label="accueil"
+                  className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+                >
+                  En savoir plus sur mon parcours →
+                </LienTracker>
+              </div>
+            </div>
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden">
+              <Image
+                src="/images/thomas-conference.jpg"
+                alt="Thomas Carrère en conférence"
+                fill
+                sizes="(max-width: 768px) 100vw, 380px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#160042]/10 to-transparent" />
+            </div>
+          </div>
+          <div className="mt-16">
+            <GrilleLogos logos={logoClients} />
           </div>
         </AnimatedSection>
       </Section>

@@ -15,7 +15,7 @@ export function GrilleLogos({ logos }: GrilleLogosProps) {
       {logos.map((logo) => (
         <div
           key={logo.nom}
-          className="border border-bg-hover rounded-md min-h-[96px] p-6 flex items-center justify-center hover:shadow-[23px_23px_64px_-16px_#393b6a0f] transition-shadow"
+          className="bg-white border border-border rounded-md min-h-[96px] p-6 flex items-center justify-center hover:shadow-[23px_23px_64px_-16px_#393b6a0f] transition-shadow"
         >
           {logo.image ? (
             <Image
