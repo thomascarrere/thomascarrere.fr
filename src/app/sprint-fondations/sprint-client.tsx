@@ -51,7 +51,7 @@ export function SprintClient() {
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center mb-12">
             <h2 className="mb-4">
-              Pourquoi votre marketing semble &quot;pédaler dans la semoule&quot; ?
+              Pourquoi votre marketing n&apos;avance pas ?
             </h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em]">
               La plupart des dirigeants de PME et TPE que j&apos;accompagne font
@@ -91,9 +91,9 @@ export function SprintClient() {
                 ),
               },
               {
-                titre: "Pilotage au \"doigt mouillé\"",
+                titre: "Pilotage à vue",
                 texte:
-                  "Vous manquez d'un endroit unique pour voir vos KPIs et votre feuille de route",
+                  "Vous manquez d'un endroit unique pour voir vos indicateurs et votre feuille de route",
                 icone: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
@@ -123,7 +123,7 @@ export function SprintClient() {
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center mb-12">
             <h2 className="mb-4">
-              Les 4 piliers de votre nouvelle machine marketing
+              Les 4 livrables du Pack Fondations
             </h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em]">
               Je ne vous livre pas un rapport théorique. Je construis des actifs
@@ -146,7 +146,7 @@ export function SprintClient() {
                 texte:
                   "Je retravaille ou crée vos scripts de vente et vos modèles d'emails.",
                 livrable:
-                  "Un système de relance prêt à l'envoi pour vos prospects \"froids\" et vos anciens clients. Objectif : générer vos premiers rendez-vous et rentabiliser le Pack avant même la fin de ma mission.",
+                  "Un système de relance prêt à l'envoi pour vos prospects \"froids\" et vos anciens clients. Objectif : que vos premières relances partent dès la fin de la mission.",
               },
               {
                 num: "03",
@@ -154,11 +154,11 @@ export function SprintClient() {
                 texte:
                   "Je centralise votre marketing dans un outil simple, visuel et collaboratif.",
                 livrable:
-                  "Votre espace Notion sur mesure incluant votre CRM simplifié (ou optimisé), votre bibliothèque d'assets (textes, logos, preuves sociales) et votre tableau de bord de performance.",
+                  "Votre espace Notion sur mesure incluant votre CRM simplifié (ou optimisé), votre bibliothèque de contenus (textes, logos, témoignages) et votre tableau de bord de performance.",
               },
               {
                 num: "04",
-                titre: "La Roadmap sur 90 jours",
+                titre: "La feuille de route sur 90 jours",
                 texte: "Pour en finir avec le \"il faudrait faire ça...\".",
                 livrable:
                   "Votre plan d'action priorisé et dimensionné pour les 3 prochains mois. Vous savez exactement quoi faire, chaque semaine, pour maintenir la dynamique.",
@@ -197,13 +197,12 @@ export function SprintClient() {
             <p className="text-lg leading-8 text-text tracking-[-0.02em]">
               Pour obtenir ce niveau de résultat, une PME a normalement deux
               choix : recruter un Directeur Marketing interne (coût minimum :
-              60 000 EUR/an) ou mandater une agence sur plusieurs mois.{" "}
+              60 000 €/an) ou mandater une agence sur plusieurs mois.{" "}
               <strong className="text-heading">
                 Le Pack Fondations est la troisième voie
               </strong>{" "}
-              : l&apos;impact immédiat d&apos;un expert senior de 15 ans
-              d&apos;expérience, sans engagement long terme, pour le prix
-              d&apos;un investissement ponctuel maîtrisé.
+              : le regard d&apos;un profil senior, sans engagement long, pour
+              un budget ponctuel et connu d&apos;avance.
             </p>
           </div>
         </AnimatedSection>
@@ -219,7 +218,7 @@ export function SprintClient() {
               </p>
               <div className="flex items-baseline justify-center gap-2 mb-4">
                 <span className="text-5xl md:text-6xl font-bold text-heading font-[family-name:var(--font-archivo)] tracking-[-0.04em]">
-                  2 900 EUR
+                  2 900 €
                 </span>
                 <span className="text-text-muted text-lg">HT</span>
               </div>
@@ -233,7 +232,7 @@ export function SprintClient() {
                 {[
                   {
                     titre: "Diagnostic & Immersion",
-                    desc: "2h de workshop intensif avec moi.",
+                    desc: "Un atelier de 2 h avec moi.",
                   },
                   {
                     titre: "Phase de Production",
@@ -275,17 +274,15 @@ export function SprintClient() {
             <div className="text-center mb-8">
               <h2 className="mb-4">Le Pack Fondations est-il fait pour vous ?</h2>
               <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-                Pour garantir ces résultats en 15 jours, je ne sélectionne que des
-                projets où je peux avoir un impact immédiat. Ce format est idéal
-                si :
+                Quinze jours, c&apos;est court. Ce format fonctionne si :
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Vous réalisez au moins 500 k EUR de CA annuel.",
+                "Vous réalisez au moins 500 000 € de chiffre d'affaires annuel.",
                 "Vous avez une base de données (clients/prospects) même si elle est inexploitée.",
                 "Vous êtes prêt à consacrer 2 à 3 heures de votre temps sur 15 jours pour valider les étapes clés.",
-                "Vous vendez des produits ou services à forte valeur ajoutée (B2B ou B2C Premium).",
+                "Vous vendez des produits ou services à forte valeur ajoutée (B2B ou B2C haut de gamme).",
               ].map((critere) => (
                 <div
                   key={critere}

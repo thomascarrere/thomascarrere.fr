@@ -32,8 +32,8 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
               Consultant marketing : La Réunion
             </p>
             <h1 className="mb-6 text-white">
-              15 ans d&apos;expérience et 150 entreprises accompagnées : je
-              simplifie votre marketing pour libérer votre croissance.
+              15 ans d&apos;expérience, environ 150 entreprises accompagnées :
+              je simplifie votre marketing.
             </h1>
             <p className="text-lg leading-8 text-white/60 tracking-[-0.02em]">
               <strong className="text-white/90">Thomas Carrère</strong>,{" "}
@@ -66,10 +66,10 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
               {
                 titre: "7 ans à la tête d'une agence",
                 texte:
-                  "CEO d'une agence de marketing digital pour maîtriser l'ensemble de la chaîne de valeur (SEO, Social Media, Contenus, Stratégie).",
+                  "Dirigeant d'une agence de marketing digital de 10 à 15 personnes : référencement, réseaux sociaux, contenus, stratégie.",
               },
               {
-                titre: "150 clients accompagnés",
+                titre: "Environ 150 entreprises accompagnées",
                 texte:
                   "De la startup en croissance à la PME historique (Isautier, SAPMER, ETAP-Santé, L'École 42 Le Havre, etc.).",
               },
@@ -144,14 +144,14 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
           <div className="max-w-[840px] mx-auto text-center mb-12">
             <h2>Comment nous pouvons travailler ensemble ?</h2>
             <p className="text-lg leading-8 text-text tracking-[-0.02em] mt-4">
-              La plupart des dirigeants de PME et TPE que j&apos;accompagne font
-              face aux mêmes obstacles :
+              On commence par les fondations. Ensuite, vous choisissez qui
+              pilote.
             </p>
           </div>
         </AnimatedSection>
-        <div className="grid md:grid-cols-2 gap-8 max-w-[960px] mx-auto">
+        <div className="grid md:grid-cols-3 gap-8">
           <AnimatedSection delay={0}>
-            <div className="bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+            <div className="h-full bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
               <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
                 15 jours
               </p>
@@ -171,15 +171,15 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
             </div>
           </AnimatedSection>
           <AnimatedSection delay={100}>
-            <div className="bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+            <div className="h-full bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
               <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
                 Accompagnement régulier
               </p>
               <h3 className="mb-3">Direction Marketing Externalisée</h3>
               <p className="text-text text-[15px] mb-6">
-                Un accompagnement régulier pour piloter votre stratégie sur le
-                long terme et garantir que vos objectifs de croissance soient
-                atteints.
+                Un accompagnement régulier pour piloter votre stratégie dans
+                la durée : priorités tenues, prestataires coordonnés, chiffres
+                lus chaque mois.
               </p>
               <LienTracker
                 href="/direction-marketing-externalise"
@@ -188,6 +188,27 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                 className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
                 Découvrir la Direction Marketing Externalisée →
+              </LienTracker>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={200}>
+            <div className="h-full bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+              <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
+                1 h par semaine
+              </p>
+              <h3 className="mb-3">Le Coaching Hebdo</h3>
+              <p className="text-text text-[15px] mb-6">
+                Une visio d&apos;une heure par semaine pour cadencer et faire
+                progresser la personne qui pilote votre marketing. 100 % à
+                distance.
+              </p>
+              <LienTracker
+                href="/coaching-hebdo"
+                event="offre"
+                label="Coaching Hebdo"
+                className="text-violet font-medium text-sm hover:text-violet-hover transition-colors"
+              >
+                Découvrir Le Coaching Hebdo →
               </LienTracker>
             </div>
           </AnimatedSection>

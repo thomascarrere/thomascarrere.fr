@@ -29,7 +29,7 @@ const TABLEAU = [
   },
   {
     critere: "Vision stratégique",
-    externalise: "Oui, c'est le coeur du rôle",
+    externalise: "Oui, c'est le cœur du rôle",
     interne: "Oui, si profil senior",
     agence: "Souvent orientée exécution",
   },
@@ -207,7 +207,7 @@ export function GuideClient({ faq }: GuideClientProps) {
               {
                 titre: "Installer des rituels et un pilotage",
                 texte:
-                  "Mettre en place un point régulier, un tableau de bord clair, un suivi des indicateurs qui comptent. On arrête de naviguer au doigt mouillé.",
+                  "Mettre en place un point régulier, un tableau de bord clair, un suivi des indicateurs qui comptent. On arrête de naviguer à vue.",
               },
               {
                 titre: "Garantir l'exécution",
@@ -237,7 +237,7 @@ export function GuideClient({ faq }: GuideClientProps) {
             <p className="text-lg leading-8 text-text tracking-[-0.02em] mb-6">
               Le directeur marketing externalisé s&apos;adresse surtout aux TPE
               et PME qui ont dépassé un certain seuil de maturité (en général à
-              partir de 500 000 EUR de chiffre d&apos;affaires) mais pour qui un
+              partir de 500 000 € de chiffre d&apos;affaires) mais pour qui un
               recrutement de directeur marketing senior n&apos;a pas encore de
               sens.
             </p>
@@ -283,12 +283,12 @@ export function GuideClient({ faq }: GuideClientProps) {
                 {
                   titre: "Pilotage récurrent (quelques jours par mois)",
                   texte:
-                    "souvent entre 1 500 et 5 000 EUR HT par mois selon le périmètre.",
+                    "souvent entre 1 500 et 5 000 € HT par mois selon le périmètre.",
                 },
                 {
                   titre: "À comparer au coût d'un directeur marketing salarié",
                   texte:
-                    "entre 60 000 et 90 000 EUR par an, charges comprises, sans compter le délai et le risque de recrutement.",
+                    "entre 60 000 et 90 000 € par an, charges comprises, sans compter le délai et le risque de recrutement.",
                 },
               ].map((item) => (
                 <div key={item.titre} className="flex gap-3">
