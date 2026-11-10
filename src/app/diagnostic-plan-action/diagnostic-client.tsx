@@ -44,7 +44,7 @@ export function DiagnosticClient() {
               Sans jargon, sans détours.
             </p>
             <Bouton href={CALENDRIER} externe variante="glow">
-              Réserver mon diagnostic offert (30min) →
+              Réserver un échange de 30 minutes →
             </Bouton>
           </div>
       </Section>
@@ -357,11 +357,11 @@ export function DiagnosticClient() {
           <h2 className="mb-6 text-white">Sortez du flou en 15 jours</h2>
           <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
             On ne commence jamais une mission sans se parler, évidemment !
-            Réservez un créneau de 30 minutes pour diagnostiquer vos blocages
-            éventuels. C&apos;est gratuit et sans engagement.
+            Réservez un créneau de 30 minutes pour faire le point sur votre
+            situation. C&apos;est gratuit et sans engagement.
           </p>
           <Bouton href={CALENDRIER} externe variante="glow">
-            Réserver mon diagnostic offert (30min) →
+            Réserver un échange de 30 minutes →
           </Bouton>
         </div>
       </Section>

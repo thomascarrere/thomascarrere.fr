@@ -94,7 +94,7 @@ export function GuideClient({ faq }: GuideClientProps) {
               c&apos;est pertinent, et combien ça coûte. Sans jargon.
             </p>
             <Bouton href={CALENDRIER} externe variante="glow">
-              Réserver mon diagnostic offert (30min) →
+              Réserver un échange de 30 minutes →
             </Bouton>
           </div>
       </Section>
@@ -498,7 +498,7 @@ export function GuideClient({ faq }: GuideClientProps) {
               engagement.
             </p>
             <Bouton href={CALENDRIER} externe variante="glow">
-              Réserver mon diagnostic offert (30min) →
+              Réserver un échange de 30 minutes →
             </Bouton>
           </div>
         </AnimatedSection>

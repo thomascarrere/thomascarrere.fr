@@ -116,7 +116,7 @@ Source : Google Fonts, chargees via `next/font` avec `display: swap`.
 
 Animation glow : `box-shadow` pulse entre `0 0 30px` et `0 0 40px` en rgba violet, 2s infinite.
 
-Texte CTA principal : "Reserver mon diagnostic offert (30min) →"
+Texte CTA principal : "Reserver un echange de 30 minutes →"
 Texte CTA navbar : "Discutons →"
 
 ### Cartes

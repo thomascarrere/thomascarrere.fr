@@ -52,7 +52,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
               </strong>
             </p>
             <Bouton href={CALENDRIER} externe variante="glow">
-              Réserver mon diagnostic offert (30min) →
+              Réserver un échange de 30 minutes →
             </Bouton>
           </div>
       </Section>
@@ -293,7 +293,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
             </p>
             <div className="mt-8">
               <Bouton href={CALENDRIER} externe variante="glow">
-                Réserver mon diagnostic offert (30min) →
+                Réserver un échange de 30 minutes →
               </Bouton>
             </div>
           </div>
@@ -330,7 +330,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Bouton href={CALENDRIER} externe variante="glow">
-                Réserver mon diagnostic offert (30min) →
+                Réserver un échange de 30 minutes →
               </Bouton>
               <LienTracker
                 href="/qui-suis-je"

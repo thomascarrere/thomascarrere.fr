@@ -145,7 +145,7 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 ## Conventions
 
 - Langue du site : francais
-- Tous les CTAs principaux : "Reserver mon diagnostic offert (30min) →"
+- Tous les CTAs principaux : "Reserver un echange de 30 minutes →" (le mot « diagnostic » est reserve a l'offre payante)
 - Lien calendrier : `https://calendar.app.google/xaB44wDhgrkCX8Rj8`
 - LinkedIn : `https://www.linkedin.com/in/thomascarrere/`
 - Hierarchie headings : h1 > h2 > h3 (pas de h4/h5/h6)

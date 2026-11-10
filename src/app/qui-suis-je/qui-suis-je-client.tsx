@@ -230,7 +230,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
               point sur votre situation actuelle, sans engagement.
             </p>
             <Bouton href={calendrier} externe variante="glow">
-              Réserver mon diagnostic offert (30min) →
+              Réserver un échange de 30 minutes →
             </Bouton>
           </div>
         </AnimatedSection>

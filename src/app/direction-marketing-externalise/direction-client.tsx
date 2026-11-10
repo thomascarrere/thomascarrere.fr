@@ -54,7 +54,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
               {" "}en freelance, la flexibilité en plus.
             </p>
             <Bouton href={CALENDRIER} externe variante="glow">
-              Réserver mon diagnostic offert (30min) →
+              Réserver un échange de 30 minutes →
             </Bouton>
           </div>
       </Section>
@@ -139,7 +139,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
         </div>
         <div className="text-center mt-8">
           <Bouton href={CALENDRIER} externe>
-            Réserver mon diagnostic offert (30min) →
+            Réserver un échange de 30 minutes →
           </Bouton>
         </div>
       </Section>
@@ -336,7 +336,7 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Bouton href={CALENDRIER} externe variante="glow">
-                Réserver mon diagnostic offert (30min) →
+                Réserver un échange de 30 minutes →
               </Bouton>
               <LienTracker
                 href="/qui-suis-je"

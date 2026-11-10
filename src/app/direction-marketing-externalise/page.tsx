@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     absolute: "Directeur marketing externalisé (CMO) dès 1 600 € HT/mois",
   },
   description:
-    "Direction marketing externalisée pour PME : un CMO freelance senior pilote votre marketing digital à temps partiel, sans recruter. Diagnostic offert.",
+    "Direction marketing externalisée pour PME : un CMO freelance senior pilote votre marketing digital à temps partiel, sans recruter. Premier échange offert.",
   alternates: { canonical: "/direction-marketing-externalise" },
   openGraph: {
     title: "Directeur marketing externalisé (CMO) dès 1 600 € HT/mois",

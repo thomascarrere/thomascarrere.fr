@@ -63,7 +63,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             entreprises réunionnaises et de métropole.
           </p>
           <Bouton href={CALENDRIER} externe variante="glow">
-            Réserver mon diagnostic offert (30min) →
+            Réserver un échange de 30 minutes →
           </Bouton>
         </div>
       </Section>
@@ -405,7 +405,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             si je peux vous aider, et comment.
           </p>
           <Bouton href={CALENDRIER} externe variante="glow">
-            Réserver mon diagnostic offert (30min) →
+            Réserver un échange de 30 minutes →
           </Bouton>
         </div>
       </Section>
