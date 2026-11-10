@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: "https://thomascarrere.fr" },
   openGraph: {
-    title: "Consultant Marketing PME : Thomas Carrère, La Réunion",
+    title: "Thomas Carrère : directeur marketing externalisé, TPE et PME",
     description: DESCRIPTION,
     url: "https://thomascarrere.fr",
-    siteName: "Thomas Carrère : Consultant Marketing",
+    siteName: "Thomas Carrère : Directeur Marketing Externalisé",
     locale: "fr_FR",
     type: "website",
     images: [IMAGE_OG],

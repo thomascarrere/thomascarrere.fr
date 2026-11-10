@@ -43,23 +43,24 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
         <div className="max-w-[840px] mx-auto text-center py-20 md:py-28">
           <h1 className="mb-6 text-white">
             <span className="block text-sm font-bold leading-normal tracking-[0.12em] uppercase text-violet-light mb-4 font-[family-name:var(--font-inter)]">
-              Consultant marketing pour PME et TPE à La Réunion
+              Directeur marketing externalisé pour TPE et PME
             </span>
-            Le marketing de votre entreprise devient enfin{" "}
+            Le directeur marketing{" "}
             <span className="bg-gradient-to-r from-violet-light to-violet bg-clip-text text-transparent">
-              clair et organisé
+              que vous n&apos;avez pas encore
             </span>
           </h1>
           <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
-            <strong className="text-white/90">Consultant marketing</strong>{" "}
-            basé à La Réunion, j&apos;aide les dirigeants de PME à simplifier
-            leurs messages et à structurer leurs actions de vente.{" "}
-            <strong className="text-white/90">15 ans d&apos;expérience</strong>{" "}
-            et{" "}
+            Vous gardez la décision. Je traduis votre vision en plan, je
+            coordonne ceux qui exécutent et je vous rends des comptes chaque
+            mois.{" "}
+            <strong className="text-white/90">Ancien dirigeant d&apos;agence</strong>
+            , j&apos;ai accompagné{" "}
             <strong className="text-white/90">
-              près de 150 entreprises accompagnées
+              environ 150 entreprises
             </strong>{" "}
-            pour construire des bases solides, sans complexité inutile.
+            depuis 2011. Basé à La Réunion, je travaille à distance avec des
+            entreprises réunionnaises et de métropole.
           </p>
           <Bouton href={CALENDRIER} externe variante="glow">
             Réserver mon diagnostic offert (30min) →
@@ -172,15 +173,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             <p className="text-sm font-bold tracking-[0.08em] uppercase text-text-muted mb-4">
               Mon rôle
             </p>
-            <h2 className="mb-6">
-              Je prends la place du directeur marketing que vous n&apos;avez pas
-              encore.
-            </h2>
-            <p className="text-lg leading-8 text-text tracking-[-0.02em]">
-              Vous gardez la décision. Je traduis votre vision en plan, je
-              coordonne ceux qui exécutent et je vous rends des comptes chaque
-              mois.
-            </p>
+            <h2>Qui fait quoi</h2>
           </div>
         </AnimatedSection>
 

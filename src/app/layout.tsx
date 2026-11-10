@@ -24,18 +24,18 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default:
-      "Consultant Marketing PME : Thomas Carrère, La Réunion",
+      "Thomas Carrère : directeur marketing externalisé, TPE et PME",
     template: "%s : Thomas Carrère",
   },
   description:
-    "Consultant marketing PME/TPE à La Réunion. Je clarifie votre offre et structure vos ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
+    "Directeur marketing externalisé pour dirigeants de TPE et PME : stratégie, pilotage des prestataires et coaching d'équipe, à La Réunion et à distance.",
   metadataBase: new URL("https://thomascarrere.fr"),
   openGraph: {
-    title: "Consultant Marketing PME : Thomas Carrère, La Réunion",
+    title: "Thomas Carrère : directeur marketing externalisé, TPE et PME",
     description:
       "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
     url: "https://thomascarrere.fr",
-    siteName: "Thomas Carrère : Consultant Marketing",
+    siteName: "Thomas Carrère : Directeur Marketing Externalisé",
     locale: "fr_FR",
     type: "website",
     images: [IMAGE_OG],
@@ -87,9 +87,9 @@ const jsonLdLocalBusiness = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": "https://thomascarrere.fr/#business",
-  name: "Thomas Carrère : Consultant Marketing",
+  name: "Thomas Carrère : Directeur Marketing Externalisé",
   description:
-    "Consultant marketing pour PME et TPE. Accompagnement stratégique, direction marketing externalisée et Pack Fondations.",
+    "Directeur marketing externalisé pour TPE et PME : Pack Fondations, direction marketing externalisée et Coaching Hebdo.",
   url: "https://thomascarrere.fr",
   address: {
     "@type": "PostalAddress",
@@ -164,7 +164,7 @@ const jsonLdOrganization = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://thomascarrere.fr/#organization",
-  name: "Thomas Carrère : Consultant Marketing",
+  name: "Thomas Carrère : Directeur Marketing Externalisé",
   url: "https://thomascarrere.fr",
   logo: "https://thomascarrere.fr/images/logo.png",
   description:
@@ -181,7 +181,7 @@ const jsonLdWebSite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://thomascarrere.fr/#website",
-  name: "Thomas Carrère : Consultant Marketing",
+  name: "Thomas Carrère : Directeur Marketing Externalisé",
   url: "https://thomascarrere.fr",
   inLanguage: "fr-FR",
   publisher: { "@id": "https://thomascarrere.fr/#organization" },
