@@ -44,7 +44,7 @@ export function MentionsLegalesClient() {
           }}
         />
         <AnimatedSection>
-          <div className="max-w-[840px] mx-auto text-center py-20 md:py-24">
+          <div className="max-w-[840px] mx-auto text-center pt-28 pb-20 md:py-24">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
               Informations légales
             </p>
