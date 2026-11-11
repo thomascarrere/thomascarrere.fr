@@ -60,7 +60,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             <strong className="text-white/90">Ancien dirigeant d&apos;agence</strong>
             , j&apos;ai accompagné{" "}
             <strong className="text-white/90">
-              environ 150 entreprises
+              plus de 150 entreprises
             </strong>{" "}
             depuis 2011. Basé à La Réunion, je travaille à distance avec des
             entreprises réunionnaises et de métropole.
@@ -247,7 +247,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
                 dans le digital depuis 2011, j&apos;ai dirigé pendant 7 ans Du
                 Simple au Double, une agence de 10 à 15 personnes à La Réunion,
                 avec la trésorerie, les recrutements et les nuits courtes qui vont
-                avec. En accompagnant environ 150 entreprises, plus de 120 avec
+                avec. En accompagnant plus de 150 entreprises, dont plus de 120 avec
                 l&apos;agence puis une trentaine en direct, j&apos;ai vu ce qui
                 fait perdre de l&apos;argent en marketing : des actions isolées,
                 des prestataires sans cap, des chiffres que personne ne regarde.
@@ -299,7 +299,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             {
               titre: "De l'expérience terrain",
               phrase: "J'ai vu beaucoup de cas avant le vôtre.",
-              preuve: "Environ 150 entreprises accompagnées depuis 2011",
+              preuve: "+150 entreprises accompagnées depuis 2011",
             },
             {
               titre: "Un pédagogue",

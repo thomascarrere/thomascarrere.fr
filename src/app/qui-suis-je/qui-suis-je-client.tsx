@@ -32,7 +32,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
               Consultant marketing : La Réunion
             </p>
             <h1 className="mb-6 text-white">
-              15 ans d&apos;expérience, environ 150 entreprises accompagnées :
+              15 ans d&apos;expérience, +150 entreprises accompagnées :
               je simplifie votre marketing.
             </h1>
             <p className="text-lg leading-8 text-white/60 tracking-[-0.02em]">
@@ -40,7 +40,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
               <strong className="text-white/90">consultant marketing</strong>{" "}
               basé à La Réunion. Le marketing ne devrait pas être une source de
               stress, mais un levier de clarté. Après avoir fondé l&apos;agence
-              Du Simple au Double et accompagné près de{" "}
+              Du Simple au Double et accompagné plus de{" "}
               <strong className="text-white/90">150 entreprises</strong> à La
               Réunion et en Métropole, j&apos;ai fait un constat simple : la
               complexité est l&apos;ennemi de l&apos;efficacité.
@@ -69,7 +69,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                   "Dirigeant d'une agence de marketing digital de 10 à 15 personnes : référencement, réseaux sociaux, contenus, stratégie.",
               },
               {
-                titre: "Environ 150 entreprises accompagnées",
+                titre: "+150 entreprises accompagnées",
                 texte:
                   "De la startup en croissance à la PME historique (Isautier, SAPMER, ETAP-Santé, L'École 42 Le Havre, etc.).",
               },
