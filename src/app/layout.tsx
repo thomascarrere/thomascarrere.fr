@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Thomas Carrère : directeur marketing externalisé, TPE et PME",
     description:
-      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, 150 entreprises accompagnées.",
+      "J'aide les dirigeants de PME à simplifier leur marketing et structurer leurs ventes. 15 ans d'expérience, plus de 150 entreprises accompagnées.",
     url: "https://thomascarrere.fr",
     siteName: "Thomas Carrère : Directeur Marketing Externalisé",
     locale: "fr_FR",
@@ -64,7 +64,7 @@ const jsonLdPerson = {
   name: "Thomas Carrère",
   jobTitle: "Directeur Marketing Externalisé",
   description:
-    "Directeur marketing externalisé pour PME et TPE. Ancien dirigeant de l'agence Du Simple au Double, environ 150 entreprises accompagnées depuis 2011 à La Réunion et en France métropolitaine. Enseignant en Master depuis 2013.",
+    "Directeur marketing externalisé pour PME et TPE. Ancien dirigeant de l'agence Du Simple au Double, plus de 150 entreprises accompagnées depuis 2011 à La Réunion et en France métropolitaine. Enseignant en Master depuis 2013.",
   url: "https://thomascarrere.fr",
   sameAs: ["https://www.linkedin.com/in/thomascarrere/"],
   knowsAbout: [
