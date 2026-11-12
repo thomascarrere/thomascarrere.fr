@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IMAGE_OG } from "@/lib/seo";
+import { IMAGE_OG_DIAGNOSTIC } from "@/lib/seo";
 import { DiagnosticClient } from "./diagnostic-client";
 
 export const metadata: Metadata = {
@@ -15,7 +15,11 @@ export const metadata: Metadata = {
     description:
       "Une immersion de 15 jours pour clarifier votre offre, organiser vos outils de vente et tracer votre feuille de route marketing.",
     url: "https://thomascarrere.fr/diagnostic-plan-action",
-    images: [IMAGE_OG],
+    images: [IMAGE_OG_DIAGNOSTIC],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [IMAGE_OG_DIAGNOSTIC.url],
   },
 };
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IMAGE_OG } from "@/lib/seo";
+import { IMAGE_OG_DME } from "@/lib/seo";
 import { DirectionClient } from "./direction-client";
 
 export const metadata: Metadata = {
@@ -14,7 +14,11 @@ export const metadata: Metadata = {
     description:
       "La puissance d'un CMO senior, la flexibilité en plus. 3 niveaux d'intensité, sans engagement long terme.",
     url: "/direction-marketing-externalise",
-    images: [IMAGE_OG],
+    images: [IMAGE_OG_DME],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [IMAGE_OG_DME.url],
   },
 };
 

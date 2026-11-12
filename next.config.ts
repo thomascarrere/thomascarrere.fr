@@ -38,6 +38,22 @@ const nextConfig: NextConfig = {
         destination: "/diagnostic-plan-action",
         permanent: true,
       },
+      // Anciennes adresses encore utilisées (Sélection LinkedIn, anciennes annonces)
+      {
+        source: "/programme-conseil-marketing",
+        destination: "/direction-marketing-externalise",
+        permanent: true,
+      },
+      {
+        source: "/conseiller",
+        destination: "/qui-suis-je",
+        permanent: true,
+      },
+      {
+        source: "/formation-marketing-os",
+        destination: "/",
+        permanent: true,
+      },
       {
         source: "/coaching-marketing-regulier",
         destination: "/coaching-hebdo",
