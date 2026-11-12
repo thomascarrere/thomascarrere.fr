@@ -5,14 +5,16 @@ import { Bouton } from "@/components/bouton";
 import { GrilleLogos } from "@/components/grille-logos";
 import { LienTracker } from "@/components/lien-tracker";
 import { AnimatedSection } from "@/components/animated-section";
+import { Accordion } from "@/components/accordion";
 
 const CALENDRIER = "https://calendar.app.google/xaB44wDhgrkCX8Rj8";
 
 type DirectionClientProps = {
   logoClients: { nom: string; image?: string }[];
+  faq: { question: string; reponse: string }[];
 };
 
-export function DirectionClient({ logoClients }: DirectionClientProps) {
+export function DirectionClient({ logoClients, faq }: DirectionClientProps) {
   return (
     <>
       {/* Hero */}
@@ -49,9 +51,9 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
               garantir l&apos;exécution de votre feuille de route. La puissance
               d&apos;un{" "}
               <strong className="text-white/90">
-                CMO senior (Chief Marketing Officer)
+                CMO externalisé (Chief Marketing Officer)
               </strong>
-              {" "}en freelance, la flexibilité en plus.
+              {" "}senior, la flexibilité en plus.
             </p>
             <Bouton href={CALENDRIER} externe variante="glow">
               Réserver un échange de 30 minutes →
@@ -314,6 +316,18 @@ export function DirectionClient({ logoClients }: DirectionClientProps) {
                 Découvrir Le Coaching Hebdo →
               </LienTracker>
             </div>
+          </div>
+        </AnimatedSection>
+      </Section>
+
+      {/* FAQ */}
+      <Section bg="alt">
+        <AnimatedSection>
+          <div className="max-w-[840px] mx-auto">
+            <div className="text-center mb-12">
+              <h2>Questions fréquentes sur la direction marketing externalisée</h2>
+            </div>
+            <Accordion items={faq} />
           </div>
         </AnimatedSection>
       </Section>
