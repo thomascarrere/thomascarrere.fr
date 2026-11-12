@@ -65,17 +65,18 @@ const jsonLdFaq = {
 const jsonLdArticle = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Directeur marketing externalisé : rôle, missions et prix",
+  headline:
+    "Combien coûte un directeur marketing externalisé ? Prix, rôle et missions",
   description:
     "Rôle, missions, coût et différence avec un CMO interne ou une agence : le guide clair du directeur marketing externalisé, par un consultant qui le fait depuis 15 ans.",
   author: { "@id": "https://thomascarrere.fr/#person" },
   publisher: { "@id": "https://thomascarrere.fr/#organization" },
   datePublished: "2026-06-22",
-  dateModified: "2026-10-05",
+  dateModified: "2026-11-12",
   inLanguage: "fr-FR",
   mainEntityOfPage:
     "https://thomascarrere.fr/guide/directeur-marketing-externalise",
-  image: "https://thomascarrere.fr/images/thomas-conference.jpg",
+  image: "https://thomascarrere.fr/images/og-thomas-carrere.jpg",
 };
 
 const jsonLdBreadcrumb = {
@@ -91,7 +92,7 @@ const jsonLdBreadcrumb = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Directeur marketing externalisé : le guide",
+      name: "Guide : combien coûte un directeur marketing externalisé ?",
       item: "https://thomascarrere.fr/guide/directeur-marketing-externalise",
     },
   ],

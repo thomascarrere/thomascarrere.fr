@@ -73,12 +73,21 @@ export function GuideClient({ faq }: GuideClientProps) {
               Guide
             </p>
             <h1 className="mb-6 text-white">
-              Directeur marketing externalisé : rôle, missions et prix
+              Combien coûte un directeur marketing externalisé ? Prix, rôle et
+              missions
             </h1>
             <p className="text-sm text-white/50 mb-6">
               Par{" "}
-              <span className="font-medium text-white/80">Thomas Carrère</span>{" "}
-              &middot; Publié le 22 juin 2026 &middot; Mis à jour le 5 octobre 2026
+              <LienTracker
+                href="/qui-suis-je"
+                event="parcours"
+                label="guide-dme-signature"
+                className="font-medium text-white/80 underline-offset-4 hover:underline"
+              >
+                Thomas Carrère
+              </LienTracker>
+              , directeur marketing externalisé{" "}
+              &middot; Publié le 22 juin 2026 &middot; Mis à jour le 12 novembre 2026
               &middot; 6 min de lecture
             </p>
             <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
@@ -464,10 +473,12 @@ export function GuideClient({ faq }: GuideClientProps) {
                 <span className="font-semibold text-heading">
                   Thomas Carrère
                 </span>
-                , consultant marketing, 15 ans d&apos;expérience et ancien
-                dirigeant d&apos;agence. J&apos;accompagne les PME et TPE en
-                direction marketing externalisée depuis La Réunion et en
-                métropole.{" "}
+                , directeur marketing externalisé. Dans le digital depuis 2011,
+                j&apos;ai dirigé pendant 7 ans l&apos;agence Du Simple au Double
+                (10 à 15 personnes) et accompagné plus de 150 entreprises.
+                J&apos;enseigne le marketing en Master depuis 2013. Aujourd&apos;hui,
+                je pilote le marketing de PME et TPE, à La Réunion comme en
+                métropole, sans commission sur les outils que je recommande.{" "}
                 <LienTracker
                   href="/qui-suis-je"
                   event="parcours"

@@ -88,6 +88,58 @@ const jsonLdService = {
   url: "https://thomascarrere.fr/direction-marketing-externalise",
 };
 
+const FAQ = [
+  {
+    question: "Qu'est-ce qu'une direction marketing externalisée ?",
+    reponse:
+      "C'est confier le pilotage de votre marketing à un directeur marketing externe, à temps partiel, plutôt que de recruter en interne. Il prend la place du directeur marketing que vous n'avez pas encore : vous gardez la décision, il traduit votre vision en plan, coordonne ceux qui exécutent (votre équipe, vos prestataires, vos outils) et vous rend des comptes chaque mois.",
+  },
+  {
+    question: "Combien coûte un directeur marketing externalisé ?",
+    reponse:
+      "Avec moi, à partir de 1 600 € HT par mois pour le pilotage « Gouvernance », à partir de 2 800 € HT par mois pour le pilotage « Croissance », qui ajoute la production d'un actif clé chaque mois, et sur devis pour un CMO complet. À comparer aux 60 000 à 90 000 € par an d'un directeur marketing salarié, charges comprises.",
+  },
+  {
+    question:
+      "CMO externalisé, CMO freelance, directeur marketing digital externalisé : quelle différence ?",
+    reponse:
+      "Aucune sur le fond. CMO (Chief Marketing Officer) est le terme anglais pour directeur marketing ; « freelance » ou « à temps partagé » précise qu'il est indépendant. Le directeur marketing digital externalisé désigne le même rôle centré sur le web, les réseaux sociaux et la publicité en ligne. Je pilote le marketing digital comme le marketing commercial : les deux doivent servir le même chiffre d'affaires.",
+  },
+  {
+    question: "Quelle différence avec une agence marketing ?",
+    reponse:
+      "Une agence exécute des actions. Un directeur marketing externalisé fixe la stratégie et pilote l'ensemble, y compris vos agences : il les choisit, les briefe et contrôle leurs résultats. Je ne touche aucune commission sur les outils ou les prestataires que je recommande.",
+  },
+  {
+    question: "Par quoi commence une mission ?",
+    reponse:
+      "Par le Diagnostic et plan d'action : 15 jours pour valider votre message, vos outils et votre feuille de route à 90 jours, pour 2 900 € HT. Je ne pilote pas sur du flou : cette étape rend le pilotage mensuel utile dès le premier mois. Elle vous reste, même si on s'arrête là.",
+  },
+  {
+    question: "Faut-il s'engager sur une longue durée ?",
+    reponse:
+      "Non. La collaboration est sans engagement long terme et se renouvelle sur la base de la confiance et des résultats. Chaque mois, un bilan des chiffres permet d'ajuster le plan, ou le niveau d'intensité.",
+  },
+  {
+    question: "Travaillez-vous avec des entreprises en métropole ?",
+    reponse:
+      "Oui. Je suis basé à La Réunion et j'accompagne des PME à La Réunion comme en métropole. Le pilotage se fait en visio, avec un point hebdomadaire, un bilan mensuel et un espace de pilotage dédié où vous suivez l'avancement en temps réel.",
+  },
+];
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.reponse,
+    },
+  })),
+};
+
 const jsonLdBreadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -118,7 +170,11 @@ export default function DirectionMarketing() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
-      <DirectionClient logoClients={LOGOS_CLIENTS} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
+      <DirectionClient logoClients={LOGOS_CLIENTS} faq={FAQ} />
     </>
   );
 }

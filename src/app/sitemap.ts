@@ -8,10 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const dates = {
     accueil: "2026-11-10",
     sprint: "2026-11-10",
-    direction: "2026-11-10",
+    direction: "2026-11-12",
     coaching: "2026-11-10",
     quiSuisJe: "2026-11-10",
-    guide: "2026-11-10",
+    guide: "2026-11-12",
   };
 
   return [
