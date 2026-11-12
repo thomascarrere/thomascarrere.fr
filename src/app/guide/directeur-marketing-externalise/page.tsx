@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IMAGE_OG } from "@/lib/seo";
+import { IMAGE_OG_GUIDE } from "@/lib/seo";
 import { GuideClient } from "./guide-client";
 
 export const metadata: Metadata = {
@@ -14,7 +14,11 @@ export const metadata: Metadata = {
     description:
       "Le guide clair : définition, missions, prix, et différence avec un recrutement ou une agence. Par un consultant qui le fait depuis 15 ans.",
     url: "/guide/directeur-marketing-externalise",
-    images: [IMAGE_OG],
+    images: [IMAGE_OG_GUIDE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [IMAGE_OG_GUIDE.url],
   },
 };
 
@@ -76,7 +80,7 @@ const jsonLdArticle = {
   inLanguage: "fr-FR",
   mainEntityOfPage:
     "https://thomascarrere.fr/guide/directeur-marketing-externalise",
-  image: "https://thomascarrere.fr/images/og-thomas-carrere.jpg",
+  image: "https://thomascarrere.fr/images/partage/partage-guide.jpg",
 };
 
 const jsonLdBreadcrumb = {

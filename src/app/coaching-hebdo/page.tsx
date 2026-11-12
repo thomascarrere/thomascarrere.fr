@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IMAGE_OG } from "@/lib/seo";
+import { IMAGE_OG_COACHING } from "@/lib/seo";
 import { CoachingClient } from "./coaching-client";
 
 export const metadata: Metadata = {
@@ -14,7 +14,11 @@ export const metadata: Metadata = {
     description:
       "Un directeur marketing senior qui cadence la personne aux commandes de votre marketing, 1h par semaine. À distance, 800 € HT/mois.",
     url: "https://thomascarrere.fr/coaching-hebdo",
-    images: [IMAGE_OG],
+    images: [IMAGE_OG_COACHING],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [IMAGE_OG_COACHING.url],
   },
 };
 
