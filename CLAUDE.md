@@ -79,7 +79,7 @@ Exception : `/mentions-legales` n'a pas de JSON-LD (page legale, `robots: noinde
 
 - `npm run dev` — Serveur de dev (port 3000)
 - `npm run build` — Build production (toutes les pages sont statiques)
-- `npx vercel --yes --prod` — Deploiement production sur Vercel
+- Deploiement production : automatique par Vercel a chaque fusion dans `main` (constate le 17/11/2026, en ligne environ une minute apres) ; `npx vercel --yes --prod` reste possible a la main
 
 ## Deploiement
 
