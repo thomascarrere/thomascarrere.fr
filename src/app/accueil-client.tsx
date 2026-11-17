@@ -269,7 +269,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             </div>
           </div>
           <div className="mt-16">
-            <GrilleLogos logos={logoClients} />
+            <GrilleLogos logos={logoClients} colonnes={3} />
           </div>
         </AnimatedSection>
       </Section>

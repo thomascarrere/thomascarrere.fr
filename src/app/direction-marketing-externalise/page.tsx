@@ -29,6 +29,7 @@ const LOGOS_CLIENTS = [
   { nom: "Gaia", image: "/images/logo-gaia.webp" },
   { nom: "Albior" },
   { nom: "SAPMER", image: "/images/logo-sapmer.png" },
+  { nom: "Marbrerie SITA", image: "/images/logo-sita.svg", symbole: true },
   { nom: "AJ Promotion", image: "/images/logo-ajp.jpg" },
   { nom: "Isautier", image: "/images/logo-isautier.webp" },
   { nom: "IUT Réunion" },
