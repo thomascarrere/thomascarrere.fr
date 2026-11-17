@@ -163,7 +163,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
               <LienTracker
                 href="/diagnostic-plan-action"
                 event="offre"
-                label="Sprint Fondations"
+                label="Diagnostic et plan d'action"
                 className="inline-flex min-h-[44px] items-center text-violet font-medium text-sm hover:text-violet-hover transition-colors"
               >
                 Découvrir le Diagnostic et plan d&apos;action →

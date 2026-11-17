@@ -229,7 +229,7 @@ export function CoachingClient({ faq }: CoachingClientProps) {
                   texte: "On pose les rails (une fois).",
                   href: "/diagnostic-plan-action",
                   lien: "Découvrir le Diagnostic et plan d'action →",
-                  label: "Sprint Fondations",
+                  label: "Diagnostic et plan d'action",
                 },
                 {
                   titre: "Le Coaching Hebdo",

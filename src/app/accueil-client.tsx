@@ -84,7 +84,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             />
             <p className="text-sm leading-snug text-white/70 text-left">
               <span className="block font-medium text-white">Thomas Carrère</span>
-              Ancien dirigeant d&apos;agence, basé à La Réunion
+              Enseignant en Master depuis 2013
             </p>
           </div>
           </div>
@@ -188,50 +188,38 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
         </AnimatedSection>
       </Section>
 
-      {/* Problématiques */}
+      {/* Problématiques : ce que les dirigeants disent, sans cartes */}
       <Section>
-        <h2 className="sr-only">Vos besoins</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <AnimatedSection>
+          <h2 className="text-sm font-bold tracking-[0.08em] uppercase text-violet mb-10 font-[family-name:var(--font-inter)] text-left md:text-center">
+            Ce que j&apos;entends souvent
+          </h2>
+        </AnimatedSection>
+        <div className="grid md:grid-cols-3 gap-10 md:gap-8">
           {[
             {
-              titre: "Besoin de clarté",
-              texte:
-                "Votre offre est excellente, mais elle mérite d'être expliquée plus simplement pour convaincre plus vite.",
-              icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-                </svg>
-              ),
+              phrase: "Mon offre est bonne, mais je l'explique mal.",
+              reponse:
+                "On la rend simple à comprendre, pour qu'elle convainque plus vite.",
             },
             {
-              titre: "Besoin de structure",
-              texte:
-                "Vos équipes ont besoin de méthodes et d'outils concrets pour ne plus perdre de temps au quotidien.",
-              icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
-                </svg>
-              ),
+              phrase: "Mon équipe perd du temps tous les jours.",
+              reponse:
+                "Je pose des méthodes et des outils concrets, que vos équipes utilisent vraiment.",
             },
             {
-              titre: "Besoin d'accompagnement",
-              texte:
-                "Vous n'avez pas besoin d'une agence de plus, mais d'un partenaire qui s'implique vraiment à vos côtés.",
-              icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              ),
+              phrase: "Je ne veux pas d'une agence de plus.",
+              reponse:
+                "Il vous faut un partenaire qui s'implique à vos côtés : c'est mon rôle.",
             },
           ].map((item, i) => (
-            <AnimatedSection key={item.titre} delay={i * 100}>
-              <div className="h-full bg-white rounded-xl p-10 text-center flex flex-col items-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
-                <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-violet-bg to-violet-lighter flex items-center justify-center mb-4">
-                  {item.icone}
-                </div>
-                <h3 className="mb-3 flex min-h-[62px] items-center justify-center text-center">{item.titre}</h3>
-                <p className="text-text">{item.texte}</p>
-              </div>
+            <AnimatedSection key={item.phrase} delay={i * 100}>
+              <figure className="h-full border-l-2 border-violet pl-6">
+                <blockquote className="font-[family-name:var(--font-archivo)] text-2xl leading-[1.3] tracking-[-0.02em] font-bold text-heading mb-4">
+                  « {item.phrase} »
+                </blockquote>
+                <figcaption className="text-text">{item.reponse}</figcaption>
+              </figure>
             </AnimatedSection>
           ))}
         </div>
@@ -293,48 +281,54 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             <h2>Pourquoi me confier votre marketing</h2>
           </div>
         </AnimatedSection>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-10 lg:gap-8 text-left md:text-center">
           {[
             {
-              titre: "Un ancien dirigeant",
-              phrase: "Je parle votre langue.",
-              preuve: "7 ans à la tête d'une agence de 10 à 15 personnes",
+              chiffre: "7 ans",
+              preuve: "à la tête d'une agence de 10 à 15 personnes",
+              phrase: "Un ancien dirigeant : je parle votre langue.",
             },
             {
-              titre: "De l'expérience terrain",
+              chiffre: "+150",
+              preuve: "entreprises accompagnées depuis 2011",
               phrase: "J'ai vu beaucoup de cas avant le vôtre.",
-              preuve: "+150 entreprises accompagnées depuis 2011",
             },
             {
-              titre: "Un pédagogue",
-              phrase: "Votre équipe comprend et progresse.",
-              preuve: "Enseignant en Master depuis 2013",
-            },
-            {
-              titre: "Indépendant des outils",
-              phrase: "Je recommande ce qui vous sert.",
-              preuve: "Aucune commission, jamais",
-            },
-            {
-              titre: "Opérationnel vite",
-              phrase: "Diagnostic et plan dès le premier mois.",
-              preuve: "Diagnostic et plan d'action : 15 jours",
-            },
-            {
-              titre: "Une passation propre",
-              phrase: "Ça tient après moi.",
-              preuve: "Procédures documentées en fin de mission",
+              chiffre: "Depuis 2013",
+              preuve: "enseignant en Master",
+              phrase: "Un pédagogue : votre équipe comprend et progresse.",
             },
           ].map((item, i) => (
-            <AnimatedSection key={item.titre} delay={(i % 3) * 100}>
-              <div className="h-full bg-white rounded-xl p-8 border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
-                <h3 className="mb-2">{item.titre}</h3>
+            <AnimatedSection key={item.chiffre} delay={i * 100}>
+              <div>
+                <p className="font-[family-name:var(--font-archivo)] text-5xl lg:text-6xl font-bold tracking-[-0.04em] text-violet leading-none mb-3 whitespace-nowrap">
+                  {item.chiffre}
+                </p>
+                <p className="text-sm font-medium text-heading mb-2">{item.preuve}</p>
                 <p className="text-text">{item.phrase}</p>
-                <p className="text-sm font-medium text-violet mt-3">{item.preuve}</p>
               </div>
             </AnimatedSection>
           ))}
         </div>
+        <AnimatedSection>
+          <ul className="mt-14 pt-10 border-t border-border grid md:grid-cols-3 gap-4 md:gap-8">
+            {[
+              ["Indépendant des outils", "aucune commission, jamais."],
+              ["Opérationnel vite", "diagnostic et plan d'action en 15 jours."],
+              ["Une passation propre", "procédures documentées en fin de mission."],
+            ].map(([titre, texte]) => (
+              <li key={titre} className="flex items-start gap-3 text-text">
+                <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" className="mt-[6px] shrink-0">
+                  <circle cx="12" cy="12" r="12" fill="#443fde" />
+                  <polyline points="7 12.5 10.5 16 17 9" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span>
+                  <strong className="text-heading">{titre}</strong> : {texte}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </AnimatedSection>
       </Section>
 
       {/* Offres */}
@@ -357,7 +351,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
               unite="HT, 15 jours"
               texte="Positionnement clarifié, diagnostic complet et plan d'action sur 90 jours. Il vous reste, même si on s'arrête là."
               href="/diagnostic-plan-action"
-              offre="Sprint Fondations"
+              offre="Diagnostic et plan d'action"
             />
             </div>
             <div aria-hidden="true" className="flex justify-center py-3 md:py-0 text-violet">

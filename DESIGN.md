@@ -119,6 +119,7 @@ Chargées par `next/font` (Google Fonts, `display: swap`).
 - Titres : Archivo 700, `text-heading` ; `text-white` sur fond sombre.
 - Corps : Inter, `text-text` ; `text-white/60` sur fond sombre.
 - Mots importants : `<strong>` en `text-heading` (clair) ou `text-white/90` (sombre).
+- Le `h1` de l'accueil contient volontairement le surtitre « Directeur marketing externalisé pour TPE et PME » (dans un `span` en `text-sm`) : c'est la requête visée en référencement. Ne pas le sortir du `h1`.
 
 ---
 
