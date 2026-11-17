@@ -3,14 +3,17 @@ import type { NextConfig } from "next";
 // CSP construite pour autoriser GA4, Google Ads (gtag) et le lien Google Calendar,
 // tout en restant restrictive par defaut. 'unsafe-inline' sur script-src est requis
 // par les balises gtag inline et les blocs JSON-LD (pas de nonce sur export statique).
+// Google Ads : pagead2.googlesyndication.com recoit les signaux sans cookie du mode
+// consentement (ccm/collect), www.google.com et td.doubleclick.net servent aux
+// conversions une fois le consentement accorde (liste de la doc CSP de Google).
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https:",
   "font-src 'self' data:",
-  "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://*.analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net",
-  "frame-src https://calendar.google.com https://calendar.app.google",
+  "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://*.analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://www.google.com",
+  "frame-src https://calendar.google.com https://calendar.app.google https://td.doubleclick.net",
   "base-uri 'self'",
   "form-action 'self'",
   "object-src 'none'",
