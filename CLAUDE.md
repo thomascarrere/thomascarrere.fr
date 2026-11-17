@@ -58,9 +58,12 @@ public/
   images/                   — Photos Thomas, logos clients, avatars temoignages, favicon
   robots.txt                — Autorise Googlebot, Google-Extended, GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User
   llms.txt                  — Guide de comprehension IA (format llmstxt.org) : resume + liens vers pages/offres
-docs/
-  charte-graphique.md       — Charte graphique complete (couleurs, typo, composants, animations)
+DESIGN.md                   — Reference visuelle (couleurs, typo, composants, animations, regles pour un agent) : a lire avant toute modification d'interface
 ```
+
+## Design
+
+Avant toute modification visuelle (page, composant, image, animation), lire `DESIGN.md` a la racine et s'y conformer. Les valeurs font foi dans `src/app/globals.css` ; si le code et `DESIGN.md` divergent, corriger `DESIGN.md` dans la meme PR.
 
 ## Architecture des pages
 

@@ -1,68 +1,92 @@
-# Charte graphique : thomascarrere.fr
+# DESIGN.md : thomascarrere.fr
 
-> Derniere mise a jour : 10 avril 2026
-
----
-
-## 1. Identite visuelle
-
-**Positionnement** : Premium, expert, accessible. Le site doit inspirer confiance et competence sans etre froid.
-
-**Direction artistique** : Hybride Dark/Light. Le hero et le CTA final sont sur fond sombre (#160042) avec des accents lumineux (glows violet). Le reste du contenu est sur fond clair (blanc / bg-alt) pour la lisibilite.
-
-**Favicon** : Carre violet (#443fde) avec crochets blancs `[ ]`. Rappelle les crochets du logo original.
+> Référence visuelle du site, à lire avant toute modification d'interface (page, composant, image, animation).
+> Les valeurs font foi dans le code : `src/app/globals.css` (tokens `@theme inline`) et `src/app/layout.tsx` (polices). Ce fichier dit à quoi elles servent et comment les combiner. En cas d'écart, le code a raison et ce fichier se corrige.
+> Mis à jour le 17/11/2026 (ex `docs/charte-graphique.md` du 10/04/2026, recalé sur le code). La marque de Thomas au-delà du site (portrait, bannières, ton) est décrite dans `~/Documents/Claude/Structure/Marketing perso/Marque_Thomas.md`.
 
 ---
 
-## 2. Palette de couleurs
+## 0. Règles pour un agent
 
-### Couleurs principales
+À faire :
+- Utiliser les classes issues des tokens (`bg-violet`, `text-heading`, `text-text-muted`, `border-border`, `bg-bg-alt`…) pour les textes, fonds et bordures, jamais une couleur en dur. Seules exceptions : les ombres, halos et voiles, qui reprennent exactement les valeurs des sections 4, 8 et 9.
+- Réutiliser les composants existants (`Bouton`, `Section`, `AnimatedSection`, `Accordion`, `CarteTemoignage`, `GrilleLogos`) avant d'en créer un.
+- Garder la séparation `page.tsx` (serveur : metadata, JSON-LD, données) et `xxx-client.tsx` (visuel).
+- Vérifier chaque changement visuel en navigateur, à 375 px, 768 px et 1280 px.
+- Respecter `prefers-reduced-motion` (déjà géré globalement) et un contraste d'au moins 4,5:1 pour le texte.
+
+À ne jamais faire :
+- Ajouter une couleur, une police ou une ombre qui n'est pas dans ce fichier : en proposer l'ajout d'abord.
+- Utiliser des emoji comme icônes : icônes SVG au trait (section 7).
+- Ajouter une librairie d'animation : hooks React natifs et keyframes CSS seulement.
+- Mettre un prix sur les visuels de partage, ou un chiffre qui n'est pas sur le site (« +150 » en étiquette, « plus de 150 » dans une phrase).
+- Écrire un tiret long (tiret cadratin) dans un texte du site : utiliser « : » ou « ; ».
+
+Textes : vouvoiement, ton direct et sans jargon ; la voix de Thomas est décrite dans le skill `linkedin-thomas`.
+
+---
+
+## 1. Identité visuelle
+
+**Positionnement** : premium, expert, accessible. Le site doit inspirer confiance et compétence sans être froid.
+
+**Direction artistique** : hybride sombre et clair. Le hero et le CTA final sont sur fond sombre (`#160042`) avec des halos violets. Le reste du contenu est sur fond clair (blanc ou `bg-alt`) pour la lisibilité.
+
+**Favicon** : carré violet (`#443fde`) avec crochets blancs `[ ]` (`src/app/icon.svg`).
+
+---
+
+## 2. Couleurs
+
+Token Tailwind entre parenthèses.
+
+### Principales
 
 | Nom | Hex | Usage |
-|-----|-----|-------|
-| **Violet** | `#443fde` | CTAs, liens, accents, icones |
-| **Violet Hover** | `#282556` | Etats hover sur les CTAs |
-| **Heading** | `#160042` | Titres h1-h6, fond des sections dark |
+|---|---|---|
+| Violet (`violet`) | `#443fde` | CTA, liens, accents, icônes |
+| Violet survol (`violet-hover`) | `#282556` | Survol des CTA |
+| Nuit (`heading`) | `#160042` | Titres h1 à h6, fond des sections sombres |
 
-### Couleurs secondaires
-
-| Nom | Hex | Usage |
-|-----|-----|-------|
-| **Violet Light** | `#9d9aea` | Surtitres sur fond dark, degrade texte |
-| **Violet Lighter** | `#d3d2f4` | Fond degrade icones (to) |
-| **Violet BG** | `#f3f3fc` | Fond degrade icones (from), badges |
-| **Active Link** | `#642eff` | Lien actif dans la navigation |
-
-### Couleurs neutres
+### Secondaires
 
 | Nom | Hex | Usage |
-|-----|-----|-------|
-| **Text** | `#3e404c` | Corps de texte (paragraphes) |
-| **Text Muted** | `#6b7094` | Texte secondaire, labels |
-| **Border** | `#e4e6f1` | Bordures de cartes, separateurs |
-| **BG Hover** | `#f3f5fb` | Fond hover des elements interactifs |
-| **BG Alt** | `#f9f9fb` | Fond des sections alternees |
-| **BG Icon** | `#f7f9fd` | Fond des icones (ancien style) |
-| **Blanc** | `#ffffff` | Fond principal |
+|---|---|---|
+| Violet clair (`violet-light`) | `#9d9aea` | Surtitres sur fond sombre |
+| Violet très clair (`violet-lighter`) | `#d3d2f4` | Dégradé des icônes (fin) |
+| Violet pâle (`violet-bg`) | `#f3f3fc` | Dégradé des icônes (début), badges |
+| Lien actif (`active-link`) | `#642eff` | Lien actif dans la navigation |
 
-### Couleurs sur sections dark
+### Neutres
 
-| Element | Valeur |
-|---------|--------|
-| Fond section | `#160042` |
+| Nom | Hex | Usage |
+|---|---|---|
+| Texte (`text`) | `#3e404c` | Corps de texte |
+| Texte secondaire (`text-muted`) | `#666b90` | Labels, mentions ; 5,16:1 sur blanc, 4,68:1 sur `violet-bg` |
+| Bordure (`border`) | `#e4e6f1` | Bordures de cartes, séparateurs |
+| Fond survol (`bg-hover`) | `#f3f5fb` | Survol des éléments interactifs |
+| Fond alterné (`bg-alt`) | `#f9f9fb` | Sections alternées |
+| Fond icône (`bg-icon`) | `#f7f9fd` | Ancien style d'icônes |
+| Blanc | `#ffffff` | Fond principal |
+
+### Sur fond sombre
+
+| Élément | Valeur |
+|---|---|
+| Fond | `#160042` |
 | Texte principal | `white` |
-| Texte secondaire | `white/60` (60% opacite) |
-| Texte fort (strong) | `white/90` |
-| Surtitre | `#9d9aea` (violet-light) |
-| Glow principal | `rgba(68, 63, 222, 0.25)` |
-| Glow secondaire | `rgba(157, 154, 234, 0.15)` |
-| Grille fond | `rgba(255, 255, 255, 0.02)` lignes 1px, espacement 60px |
+| Texte secondaire | `white/60` |
+| Texte fort | `white/90` |
+| Surtitre | `violet-light` |
+| Halo principal | `rgba(68, 63, 222, 0.25)` |
+| Halo secondaire | `rgba(157, 154, 234, 0.15)` |
+| Grille de fond | lignes `rgba(255, 255, 255, 0.02)`, 1 px, tous les 60 px |
 
-### Couleur annexe
+### Annexe
 
 | Nom | Hex | Usage |
-|-----|-----|-------|
-| **Amber** | `#f59e0b` | Etoiles des temoignages |
+|---|---|---|
+| Ambre | `#f59e0b` | Étoiles des témoignages, rien d'autre |
 
 ---
 
@@ -70,245 +94,150 @@
 
 ### Polices
 
-| Police | Usage | Poids |
-|--------|-------|-------|
-| **Archivo** | Titres (h1-h6), compteurs, prix | 400, 500, 600, **700** |
-| **Inter** | Corps de texte, boutons, labels | 300, 400, 500, **600** |
+| Police | Usage | Graisses |
+|---|---|---|
+| Archivo | Titres h1 à h6, compteurs, prix | 400, 500, 600, **700** |
+| Inter | Corps, boutons, labels | 300, 400, 500, **600** |
 
-Source : Google Fonts, chargees via `next/font` avec `display: swap`.
+Chargées par `next/font` (Google Fonts, `display: swap`).
 
-### Echelle typographique
+### Échelle
 
-| Element | Taille desktop | Taille tablette | Taille mobile | Line-height | Letter-spacing |
-|---------|---------------|-----------------|---------------|-------------|----------------|
-| **h1** | 64px | 48px | 42px | 1.1 | -0.04em |
-| **h2** | 56px | 44px | 44px | 1.1 | -0.04em |
-| **h3** | 24px | 24px | 24px | 1.3 | -0.02em |
-| **p** (body) | 16px | 16px | 16px | 1.8 | — |
-| **p** (intro) | 18px (text-lg) | 18px | 18px | 2.0 (leading-8) | -0.02em |
-| **Surtitre** | 14px (text-sm) | 14px | 14px | — | 0.08em (light) / 0.12em (dark) |
-| **Label** | 12px (text-xs) | 12px | 12px | — | 0.08em |
+| Élément | Bureau | Tablette (< 992 px) | Mobile (< 768 px) | Interligne | Approche |
+|---|---|---|---|---|---|
+| h1 | 64 px | 48 px | 42 px | 1.1 | -0.04em |
+| h2 | 56 px | 44 px | 44 px | 1.1 | -0.04em |
+| h3 | 24 px | 24 px | 24 px | 1.3 | -0.02em |
+| p | 16 px | 16 px | 16 px | 1.65 | |
+| Intro (`text-lg`) | 18 px | 18 px | 18 px | 2.0 (`leading-8`) | -0.02em |
+| Surtitre (`text-sm`) | 14 px | | | | 0.08em (clair), 0.12em (sombre) |
+| Label (`text-xs`) | 12 px | | | | 0.08em |
 
-### Regles typographiques
+### Règles
 
-- Surtitres : uppercase, font-bold, tracking large
-- Surtitres sur fond clair : `text-violet`
-- Surtitres sur fond dark : `text-violet-light` + tracking 0.12em
-- Titres (h1-h6) : Archivo, font-weight 700, couleur `heading` (#160042)
-- Titres sur fond dark : `text-white`
-- Corps : Inter, couleur `text` (#3e404c)
-- Corps sur fond dark : `text-white/60`
-- Mots importants dans le corps : `<strong>` avec `text-heading` (clair) ou `text-white/90` (dark)
+- Surtitres : capitales, gras, approche large ; `text-violet` sur fond clair, `text-violet-light` sur fond sombre.
+- Titres : Archivo 700, `text-heading` ; `text-white` sur fond sombre.
+- Corps : Inter, `text-text` ; `text-white/60` sur fond sombre.
+- Mots importants : `<strong>` en `text-heading` (clair) ou `text-white/90` (sombre).
 
 ---
 
 ## 4. Composants
 
-### Boutons (Bouton)
+### Bouton (`src/components/bouton.tsx`)
 
-3 variantes, toutes en `rounded-full`, min-height 48px, padding `px-8 py-3`.
+Trois variantes, toutes `rounded-full`, hauteur minimale 48 px, `px-8 py-3`, `text-sm font-medium`, transition 300 ms.
 
-| Variante | Fond | Texte | Hover | Usage |
-|----------|------|-------|-------|-------|
-| **Primaire** | `#443fde` | Blanc | `#282556` | CTA principal sur fond clair |
-| **Secondaire** | Blanc | `#160042` | `#f3f5fb` | CTA secondaire, liens internes |
-| **Glow** | `#443fde` | Blanc | `#282556` | CTA sur fond dark, avec animation pulse |
+| Variante | Fond | Texte | Survol | Usage |
+|---|---|---|---|---|
+| `primaire` | `violet` | blanc | `violet-hover` | CTA principal sur fond clair |
+| `secondaire` | blanc, bordure `border` | `heading` | `bg-hover`, bordure transparente | CTA secondaire, liens internes |
+| `glow` | `violet` | blanc | `violet-hover` | CTA sur fond sombre : halo `0 0 24px rgba(68,63,222,0.35)`, renforcé au survol à `0 0 40px rgba(68,63,222,0.55)` |
 
-Animation glow : `box-shadow` pulse entre `0 0 30px` et `0 0 40px` en rgba violet, 2s infinite.
-
-Texte CTA principal : "Reserver un echange de 30 minutes →"
-Texte CTA navbar : "Discutons →"
+Textes : CTA principal « Réserver un échange de 30 minutes → » ; CTA de la navigation « Discutons → ».
 
 ### Cartes
 
-**Style standard (fond clair)** :
-- Fond blanc, `rounded-xl` (12px), padding 32px (p-8)
-- Bordure : `1px solid #e4e6f1`
-- Ombre : `0 4px 16px rgba(22, 0, 66, 0.04)`
-- Hover : `translateY(-2px)` + ombre `0 8px 32px rgba(22, 0, 66, 0.08)`
-- Transition : `all 200ms ease`
+- Fond blanc, `rounded-xl` (12 px), `p-8`, bordure `1px solid #e4e6f1`.
+- Ombre au repos `0 4px 16px rgba(22, 0, 66, 0.04)` ; au survol `translateY(-2px)` et `0 8px 32px rgba(22, 0, 66, 0.08)` ; transition 200 ms.
+- Icône : conteneur 44 × 44, `rounded-[10px]`, fond `linear-gradient(135deg, #f3f3fc, #d3d2f4)`, SVG 24 × 24 au trait `violet`, épaisseur 2.
 
-**Icones dans les cartes** :
-- Conteneur : 44x44px, `rounded-[10px]`
-- Fond degrade : `linear-gradient(135deg, #f3f3fc, #d3d2f4)`
-- Icone SVG : 24x24, stroke `#443fde`, strokeWidth 2
+### Navigation (`nav-bar.tsx`)
 
-### Navigation (NavBar)
-
-**Comportement** :
-- Sticky `top-0`, z-index 50, hauteur 88px
-- Sur la homepage en haut : fond transparent, texte blanc, logo inverse
-- Au scroll (> 50px) ou sur sous-pages : fond `white/95` + `backdrop-blur-md` + ombre subtile
-- Transition : 300ms ease
-
-**Elements** :
-- Logo : 160x40, filtre `brightness-0 invert` quand transparent
-- Liens desktop : `rounded-full px-6 py-2`, text-sm, font-medium
-- Liens actifs : `text-active-link` (#642eff) sur fond clair, `text-white` sur transparent
-- CTA desktop : "Discutons →", violet plein sur fond clair, outline blanc sur transparent
-- LinkedIn : icone originale (bleue), pas de filtre
-- Mobile : hamburger anime, menu deroulant avec fond blanc
+- Collante en haut, `z-50`, hauteur 88 px.
+- Accueil en haut de page : fond transparent, texte blanc, logo inversé. Au défilement (> 50 px) ou sur les sous-pages : `white/95`, `backdrop-blur-md`, ombre légère. Transition 300 ms.
+- Logo 160 × 40 (`brightness-0 invert` sur fond transparent) ; liens `rounded-full px-6 py-2 text-sm font-medium` ; lien actif `active-link` sur fond clair.
+- CTA « Discutons → » : violet plein sur fond clair, contour blanc sur fond transparent.
+- LinkedIn : icône d'origine bleue. Mobile : menu hamburger animé, panneau blanc.
 
 ### Accordion (FAQ)
 
-- Conteneur unique : fond blanc, `rounded-xl`, bordure, `overflow-hidden`
-- Items separes par `divide-y divide-border`
-- Padding items : `px-6 py-5`
-- Icone : "+" en violet, rotation 45deg vers "x" a l'ouverture (300ms)
-- Contenu : `max-height` anime de 0 a 96 (300ms)
+Conteneur unique blanc, `rounded-xl`, bordure, `divide-y divide-border`, items `px-6 py-5` ; icône « + » violette qui pivote de 45° (300 ms) ; contenu en `max-height` animé (300 ms).
 
-### Temoignages (CarteTemoignage)
+### Témoignages (`carte-temoignage.tsx`)
 
-- Style carte standard avec hover lift
-- Etoiles : 5 etoiles SVG remplies en amber `#f59e0b`
-- Citation : `italic`, text-[15px], couleur text
-- Avatar : 48x48 rounded-full, ou initiales sur fond `bg-hover`
-- Nom : font-medium, text-sm, couleur heading
-- Entreprise : text-xs, couleur text-muted
+Carte standard ; 5 étoiles `#f59e0b` ; citation en italique, 15 px ; avatar 48 × 48 rond ou initiales sur `bg-hover` ; nom `font-medium text-sm text-heading` ; entreprise `text-xs text-text-muted`.
 
-### Compteurs (Compteurs)
+### Compteurs
 
-- Disposition : flex horizontal, centree, gap 40-64px
-- Separateur : ligne verticale 1px, hauteur 48px, couleur border
-- Chiffre : text-4xl (36px), font-bold, Archivo, couleur violet
-- Label : text-sm, couleur text-muted
-- Animation : count-up de 0 a N au scroll (1500ms, ease-out cubique)
+Flex centré, écart 40 à 64 px, séparateur vertical 1 × 48 px `border` ; chiffre `text-4xl` Archivo gras `violet` ; label `text-sm text-text-muted` ; comptage animé de 0 à N au défilement (1 500 ms).
 
-### Logos clients (GrilleLogos)
+### Logos clients (`grille-logos.tsx`)
 
-- Grille : 2 colonnes (mobile), 3 (sm), 4 (md)
-- Cellules : fond blanc, bordure `bg-hover`, min-height 96px, padding 24px
-- Hover : ombre `23px 23px 64px -16px #393b6a0f`
-- Fallback texte si pas d'image
+Grille 2, 3 puis 4 colonnes ; cellules blanches, bordure `bg-hover`, hauteur minimale 96 px, `p-6` ; texte de repli si pas d'image ; logos `object-contain`, 48 px de haut au plus.
 
-### Section
-
-3 variantes de fond :
+### Section (`section.tsx`)
 
 | Variante | Fond | Usage |
-|----------|------|-------|
-| **blanc** | `#ffffff` | Sections standard |
-| **alt** | `#f9f9fb` | Sections alternees |
-| **dark** | `#160042` | Hero, CTA final |
+|---|---|---|
+| `blanc` | `#ffffff` | Sections standard |
+| `alt` | `#f9f9fb` | Sections alternées |
+| `dark` | `#160042` | Hero, CTA final |
 
-Padding : `py-18 px-[5%]` (72px vertical, 5% horizontal).
-Largeur max contenu : 1140px (defaut) ou 1280px (large).
+`py-18 px-[5%]` ; largeur de contenu 1 140 px (1 280 px en version large).
 
-### Footer
+### Pied de page (`footer.tsx`)
 
-- Fond : `#160042` (dark, coherent avec les sections dark)
-- Disposition : flex, logo a gauche, copyright centre, LinkedIn a droite
-- Logo : inverse en blanc via `brightness-0 invert`
-- Texte : `white/50`
-- LinkedIn : icone originale (bleue) sur fond `white/10`, hover `white/20`
+Fond `#160042` ; logo inversé à gauche, mentions au centre, LinkedIn à droite ; texte `white/50` ; liens Mentions légales et Gérer les cookies.
 
 ---
 
-## 5. Animations et interactions
+## 5. Animations
 
-### Scroll animations
+| Animation | Déclencheur | Durée | Courbe |
+|---|---|---|---|
+| Apparition vers le haut | IntersectionObserver (seuil 0.1) | 600 ms | ease-out |
+| Décalage entre enfants | 100 ms par enfant | | |
+| Comptage | IntersectionObserver (seuil 0.3) | 1 500 ms | ease-out cubique |
+| Survol des cartes | | 200 ms | |
+| Survol des boutons | | 300 ms | |
 
-| Animation | Declencheur | Duree | Easing |
-|-----------|-------------|-------|--------|
-| **Fade-in up** | Intersection Observer (threshold 0.1) | 600ms | ease-out |
-| **Stagger** | Delai entre enfants : 100ms | 600ms + delai | ease-out |
-| **Count-up** | Intersection Observer (threshold 0.3) | 1500ms | ease-out cubique |
-
-Implementation : hooks React natifs (`useInView`, `useCountUp`), pas de librairie externe.
-
-### Hover interactions
-
-| Element | Effet | Duree |
-|---------|-------|-------|
-| **Cartes** | `translateY(-2px)` + ombre renforcee | 200ms |
-| **Boutons** | Changement couleur fond | 300ms |
-| **Liens navbar** | Changement couleur texte | 150ms (defaut) |
-
-### Animations continues
-
-| Animation | Effet | Duree |
-|-----------|-------|-------|
-| **CTA glow** | Pulse box-shadow violet | 2s, infinite |
-
-### Transitions navbar
-
-| Propriete | Duree |
-|-----------|-------|
-| Background, color, box-shadow | 300ms ease |
-| Logo brightness/invert | 300ms ease |
+Aucune animation continue. Toutes s'arrêtent avec `prefers-reduced-motion` (règle globale dans `globals.css`).
 
 ---
 
 ## 6. Mise en page
 
-### Breakpoints
-
 | Nom | Largeur | Changements |
-|-----|---------|-------------|
-| **Mobile** | < 767px | h1: 42px, colonnes empilees |
-| **Tablette** | < 991px | h1: 48px, h2: 44px |
-| **Desktop** | > 991px | Grilles multi-colonnes, navbar desktop |
-| **Large** | > 1280px | Contenu max-width 1280px |
+|---|---|---|
+| Mobile | < 768 px | h1 42 px, colonnes empilées |
+| Tablette | < 992 px | h1 48 px, h2 44 px |
+| Bureau | ≥ 992 px | Grilles multi-colonnes, navigation complète |
+| Large | > 1 280 px | Contenu limité à 1 280 px |
 
-### Structure des pages
+Structure d'une page : navigation collante, hero sombre, sections alternées blanc et `alt` (contenu centré à 1 140 px), CTA final sombre, pied de page sombre.
 
-```
-[NavBar sticky — transparent/blanc]
-[Hero — dark, pleine largeur]
-[Sections alternees blanc/alt]
-  [Contenu max-width 1140px centre]
-[CTA Final — dark, pleine largeur]
-[Footer — dark]
-```
-
-### Espacements
-
-| Element | Valeur |
-|---------|--------|
-| Padding section vertical | 72px (py-18) |
-| Padding section horizontal | 5% |
-| Hero padding (dark) | 80px/112px (py-20 md:py-28) |
-| Gap grilles cartes | 32px (gap-8) |
-| Gap grille temoignages | 24px (gap-6) |
-| Espace entre titre et contenu | 48px (mb-12) |
-| Espace titre/sous-titre | 24px (mb-6) |
-| Espace sous-titre/corps | 16px (mb-4) |
+| Espacement | Valeur |
+|---|---|
+| Section, vertical | 72 px (`py-18`) |
+| Section, horizontal | 5 % |
+| Hero | `py-20 md:py-28` |
+| Grilles de cartes | `gap-8` |
+| Grille de témoignages | `gap-6` |
+| Titre puis contenu | `mb-12` |
+| Titre puis sous-titre | `mb-6` |
+| Sous-titre puis corps | `mb-4` |
 
 ---
 
-## 7. Iconographie
+## 7. Icônes
 
-- Style : SVG inline, stroke (pas fill), strokeWidth 2, strokeLinecap/strokeLinejoin round
-- Taille : 24x24 dans les cartes, 20x20 dans les listes, 14x14 pour les checkmarks
-- Couleur : `#443fde` (violet) sur fond clair
-- Checkmarks : cercle violet plein + stroke blanc (14x14, strokeWidth 3)
+SVG en ligne, au trait (jamais en aplat), épaisseur 2, extrémités arrondies ; 24 × 24 dans les cartes, 20 × 20 dans les listes ; couleur `violet` sur fond clair. Coches : cercle violet plein et trait blanc (14 × 14, épaisseur 3).
 
 ---
 
 ## 8. Images
 
-- Format : WebP pour les photos, PNG pour les logos
-- Photos de Thomas : `aspect-[4/5]`, `rounded-xl`, `object-cover`
-- Overlay sur les photos : `bg-gradient-to-t from-[#160042]/10 to-transparent`
-- Optimisation : Next.js `<Image>` avec `fill` ou dimensions explicites
-- Logos clients : `object-contain`, max-height 48px
+- Photos en WebP, logos en PNG ; composant Next.js `<Image>`.
+- Photos de Thomas : `aspect-[4/5]`, `rounded-xl`, `object-cover`, voile `bg-gradient-to-t from-[#160042]/10 to-transparent`.
+- Images de partage (`public/images/partage/`, `src/lib/seo.ts`) : titre seul, sans prix ni petits textes. Pour forcer LinkedIn à recharger une image, changer sa version via `imagePartage(..., version)`.
 
 ---
 
-## 9. Effets decoratifs (sections dark)
+## 9. Effets décoratifs (sections sombres)
 
-### Glows
-
-- Glow principal (haut-droite) : cercle radial `rgba(68,63,222,0.25)`, 300x300px, blur 40px
-- Glow secondaire (bas-gauche) : cercle radial `rgba(157,154,234,0.15)`, 250x250px, blur 50px
-- Glow CTA final : ellipse centree `rgba(68,63,222,0.2)`, 400x200px, blur 40px
-- Tous les glows : `position absolute`, `z-0`, `pointer-events-none`
-
-### Grille de fond
-
-- Lignes horizontales et verticales : `rgba(255,255,255,0.02)`, 1px, espacement 60px
-- `position absolute inset-0`, `z-0`, `pointer-events-none`
-
-### Ligne de transition
-
-Non implementee (optionnelle pour une future iteration).
+- Halo principal (haut droite) : cercle `rgba(68,63,222,0.25)`, 300 × 300, flou 40 px.
+- Halo secondaire (bas gauche) : cercle `rgba(157,154,234,0.15)`, 250 × 250, flou 50 px.
+- Halo du CTA final : ellipse centrée `rgba(68,63,222,0.2)`, 400 × 200, flou 40 px.
+- Grille de fond : lignes `rgba(255,255,255,0.02)`, 1 px, tous les 60 px.
+- Tous : `absolute`, `z-0`, `pointer-events-none`.
