@@ -409,19 +409,18 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
           </div>
         </AnimatedSection>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Sur mobile : 3 témoignages affichés, les autres au clic.
-              Case à cocher + label : fonctionne sans script. Masquée sur
-              ordinateur, où tous les témoignages restent affichés. */}
+          {/* À toutes les largeurs : 3 témoignages affichés, les autres au
+              clic. Case à cocher + label : fonctionne sans script. */}
           <input
             type="checkbox"
             id="tous-les-temoignages"
-            className="peer sr-only md:hidden"
+            className="peer sr-only"
           />
           {temoignages.map((t, i) => (
             <AnimatedSection
               key={t.nom}
               delay={(i % 3) * 100}
-              className={i >= 3 ? "max-md:hidden peer-checked:max-md:block" : ""}
+              className={i >= 3 ? "hidden peer-checked:block" : ""}
             >
               <CarteTemoignage
                 nom={t.nom}
@@ -434,7 +433,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
           {temoignages.length > 3 && (
             <label
               htmlFor="tous-les-temoignages"
-              className="md:hidden peer-checked:hidden justify-self-center inline-flex items-center justify-center rounded-full min-h-[48px] px-8 py-3 text-sm font-medium text-heading bg-white border border-border cursor-pointer peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-violet"
+              className="col-span-full peer-checked:hidden justify-self-center inline-flex items-center justify-center rounded-full min-h-[48px] px-8 py-3 text-sm font-medium text-heading bg-white border border-border cursor-pointer peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-violet"
             >
               Voir les {temoignages.length - 3} autres témoignages
             </label>
