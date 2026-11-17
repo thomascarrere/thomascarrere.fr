@@ -43,7 +43,9 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
         {/* Portrait : grand, à droite, à partir de 1280 px ; en dessous, une
             signature sous le bouton pour garder le bouton visible sur mobile. */}
         <div className="py-20 md:py-28 xl:grid xl:grid-cols-[minmax(0,1fr)_340px] xl:gap-12 xl:items-center">
-          <div className="max-w-[840px] mx-auto text-center xl:mx-0 xl:text-left">
+          {/* Aligné à gauche sur mobile (plus lisible sur un écran étroit),
+              centré sur tablette, à gauche avec le portrait à partir de 1280 px. */}
+          <div className="max-w-[840px] mx-auto text-left md:text-center xl:mx-0 xl:text-left">
           <h1 className="mb-6 text-white">
             <span className="block text-sm font-bold leading-normal tracking-[0.12em] uppercase text-violet-light mb-4 font-[family-name:var(--font-inter)]">
               Directeur marketing externalisé pour TPE et PME
@@ -53,10 +55,12 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
               que vous n&apos;avez pas encore
             </span>
           </h1>
-          <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
+          <p className="text-lg leading-8 text-white/60 mb-4 tracking-[-0.02em]">
             Vous gardez la décision. Je traduis votre vision en plan, je
             coordonne ceux qui exécutent et je vous rends des comptes chaque
-            mois.{" "}
+            mois.
+          </p>
+          <p className="text-lg leading-8 text-white/60 mb-8 tracking-[-0.02em]">
             <strong className="text-white/90">Ancien dirigeant d&apos;agence</strong>
             , j&apos;ai accompagné{" "}
             <strong className="text-white/90">
@@ -68,7 +72,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
           <Bouton href={CALENDRIER} externe variante="glow">
             Réserver un échange de 30 minutes →
           </Bouton>
-          <div className="mt-8 flex items-center justify-center gap-3 xl:hidden">
+          <div className="mt-8 flex items-center justify-start md:justify-center gap-3 xl:hidden">
             {/* alt vide : le nom est écrit juste à côté */}
             <Image
               src="/images/thomas-portrait.webp"
@@ -436,6 +440,15 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             </label>
           )}
         </div>
+        {/* Bouton de réservation juste après la preuve sociale : c'est le
+            moment où le visiteur est le plus convaincu. */}
+        <AnimatedSection>
+          <div className="mt-12 text-center">
+            <Bouton href={CALENDRIER} externe>
+              Réserver un échange de 30 minutes →
+            </Bouton>
+          </div>
+        </AnimatedSection>
       </Section>
 
       {/* FAQ */}
