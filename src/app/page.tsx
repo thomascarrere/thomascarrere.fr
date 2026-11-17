@@ -25,6 +25,7 @@ const LOGOS_CLIENTS = [
   { nom: "AJ Promotion", image: "/images/logo-ajp.jpg" },
   { nom: "ETAP-Santé", image: "/images/logo-etap-sante.png" },
   { nom: "SAPMER", image: "/images/logo-sapmer.png" },
+  { nom: "Marbrerie SITA", image: "/images/logo-sita.svg", symbole: true },
   { nom: "Isautier", image: "/images/logo-isautier.webp" },
   { nom: "ASDR", image: "/images/logo-asdr.jpeg" },
   { nom: "SEDRE", image: "/images/logo-sedre.jpg" },
