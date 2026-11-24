@@ -80,7 +80,7 @@ const jsonLdArticle = {
   inLanguage: "fr-FR",
   mainEntityOfPage:
     "https://thomascarrere.fr/guide/directeur-marketing-externalise",
-  image: "https://thomascarrere.fr/images/partage/partage-guide.jpg?v=2",
+  image: `https://thomascarrere.fr${IMAGE_OG_GUIDE.url}`,
 };
 
 const jsonLdBreadcrumb = {

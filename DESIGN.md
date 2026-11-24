@@ -231,7 +231,7 @@ SVG en ligne, au trait (jamais en aplat), épaisseur 2, extrémités arrondies ;
 
 - Photos en WebP, logos en PNG ; composant Next.js `<Image>`.
 - Photos de Thomas : `aspect-[4/5]`, `rounded-xl`, `object-cover`, voile `bg-gradient-to-t from-heading/10 to-transparent`.
-- Images de partage (`public/images/partage/`, `src/lib/seo.ts`) : titre seul, sans prix ni petits textes. Au 24/11/2026 elles sont encore dans l'ancien violet : à refaire en bleu nuit. Pour forcer LinkedIn à recharger une image, changer sa version via `imagePartage(..., version)`.
+- Images de partage (`public/images/partage/`, `src/lib/seo.ts`) : titre seul, sans prix ni petits textes. Refaites en bleu nuit le 24/11/2026, comme l'image générale `og-thomas-carrere.jpg` : fond `#0b1f3a` uni, mot du titre en bleu clair `#8fb3e0`, photo détourée posée directement sur le fond, sans grille, halo ni dégradé. Pour forcer LinkedIn à recharger une image, changer sa version via `imagePartage(..., version)`.
 
 ---
 
