@@ -32,7 +32,7 @@ export function NavBar() {
       className={`sticky top-0 z-50 min-h-[88px] px-[5%] py-6 transition-all duration-300 ${
         transparent
           ? "bg-transparent"
-          : "bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(22,0,66,0.06)]"
+          : "bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(11,31,58,0.06)]"
       }`}
     >
       <div className="max-w-[1280px] mx-auto flex items-center justify-between">

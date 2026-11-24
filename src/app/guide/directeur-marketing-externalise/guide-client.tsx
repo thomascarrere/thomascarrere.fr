@@ -56,18 +56,6 @@ export function GuideClient({ faq }: GuideClientProps) {
     <>
       {/* Hero */}
       <Section bg="dark" className="!py-0 -mt-[88px] pt-[88px]">
-        {/* Glow effects */}
-        <div className="absolute top-[-60px] right-[-40px] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(68,63,222,0.25)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
-        <div className="absolute bottom-[-40px] left-[-20px] w-[250px] h-[250px] bg-[radial-gradient(circle,rgba(157,154,234,0.15)_0%,transparent_70%)] blur-[50px] z-0 pointer-events-none" />
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
           <div className="max-w-[840px] mx-auto text-center pt-28 pb-20 md:py-28">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
               Guide
@@ -495,7 +483,6 @@ export function GuideClient({ faq }: GuideClientProps) {
 
       {/* CTA final */}
       <Section bg="dark">
-        <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[radial-gradient(ellipse,rgba(68,63,222,0.2)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center py-8">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">

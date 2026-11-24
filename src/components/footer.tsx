@@ -9,7 +9,7 @@ const LINKEDIN = "https://www.linkedin.com/in/thomascarrere/";
 
 export function Footer() {
   return (
-    <footer className="bg-[#160042] px-[5%] py-8">
+    <footer className="bg-heading px-[5%] py-8">
       <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <Link href="/">
           <Image

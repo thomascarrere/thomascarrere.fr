@@ -80,7 +80,7 @@ export function BandeauCookies() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 sm:px-6 sm:pb-6 pointer-events-none">
-      <div className="pointer-events-auto mx-auto max-w-[1140px] rounded-2xl border border-border bg-white shadow-[0_8px_40px_rgba(22,0,66,0.18)] p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+      <div className="pointer-events-auto mx-auto max-w-[1140px] rounded-2xl border border-border bg-white shadow-[0_8px_40px_rgba(11,31,58,0.18)] p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
         <p className="text-text text-[14px] leading-6 flex-1">
           Ce site utilise des cookies de mesure d’audience (Google Analytics) et
           de publicité (Google Ads). Vous pouvez les accepter ou les refuser. En

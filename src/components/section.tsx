@@ -16,7 +16,7 @@ export function Section({
   const bgClass = {
     blanc: "bg-white",
     alt: "bg-bg-alt",
-    dark: "bg-[#160042] relative overflow-hidden",
+    dark: "bg-heading relative overflow-hidden",
   }[bg];
   const maxWidth = large ? "max-w-[1280px]" : "max-w-[1140px]";
 

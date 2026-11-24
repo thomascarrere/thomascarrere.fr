@@ -12,18 +12,6 @@ export function DiagnosticClient() {
     <>
       {/* Hero */}
       <Section bg="dark" className="!py-0 -mt-[88px] pt-[88px]">
-        {/* Glow effects */}
-        <div className="absolute top-[-60px] right-[-40px] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(68,63,222,0.25)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
-        <div className="absolute bottom-[-40px] left-[-20px] w-[250px] h-[250px] bg-[radial-gradient(circle,rgba(157,154,234,0.15)_0%,transparent_70%)] blur-[50px] z-0 pointer-events-none" />
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
           <div className="max-w-[840px] mx-auto text-center pt-28 pb-20 md:py-28">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
               Diagnostic et plan d&apos;action
@@ -68,7 +56,7 @@ export function DiagnosticClient() {
                 texte:
                   "On ne comprend pas immédiatement en quoi vous êtes l'unique solution aux problèmes de vos clients",
                 icone: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-violet" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                   </svg>
                 ),
@@ -78,7 +66,7 @@ export function DiagnosticClient() {
                 texte:
                   "Des anciens prospects ou des clients inactifs que personne ne prend le temps de relancer",
                 icone: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-violet" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
                   </svg>
                 ),
@@ -88,7 +76,7 @@ export function DiagnosticClient() {
                 texte:
                   "Vos équipes commerciales perdent du temps à réinventer leurs arguments à chaque appel",
                 icone: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-violet" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" />
                   </svg>
                 ),
@@ -98,7 +86,7 @@ export function DiagnosticClient() {
                 texte:
                   "Vous manquez d'un endroit unique pour voir vos indicateurs et votre feuille de route",
                 icone: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-violet" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
                   </svg>
                 ),
@@ -106,7 +94,7 @@ export function DiagnosticClient() {
             ].map((item) => (
               <div
                 key={item.titre}
-                className="bg-white rounded-xl p-8 flex gap-4 border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200"
+                className="bg-white rounded-xl p-8 flex gap-4 border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200"
               >
                 <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-violet-bg to-violet-lighter flex items-center justify-center shrink-0">
                   {item.icone}
@@ -289,7 +277,7 @@ export function DiagnosticClient() {
               ].map((critere) => (
                 <div
                   key={critere}
-                  className="bg-white rounded-xl p-6 flex gap-3 border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200"
+                  className="bg-white rounded-xl p-6 flex gap-3 border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200"
                 >
                   <div className="w-6 h-6 rounded-full bg-violet flex items-center justify-center shrink-0 mt-0.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -349,7 +337,6 @@ export function DiagnosticClient() {
 
       {/* CTA final */}
       <Section bg="dark">
-        <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[radial-gradient(ellipse,rgba(68,63,222,0.2)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
         <div className="max-w-[840px] mx-auto text-center py-8">
           <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
             On y va ?

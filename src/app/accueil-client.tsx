@@ -27,19 +27,6 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
     <>
       {/* Hero */}
       <Section bg="dark" className="!py-0 -mt-[88px] pt-[88px]">
-        {/* Glow top-right */}
-        <div className="absolute top-[-60px] right-[-40px] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(68,63,222,0.25)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
-        {/* Glow bottom-left */}
-        <div className="absolute bottom-[-40px] left-[-20px] w-[250px] h-[250px] bg-[radial-gradient(circle,rgba(157,154,234,0.15)_0%,transparent_70%)] blur-[50px] z-0 pointer-events-none" />
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
         {/* Portrait : grand, à droite, à partir de 1280 px ; en dessous, une
             signature sous le bouton pour garder le bouton visible sur mobile. */}
         <div className="py-20 md:py-28 xl:grid xl:grid-cols-[minmax(0,1fr)_340px] xl:gap-12 xl:items-center">
@@ -51,7 +38,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
               Directeur marketing externalisé pour TPE et PME
             </span>
             Le directeur marketing{" "}
-            <span className="bg-gradient-to-r from-violet-light to-violet bg-clip-text text-transparent">
+            <span className="text-violet-light">
               que vous n&apos;avez pas encore
             </span>
           </h1>
@@ -265,7 +252,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
                 sizes="(max-width: 768px) 100vw, 380px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#160042]/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-heading/10 to-transparent" />
             </div>
           </div>
           <div className="mt-16">
@@ -319,7 +306,7 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
             ].map(([titre, texte]) => (
               <li key={titre} className="flex items-start gap-3 text-text">
                 <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" className="mt-[6px] shrink-0">
-                  <circle cx="12" cy="12" r="12" fill="#443fde" />
+                  <circle cx="12" cy="12" r="12" className="fill-violet" />
                   <polyline points="7 12.5 10.5 16 17 9" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span>
@@ -458,7 +445,6 @@ export function AccueilClient({ logoClients, faq, temoignages }: AccueilClientPr
 
       {/* Contact final */}
       <Section bg="dark" id="contact">
-        <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[radial-gradient(ellipse,rgba(68,63,222,0.2)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
         <div className="max-w-[840px] mx-auto text-center py-8">
           <h2 className="mb-6 text-white">
             Parlons de votre marketing pendant 30 minutes.
@@ -520,7 +506,7 @@ function CarteOffre({
 }) {
   return (
     <div
-      className={`h-full bg-white rounded-xl p-8 flex flex-col gap-3 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200 ${
+      className={`h-full bg-white rounded-xl p-8 flex flex-col gap-3 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200 ${
         accent ? "border-2 border-violet" : "border border-border"
       }`}
     >

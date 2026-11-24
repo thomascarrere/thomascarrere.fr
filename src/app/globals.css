@@ -1,20 +1,22 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-violet: #443fde;
-  --color-violet-hover: #282556;
-  --color-violet-light: #9d9aea;
-  --color-violet-lighter: #d3d2f4;
-  --color-violet-bg: #f3f3fc;
-  --color-heading: #160042;
+  /* Les tokens gardent le nom "violet" (classes utilisees partout) mais
+     portent du bleu depuis le passage au bleu nuit du 24/11/2026. */
+  --color-violet: #2b5ca8;
+  --color-violet-hover: #1f4480;
+  --color-violet-light: #8fb3e0;
+  --color-violet-lighter: #bcd0ea;
+  --color-violet-bg: #dce6f2;
+  --color-heading: #0b1f3a;
   --color-text: #3e404c;
-  /* #666b90 : 4,68:1 sur le fond violet clair (#f3f3fc), 5,16:1 sur blanc */
-  --color-text-muted: #666b90;
+  /* #566580 : 4,66:1 sur le fond bleu pale (#dce6f2), 5,88:1 sur blanc */
+  --color-text-muted: #566580;
   --color-border: #e4e6f1;
   --color-bg-hover: #f3f5fb;
   --color-bg-alt: #f9f9fb;
   --color-bg-icon: #f7f9fd;
-  --color-active-link: #642eff;
+  --color-active-link: #2b5ca8;
   --font-archivo: "Archivo", sans-serif;
   --font-inter: "Inter", sans-serif;
 }
@@ -56,7 +58,7 @@
     line-height: 1.65;
   }
 
-  /* Focus clavier : anneau violet, double d'un lisere blanc pour rester
+  /* Focus clavier : anneau bleu, double d'un lisere blanc pour rester
      visible sur les fonds sombres (hero, pied de page). */
   :focus-visible {
     outline: 2px solid var(--color-violet);
