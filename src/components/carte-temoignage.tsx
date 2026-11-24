@@ -14,7 +14,7 @@ export function CarteTemoignage({
   avatar,
 }: CarteTemoignageProps) {
   return (
-    <div className="bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+    <div className="bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(11,31,58,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200">
       <div className="flex gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
           <svg

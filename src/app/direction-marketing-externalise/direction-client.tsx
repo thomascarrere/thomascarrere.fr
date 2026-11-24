@@ -19,18 +19,6 @@ export function DirectionClient({ logoClients, faq }: DirectionClientProps) {
     <>
       {/* Hero */}
       <Section bg="dark" className="!py-0 -mt-[88px] pt-[88px]">
-        {/* Glow effects */}
-        <div className="absolute top-[-60px] right-[-40px] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(68,63,222,0.25)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
-        <div className="absolute bottom-[-40px] left-[-20px] w-[250px] h-[250px] bg-[radial-gradient(circle,rgba(157,154,234,0.15)_0%,transparent_70%)] blur-[50px] z-0 pointer-events-none" />
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
           <div className="max-w-[840px] mx-auto text-center pt-28 pb-20 md:py-28">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
               Direction Marketing externalisée
@@ -90,7 +78,7 @@ export function DirectionClient({ logoClients, faq }: DirectionClientProps) {
               texte:
                 "15 ans d'expérience en direction d'agence et en conseil",
               icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-violet" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                 </svg>
               ),
@@ -100,7 +88,7 @@ export function DirectionClient({ logoClients, faq }: DirectionClientProps) {
               texte:
                 "Le prix d'un profil junior pour le cerveau d'un profil senior",
               icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-violet" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                 </svg>
               ),
@@ -110,7 +98,7 @@ export function DirectionClient({ logoClients, faq }: DirectionClientProps) {
               texte:
                 "Je ne suis pas là pour \"occuper un poste\", mais pour faire avancer les chantiers",
               icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-violet" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
                 </svg>
               ),
@@ -120,14 +108,14 @@ export function DirectionClient({ logoClients, faq }: DirectionClientProps) {
               texte:
                 "Une collaboration basée sur la confiance et renouvelable",
               icone: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-violet" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
               ),
             },
           ].map((item, i) => (
             <AnimatedSection key={item.titre} delay={i * 80}>
-              <div className="bg-white rounded-xl p-8 flex gap-4 border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+              <div className="bg-white rounded-xl p-8 flex gap-4 border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200">
                 <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-violet-bg to-violet-lighter flex items-center justify-center shrink-0">
                   {item.icone}
                 </div>
@@ -266,7 +254,7 @@ export function DirectionClient({ logoClients, faq }: DirectionClientProps) {
             },
           ].map((item, i) => (
             <AnimatedSection key={item.titre} delay={i * 80}>
-              <div className="h-full bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+              <div className="h-full bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200">
                 <h3 className="mb-3">{item.titre}</h3>
                 <p className="text-text">{item.texte}</p>
               </div>
@@ -334,7 +322,6 @@ export function DirectionClient({ logoClients, faq }: DirectionClientProps) {
 
       {/* CTA final */}
       <Section bg="dark">
-        <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[radial-gradient(ellipse,rgba(68,63,222,0.2)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center py-8">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">

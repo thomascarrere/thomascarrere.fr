@@ -31,7 +31,7 @@ export function Bouton({
     primaire: "bg-violet text-white hover:bg-violet-hover",
     secondaire:
       "bg-white text-heading border border-border hover:bg-bg-hover hover:border-transparent",
-    glow: "bg-violet text-white hover:bg-violet-hover shadow-[0_0_24px_rgba(68,63,222,0.35)] hover:shadow-[0_0_40px_rgba(68,63,222,0.55)]",
+    glow: "bg-violet text-white hover:bg-violet-hover",
   };
 
   const props = externe

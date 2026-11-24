@@ -15,18 +15,6 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
     <>
       {/* Hero */}
       <Section bg="dark" className="!py-0 -mt-[88px] pt-[88px]">
-        {/* Glow effects */}
-        <div className="absolute top-[-60px] right-[-40px] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(68,63,222,0.25)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
-        <div className="absolute bottom-[-40px] left-[-20px] w-[250px] h-[250px] bg-[radial-gradient(circle,rgba(157,154,234,0.15)_0%,transparent_70%)] blur-[50px] z-0 pointer-events-none" />
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
           <div className="max-w-[840px] mx-auto text-center pt-28 pb-20 md:py-28">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">
               Consultant marketing : La Réunion
@@ -77,7 +65,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
               <AnimatedSection key={item.titre} delay={index * 100}>
                 <div className="flex gap-4">
                   <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-violet-bg to-violet-lighter flex items-center justify-center shrink-0">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#443fde" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-violet" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                   </div>
@@ -97,7 +85,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#160042]/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-heading/10 to-transparent" />
             </div>
           </AnimatedSection>
         </div>
@@ -129,7 +117,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
             },
           ].map((item, index) => (
             <AnimatedSection key={item.titre} delay={index * 100}>
-              <div className="h-full bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+              <div className="h-full bg-white rounded-xl p-8 text-center border border-border hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200">
                 <h3 className="mb-3 flex min-h-[62px] items-center justify-center text-center">{item.titre}</h3>
                 <p className="text-text">{item.texte}</p>
               </div>
@@ -151,7 +139,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
         </AnimatedSection>
         <div className="grid md:grid-cols-3 gap-8">
           <AnimatedSection delay={0}>
-            <div className="h-full bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+            <div className="h-full bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(11,31,58,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200">
               <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
                 15 jours
               </p>
@@ -171,7 +159,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
             </div>
           </AnimatedSection>
           <AnimatedSection delay={100}>
-            <div className="h-full bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+            <div className="h-full bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(11,31,58,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200">
               <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
                 Accompagnement régulier
               </p>
@@ -192,7 +180,7 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
             </div>
           </AnimatedSection>
           <AnimatedSection delay={200}>
-            <div className="h-full bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(22,0,66,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(22,0,66,0.08)] transition-all duration-200">
+            <div className="h-full bg-white rounded-xl p-8 border border-border shadow-[0_4px_16px_rgba(11,31,58,0.04)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(11,31,58,0.08)] transition-all duration-200">
               <p className="text-xs font-bold tracking-[0.08em] uppercase text-violet mb-3">
                 1 h par semaine
               </p>
@@ -217,7 +205,6 @@ export function QuiSuisJeClient({ calendrier }: QuiSuisJeClientProps) {
 
       {/* CTA final */}
       <Section bg="dark">
-        <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[radial-gradient(ellipse,rgba(68,63,222,0.2)_0%,transparent_70%)] blur-[40px] z-0 pointer-events-none" />
         <AnimatedSection>
           <div className="max-w-[840px] mx-auto text-center py-8">
             <p className="text-sm font-bold tracking-[0.12em] uppercase text-violet-light mb-4">

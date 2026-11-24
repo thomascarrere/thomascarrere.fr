@@ -20,7 +20,7 @@ src/
     accueil-client.tsx      — Accueil (client component : toutes les sections visuelles)
     globals.css             — Tailwind + design tokens + typographie responsive + keyframes
     sitemap.ts              — Sitemap XML auto-genere (6 URLs ; /mentions-legales exclue car noindex)
-    icon.svg                — Favicon vectoriel (crochets [ ] blancs sur violet)
+    icon.svg                — Favicon vectoriel (crochets [ ] blancs sur bleu)
     favicon.ico             — Favicon legacy 32x32 (genere depuis icon.svg)
     apple-icon.png          — Apple touch icon 180x180 (genere depuis icon.svg)
     diagnostic-plan-action/ — offre d'entree « Diagnostic et plan d'action » (ex Pack Fondations ; /sprint-fondations redirige ici)
@@ -37,9 +37,9 @@ src/
       mentions-legales-client.tsx — Client component (mentions legales + politique de confidentialite RGPD)
   components/
     nav-bar.tsx             — Navigation sticky, transparent sur hero / blanche au scroll ("use client")
-    footer.tsx              — Pied de page, fond dark #160042, liens Mentions legales + Gerer les cookies ("use client")
+    footer.tsx              — Pied de page, fond bleu nuit #0b1f3a, liens Mentions legales + Gerer les cookies ("use client")
     bandeau-cookies.tsx     — Bandeau de consentement cookies + Google Consent Mode v2 ("use client")
-    bouton.tsx              — CTA : primaire (violet) / secondaire (blanc) / glow (violet + pulse)
+    bouton.tsx              — CTA : primaire (bleu) / secondaire (blanc) / glow (meme rendu que primaire, sans lueur ; nom historique)
     section.tsx             — Wrapper section : blanc / alt / dark
     animated-section.tsx    — Wrapper fade-in au scroll via IntersectionObserver ("use client")
     carte-temoignage.tsx    — Carte avis client (avatar, etoiles amber, texte italic)
@@ -99,19 +99,20 @@ Direction visuelle : hero dark + CTA final dark "bookendent" la page. Sections i
 
 ### Couleurs principales
 
-- `violet` (#443fde) : CTAs, liens, accents
-- `violet-light` (#9d9aea) : surtitres sur fond dark, degrade texte
-- `heading` (#160042) : titres sur fond clair, fond des sections dark
+Bleu nuit depuis le 24/11/2026 (remplace le violet, couleur pour couleur). Les tokens gardent le nom `violet`.
+
+- `violet` (#2b5ca8, bleu) : CTAs, liens, accents
+- `violet-light` (#8fb3e0, bleu clair) : surtitres sur fond dark, fin du titre du hero
+- `heading` (#0b1f3a, nuit) : titres sur fond clair, fond des sections dark
 - `text` (#3e404c) : paragraphes
 - `bg-alt` (#f9f9fb) : sections alternees
 
 ### Sections dark
 
-- Fond : `#160042` via `Section bg="dark"`
-- Glows decoratifs : radial-gradient violet, blur, `pointer-events-none`
-- Grille de fond : lignes blanches 2% opacite, 60px
+- Fond : aplat `#0b1f3a` via `Section bg="dark"` (`bg-heading`)
+- Aucun decor : ni halo, ni grille, ni degrade de texte (retires le 24/11/2026, ne pas les remettre)
 - Texte : blanc, `white/60`, `white/90` pour strong
-- CTA : `Bouton variante="glow"` (pulse box-shadow)
+- CTA : `Bouton variante="glow"` (bouton plein, sans lueur)
 
 ### Animations
 
@@ -119,7 +120,6 @@ Direction visuelle : hero dark + CTA final dark "bookendent" la page. Sections i
 - Stagger : delai 100ms entre elements (prop `delay`)
 - Pas de compteurs animes : les chiffres sont ecrits en dur dans le HTML (lisibles par Google et les IA)
 - Hover lift : cartes `translateY(-2px)` + ombre renforcee (200ms)
-- Glow pulse : CTA dark, box-shadow 2s infinite
 
 ### Navbar
 
@@ -127,7 +127,7 @@ Direction visuelle : hero dark + CTA final dark "bookendent" la page. Sections i
 - Au scroll (>50px) ou sous-pages : blanche, backdrop-blur, ombre subtile
 - Hero remonte sous la navbar : `-mt-[88px] pt-[88px]`
 
-Charte graphique complete : `docs/charte-graphique.md`
+Charte graphique complete : `DESIGN.md`
 
 ## SEO / GEO
 
@@ -156,7 +156,7 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - Deux-points avec une espace avant ET apres dans le texte affiche : "Titre : sous-titre" (jamais collo au mot suivant)
 - Nav links : "Diagnostic", "Coaching Hebdo", "Direction Marketing externalisee", "Qui suis-je ?"
 - Bouton navbar : "Discutons →" (seul CTA avec un texte different)
-- Favicon : carre violet #443fde avec crochets blancs [ ], gere par les conventions de fichiers Next (`src/app/icon.svg` + `favicon.ico` + `apple-icon.png`), pas via metadata.icons. Source vectorielle = `icon.svg` ; les .ico/.png se regenerent depuis le SVG avec sharp.
+- Favicon : carre bleu #2b5ca8 avec crochets blancs [ ], gere par les conventions de fichiers Next (`src/app/icon.svg` + `favicon.ico` + `apple-icon.png`), pas via metadata.icons. Source vectorielle = `icon.svg` ; les .ico/.png se regenerent depuis le SVG avec sharp.
 
 ## Audits realises
 
@@ -177,8 +177,8 @@ npm run build && git add -A && git commit -m "message" && git push && npx vercel
 - **Contenu visible sans script** : `AnimatedSection` ne pose plus `opacity:0` au rendu serveur. `useInView` renvoie un etat `initial` (visible), `cache` (sous la zone visible, apres hydratation) ou `visible` (revele au scroll). Ne pas remettre de style masquant par defaut.
 - **En-tete** : hauteur fixe de 88 px (le hero est cale dessus avec `-mt-[88px] pt-[88px]`) ; tout element de l'en-tete fait au plus 40 px de haut. Logo `public/images/logo-horizontal.png` (logo.png recadre sans marges). Bouton « Discutons → » visible aussi sur mobile, a cote du menu.
 - **Zones cliquables** : liens d'action isoles et liens du pied de page en `inline-flex min-h-[44px] items-center`.
-- **Texte courant** : 16 px (plus de `text-[15px]`). Gris secondaire `--color-text-muted` a #666b90 pour tenir 4,5:1 sur les fonds clairs.
-- **Focus clavier** : regle globale `:focus-visible` dans `globals.css` (anneau violet + lisere blanc).
+- **Texte courant** : 16 px (plus de `text-[15px]`). Gris secondaire `--color-text-muted` a #566580 (depuis le 24/11/2026) pour tenir 4,5:1 sur les fonds clairs, bleu pale compris.
+- **Focus clavier** : regle globale `:focus-visible` dans `globals.css` (anneau bleu + lisere blanc).
 - **Temoignages (accueil)** : sur mobile, 3 affiches puis « Voir les N autres » via une case a cocher + label (sans script). Sur ordinateur, tous affiches.
 - **Vocabulaire** : l'offre d'entree s'appelle « Diagnostic et plan d'action » ; le rendez-vous gratuit « echange de 30 minutes » ; l'outil de pilotage est decrit par son principe (« espace de pilotage dedie, sur mesure »), sans nom de logiciel.
 - **Passe SEO/GEO** (12 nov. 2026, suite bilan Search Console : DME 2 -> 15 clics/30 j apres le title avec prix) : FAQ de 7 questions + FAQPage sur `/direction-marketing-externalise` (definition, cout, CMO externalise / freelance / digital, agence, premiere etape, engagement, metropole) ; hero DME avec « CMO externalise » ; guide recentre sur l'intention prix (H1 + headline « Combien coute un directeur marketing externalise ? ») pour limiter la cannibalisation avec la page DME ; signature auteur cliquable, bloc auteur avec faits verifiables (Du Simple au Double, +150 entreprises, Master depuis 2013), dateModified 2026-11-12, image Article = image de partage.
